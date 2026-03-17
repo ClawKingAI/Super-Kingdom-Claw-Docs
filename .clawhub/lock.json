@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "anima-design-agent": {
+      "version": "1.0.9",
+      "installedAt": 1773689471547
+    },
+    "agent-team-orchestration": {
+      "version": "1.0.0",
+      "installedAt": 1773689473570
+    },
+    "memory-maintenance": {
+      "version": "1.0.0",
+      "installedAt": 1773689477572
+    }
+  }
+}
