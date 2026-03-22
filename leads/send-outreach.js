@@ -1,20 +1,43 @@
 #!/usr/bin/env node
 /**
- * Send Outreach - Executes campaign sends via AgentMail
+ * Send Outreach - Executes campaign sends via AgentMail or Gmail
  * 
  * Usage:
- *   node send-outreach.js <campaignId> [--dry-run] [--limit=N]
+ *   node send-outreach.js <campaignId> [--dry-run] [--limit=N] [--use-gmail]
  */
 
 const { AgentMailClient } = require('agentmail');
+const nodemailer = require('nodemailer');
 const fs = require('fs');
 const path = require('path');
 
 const CAMPAIGNS_DIR = '/data/.openclaw/workspace/leads/campaigns';
+const CONFIG_PATH = '/data/.openclaw/workspace/leads/email-config.json';
+
 const API_KEY = process.env.AGENTMAIL_API_KEY || 'am_us_0979af61e72c013e15ea72c47964b7612d90d40afcf7ca42dd9b5766b1e70eb9';
 const INBOX_ID = 'kingdomclaw1@agentmail.to';
 
 const client = new AgentMailClient({ apiKey: API_KEY });
+
+// Load email config
+function loadConfig() {
+  if (fs.existsSync(CONFIG_PATH)) {
+    return JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf-8'));
+  }
+  return null;
+}
+
+// Create Gmail transporter
+function createGmailTransporter(config) {
+  if (!config || !config.gmail) return null;
+  return nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: config.gmail.user,
+      pass: config.gmail.appPassword.replace(/\s+/g, '')
+    }
+  });
+}
 
 // Message templates with multiple variations for uniqueness
 const TEMPLATES = {
@@ -156,18 +179,58 @@ function personalize(template, contact) {
     .replace(/{email}/g, contact.email);
 }
 
-// Send email
-async function sendEmail(to, subject, body) {
+// Send email via AgentMail
+async function sendEmailAgentMail(to, subject, body) {
   try {
     const result = await client.inboxes.messages.send(INBOX_ID, {
       to: to,
       subject: subject,
       text: body,
     });
-    return { success: true, id: result.id };
+    return { success: true, id: result.id, method: 'agentmail' };
+  } catch (error) {
+    return { success: false, error: error.message, errorType: error.name };
+  }
+}
+
+// Send email via Gmail
+async function sendEmailGmail(to, subject, body, config) {
+  const transporter = createGmailTransporter(config);
+  if (!transporter) {
+    return { success: false, error: 'Gmail not configured' };
+  }
+  
+  try {
+    const result = await transporter.sendMail({
+      from: config.gmail.user,
+      to: to,
+      subject: subject,
+      text: body
+    });
+    return { success: true, id: result.messageId, method: 'gmail' };
   } catch (error) {
     return { success: false, error: error.message };
   }
+}
+
+// Send email (with fallback to Gmail if AgentMail rate limited)
+async function sendEmail(to, subject, body, useGmail = false) {
+  const config = loadConfig();
+  
+  if (useGmail) {
+    return sendEmailGmail(to, subject, body, config);
+  }
+  
+  // Try AgentMail first
+  const result = await sendEmailAgentMail(to, subject, body);
+  
+  // If rate limited, fallback to Gmail
+  if (!result.success && result.errorType === 'RateLimitError' && config && config.gmail) {
+    console.log('AgentMail rate limited, falling back to Gmail...');
+    return sendEmailGmail(to, subject, body, config);
+  }
+  
+  return result;
 }
 
 // Sleep
@@ -175,7 +238,7 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Main send function
 async function sendCampaign(campaignId, options = {}) {
-  const { dryRun = false, limit = 100 } = options;
+  const { dryRun = false, limit = 100, useGmail = false } = options;
   
   // Load campaign
   const campaignPath = path.join(CAMPAIGNS_DIR, `${campaignId}.json`);
@@ -224,7 +287,7 @@ async function sendCampaign(campaignId, options = {}) {
       console.log(`         Subject: ${subject}\n`);
       sent++;
     } else {
-      const result = await sendEmail(contact.email, subject, body);
+      const result = await sendEmail(contact.email, subject, body, useGmail);
       
       if (result.success) {
         // Update contact status
@@ -263,6 +326,7 @@ async function sendCampaign(campaignId, options = {}) {
 const args = process.argv.slice(2);
 const campaignId = args[0];
 const dryRun = args.includes('--dry-run');
+const useGmail = args.includes('--use-gmail');
 const limitArg = args.find(a => a.startsWith('--limit='));
 const limit = limitArg ? parseInt(limitArg.split('=')[1]) : 100;
 
@@ -270,14 +334,15 @@ if (!campaignId) {
   console.log(`
 📧 Send Outreach - Usage:
 
-  node send-outreach.js <campaignId> [--dry-run] [--limit=N]
+  node send-outreach.js <campaignId> [--dry-run] [--limit=N] [--use-gmail]
 
 Examples:
-  node send-outreach.js abc123                    # Send live
+  node send-outreach.js abc123                    # Send live via AgentMail
   node send-outreach.js abc123 --dry-run          # Test without sending
   node send-outreach.js abc123 --limit=50         # Send only 50
+  node send-outreach.js abc123 --use-gmail        # Force Gmail SMTP
 `);
   process.exit(0);
 }
 
-sendCampaign(campaignId, { dryRun, limit }).catch(console.error);
+sendCampaign(campaignId, { dryRun, limit, useGmail }).catch(console.error);
