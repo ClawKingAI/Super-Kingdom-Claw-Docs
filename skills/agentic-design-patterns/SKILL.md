@@ -487,10 +487,35 @@ Before starting any complex task, ask:
 4. **Quality:** Does output need refinement? → Use Reflection
 5. **Capabilities:** Do I need external tools/data? → Use Tool Use
 6. **Complexity:** Is this a complex goal? → Use Planning
-7. **Specialists:** Would multiple agents help? → Use Multi-Agent
+7. **Specialists:** Would multiple agents help? → Use Multi-Agent (NemoClaw dispatch)
 8. **Context:** Do I need past conversation? → Use Memory Management
 9. **Safety:** Should I validate before acting? → Use Guardrails
 10. **Recovery:** What if this fails? → Use Exception Handling
+
+## NemoClaw Agent Dispatch
+
+When a task matches these patterns, dispatch to Kingdom Claw agents:
+
+| Task Type | Dispatch To | Method |
+|-----------|-------------|--------|
+| Multi-phase project | `orchestrator` | Plan → Route to specialists |
+| Code/app build | `developer` | sessions_spawn or direct |
+| Landing page/UI | `designer` + `developer` | Parallel spawn |
+| Email campaign | `outreach` | Batch dispatch |
+| Contact finding | `leads` | Search → Verify |
+| Research/analysis | `researcher` | Web fetch + synthesize |
+| Metrics/report | `analyst` | Data aggregation |
+| Deploy to URL | `deployer` | Build → here.now |
+
+**Dispatch Pattern:**
+```
+1. Orchestrator receives task
+2. Orchestrator classifies and routes
+3. Specialist agent executes
+4. Orchestrator reviews output
+5. If quality gate passes → deliver
+6. If quality gate fails → reflection loop
+```
 
 ---
 

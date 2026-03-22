@@ -42,6 +42,21 @@
   21. Exploration (autonomous discovery)
 - **Operational rule:** Reference SKILL.md before complex tasks. Apply reflection loops for quality-critical work. Use routing for multi-domain requests.
 
+## NemoClaw / Kingdom Claw Agents
+- **Location:** `/data/.openclaw/workspace/kingdom-claw-agents/`
+- **Integration:** `/data/.openclaw/workspace/kingdom-claw-agents/nemoclaw-integration/nemoclaw_agent.py`
+- **When to dispatch to agents:**
+  - `orchestrator`: Complex multi-step projects, intake, planning, coordination
+  - `developer`: Code builds, app development, technical implementation
+  - `designer`: UI/UX, landing pages, brand consistency, styling
+  - `outreach`: Email campaigns, follow-ups, personalized messaging
+  - `leads`: Contact finding, email verification, list building
+  - `researcher`: Competitive intel, documentation, analysis
+  - `analyst`: Metrics tracking, reports, dashboards
+  - `deployer`: Production builds, here.now deployment, verification
+- **Dispatch method:** Use `sessions_spawn` with agent-specific context, or direct API calls via NVIDIA/OpenAI-compatible endpoint
+- **Workflows defined:** `workflows/client-project.md`, `workflows/lead-generation.md`, `workflows/email-outreach.md`
+
 ## Agent Self-Protection Rules
 - **NO `pkill`, `killall`, or broad process termination** — these cascade and crash the gateway
 - **NO signal-sending commands** (`kill -9`, `kill -TERM`) — causes gateway disconnect
