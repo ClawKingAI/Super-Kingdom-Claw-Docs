@@ -89,7 +89,7 @@ Kingdom Life Ascension`
 
 Just wanted to bump this up in case it got buried.
 
-Quick question: Is the Kingdom training resource something you'd like to explore, or is it on the back burner for now?
+Quick question: Is improving lead capture or customer support something {organization} is actively working on, or is it on the back burner for now?
 
 Either way totally fine—just want to be respectful of your inbox.
 
@@ -100,10 +100,50 @@ David Morgan`,
 
 One last ping on this.
 
-I'll assume now isn't the right time and won't follow up further. If things change, feel free to reach out.
+I'll assume now isn't the right time and won't follow up further. If things change, here's a link to see what we build: https://ai.kingdomlife.site/smart
 
-Blessings,
+Best,
 David Morgan`
+    ]
+  },
+  
+  aiServicesOutreach: {
+    subject: 'AI Chatbots for {organization}',
+    variations: [
+      `Hi {name},
+
+I noticed {organization} is doing interesting work, and wanted to reach out.
+
+We build AI chatbots and smart assistants that help businesses like yours:
+• Qualify leads 24/7 (even while you sleep)
+• Answer customer questions instantly
+• Schedule appointments automatically
+• Reduce support workload by 60%+
+
+Recent project: Built a chatbot for a marketing agency that now qualifies 50+ leads/week automatically.
+
+Would 15 minutes to see if something similar could work for {organization} be worth it?
+
+Best,
+David Morgan
+Kingdom Life Ascension
+https://ai.kingdomlife.site/smart`,
+
+      `Hi {name},
+
+Quick question: Is {organization} using AI for customer support or lead generation yet?
+
+We've helped businesses like yours:
+• Deploy chatbots that convert visitors into leads
+• Automate appointment scheduling
+• Provide 24/7 customer support without hiring
+
+One client went from 20% to 70% lead capture rate after adding our AI assistant.
+
+Happy to share what worked — would a brief call make sense?
+
+David Morgan
+https://ai.kingdomlife.site/chattybot`
     ]
   }
 };
