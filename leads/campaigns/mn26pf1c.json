@@ -1,0 +1,62 @@
+{
+  "id": "mn26pf1c",
+  "name": "kingdom-life-outreach",
+  "created": "2026-03-22T20:03:19.776Z",
+  "status": "active",
+  "config": {
+    "templateType": "kingdomOutreach",
+    "dailyLimit": 100,
+    "followUpDays": [
+      4,
+      10
+    ],
+    "targetProfiles": [],
+    "excludeDomains": [
+      "gmail.com",
+      "yahoo.com",
+      "hotmail.com"
+    ]
+  },
+  "stats": {
+    "totalSent": 3,
+    "totalOpened": 0,
+    "totalResponded": 0,
+    "totalBounced": 0
+  },
+  "contacts": [
+    {
+      "email": "info@churchsample.com",
+      "name": "John Smith",
+      "organization": "Sample Church",
+      "status": "pending",
+      "addedAt": "2026-03-22T20:04:12.339Z",
+      "sentAt": null,
+      "openedAt": null,
+      "respondedAt": null,
+      "followUps": []
+    },
+    {
+      "email": "pastor@testchurch.org",
+      "name": "Pastor Mike",
+      "organization": "Test Church",
+      "status": "pending",
+      "addedAt": "2026-03-22T20:04:12.339Z",
+      "sentAt": null,
+      "openedAt": null,
+      "respondedAt": null,
+      "followUps": []
+    },
+    {
+      "email": "contact@ministry-example.org",
+      "name": "Sarah Johnson",
+      "organization": "Example Ministry",
+      "status": "pending",
+      "addedAt": "2026-03-22T20:04:12.339Z",
+      "sentAt": null,
+      "openedAt": null,
+      "respondedAt": null,
+      "followUps": []
+    }
+  ],
+  "history": []
+}

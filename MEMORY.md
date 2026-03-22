@@ -70,15 +70,19 @@
   - `analyst`: Metrics tracking, reports, dashboards
   - `deployer`: Production builds, here.now deployment, verification
 - **Dispatch method:** Use `sessions_spawn` with agent-specific context, or direct API calls via NVIDIA/OpenAI-compatible endpoint
-- **Workflows defined:** `workflows/client-project.md`, `workflows/lead-generation.md`, `workflows/email-outreach.md`, `workflows/client-outreach.md`
+- **Workflows defined:** `workflows/client-project.md`, `workflows/lead-generation.md`, `workflows/email-outreach.md`, `workflows/client-outreach.md`, `workflows/sales-delivery.md`
 
 ## Client Acquisition System
 - **Guide deployed:** https://soulful-soul-ghqt.here.now/
-- **Workflow file:** `/data/.openclaw/workspace/kingdom-claw-agents/workflows/client-outreach.md`
-- **Templates available:** Discord DM, Cold Email, LinkedIn, Follow-ups, Referral ask
-- **Discovery script:** 30-45 min call framework
-- **Red flags:** 10 warning signs to decline or proceed with caution
-- **Ideal clients:** Startup Founder ($5K-$50K), Enterprise Manager ($50K-$500K), Agency Owner ($10K-$100K)
+- **Workflow files:** 
+  - `workflows/client-outreach.md` — Templates and outreach workflow
+  - `workflows/sales-delivery.md` — Discovery calls, proposals, delivery
+- **Automation scripts:**
+  - `leads/campaign-manager.js` — Create and manage outreach campaigns
+  - `leads/send-outreach.js` — Execute sends via AgentMail
+  - `leads/outreach-automated.js` — Full automation system
+- **Campaign tracking:** `/data/.openclaw/workspace/leads/campaigns/`
+- **Key metrics:** Sent, opened, responded, response rate
 
 ## Agent Self-Protection Rules
 - **NO `pkill`, `killall`, or broad process termination** — these cascade and crash the gateway
