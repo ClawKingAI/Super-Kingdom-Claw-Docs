@@ -1,0 +1,6 @@
+{
+  "slug": "certtrack",
+  "files": {
+    "index.html": "$(cat index.html | base64 -w0)"
+  }
+}

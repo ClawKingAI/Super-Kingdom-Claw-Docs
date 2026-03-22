@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Radar 2026 — Kingdom Claw</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+        
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .glow {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+        }
+        
+        .trend-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .trend-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .radar-ring {
+            position: absolute;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 50%;
+            animation: radar-sweep 4s infinite linear;
+        }
+        
+        @keyframes radar-sweep {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <!-- Header -->
+    <header class="border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">👑</span>
+                <span class="font-semibold text-lg">Kingdom Claw</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-400 text-sm mono">
+                <span class="pulse-dot w-2 h-2 bg-green-500 rounded-full"></span>
+                <span>Live Research Pull</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <p class="text-indigo-400 mono text-sm mb-4">CAPGEMINI + IEEE + JUNIPER RESEARCH</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                <span class="gradient-text">Tech Radar 2026</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                Five transformative trends shaping enterprise architecture, AI adoption, and operational resilience.
+            </p>
+        </div>
+
+        <!-- Trend Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- Trend 1 -->
+            <div class="trend-card rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-2xl">
+                        🧠
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Year of Truth for AI</h3>
+                        <span class="text-xs text-slate-500 mono">TREND #1</span>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm mb-4">
+                    AI moves from POC to production. The shift from proof-of-concept to proof-of-impact — enterprises invest in data foundations and "Human-AI chemistry."
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-violet-500/20 rounded text-xs text-violet-300">Governance</span>
+                    <span class="px-2 py-1 bg-violet-500/20 rounded text-xs text-violet-300">Data Foundations</span>
+                    <span class="px-2 py-1 bg-violet-500/20 rounded text-xs text-violet-300">Trust Architecture</span>
+                </div>
+            </div>
+
+            <!-- Trend 2 -->
+            <div class="trend-card rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-2xl">
+                        💻
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">AI is Eating Software</h3>
+                        <span class="text-xs text-slate-500 mono">TREND #2</span>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm mb-4">
+                    From "writing code" to "expressing intent." Developers articulate outcomes, AI delivers. Self-assembling, self-healing systems become the norm.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-cyan-500/20 rounded text-xs text-cyan-300">Intent-Driven Dev</span>
+                    <span class="px-2 py-1 bg-cyan-500/20 rounded text-xs text-cyan-300">Autonomous Maintenance</span>
+                </div>
+            </div>
+
+            <!-- Trend 3 -->
+            <div class="trend-card rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-2xl">
+                        ☁️
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Cloud 3.0</h3>
+                        <span class="text-xs text-slate-500 mono">TREND #3</span>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm mb-4">
+                    All flavors of cloud: hybrid, private, multi, sovereign. AI can't scale on classical public cloud alone. Portability and sovereignty become core requirements.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-emerald-500/20 rounded text-xs text-emerald-300">Hybrid Multi-Cloud</span>
+                    <span class="px-2 py-1 bg-emerald-500/20 rounded text-xs text-emerald-300">Sovereign AI</span>
+                </div>
+            </div>
+
+            <!-- Trend 4 -->
+            <div class="trend-card rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-2xl">
+                        ⚙️
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Intelligent Ops</h3>
+                        <span class="text-xs text-slate-500 mono">TREND #4</span>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm mb-4">
+                    Monolithic backbones evolve into living ecosystems. Modular, continuously learning applications blend human oversight with autonomous AI agents.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-amber-500/20 rounded text-xs text-amber-300">Adaptive Operations</span>
+                    <span class="px-2 py-1 bg-amber-500/20 rounded text-xs text-amber-300">Agentic Workflows</span>
+                </div>
+            </div>
+
+            <!-- Trend 5 -->
+            <div class="trend-card rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center text-2xl">
+                        🌐
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Tech Sovereignty Paradox</h3>
+                        <span class="text-xs text-slate-500 mono">TREND #5</span>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm mb-4">
+                    Resilient interdependence over isolation. Strategic self-reliance with global connectivity. Sovereign clouds, regional AI models, diversified suppliers.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-rose-500/20 rounded text-xs text-rose-300">Strategic Control</span>
+                    <span class="px-2 py-1 bg-rose-500/20 rounded text-xs text-rose-300">Global Connectivity</span>
+                </div>
+            </div>
+
+            <!-- Action Card -->
+            <div class="trend-card rounded-xl p-6 flex flex-col justify-center items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-3xl mb-4 glow">
+                    🚀
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Ready to Adapt?</h3>
+                <p class="text-slate-400 text-sm mb-4">
+                    These trends are reshaping enterprise strategy. The question is: which ones are you acting on?
+                </p>
+                <button class="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-medium hover:opacity-90 transition">
+                    Explore Implications
+                </button>
+            </div>
+        </div>
+
+        <!-- Source Attribution -->
+        <div class="border-t border-slate-800 pt-8">
+            <div class="flex flex-wrap items-center justify-center gap-6 text-slate-500 text-sm">
+                <div class="flex items-center gap-2">
+                    <span>📊</span>
+                    <span>Source: Capgemini Top Tech Trends 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span>⏱️</span>
+                    <span class="mono">Pulled: 2026-03-20</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span>🤖</span>
+                    <span>Built by Kingdom Claw</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implications Section -->
+    <section class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800">
+        <h2 class="text-3xl font-bold mb-8 text-center">Strategic Implications</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-slate-800/50 rounded-xl p-6">
+                <h3 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                    <span class="text-green-400">↑</span> What's Accelerating
+                </h3>
+                <ul class="space-y-3 text-slate-300 text-sm">
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-400 mt-1">•</span>
+                        <span>AI-native development workflows (intent over code)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-400 mt-1">•</span>
+                        <span>Hybrid/multi-cloud architectures for AI workloads</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-400 mt-1">•</span>
+                        <span>Autonomous operations with AI agents</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-400 mt-1">•</span>
+                        <span>Regional AI model development (sovereignty)</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-slate-800/50 rounded-xl p-6">
+                <h3 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                    <span class="text-amber-400">!</span> What's at Risk
+                </h3>
+                <ul class="space-y-3 text-slate-300 text-sm">
+                    <li class="flex items-start gap-2">
+                        <span class="text-amber-400 mt-1">•</span>
+                        <span>Organizations still in "POC mode" on AI</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-amber-400 mt-1">•</span>
+                        <span>Single-cloud dependencies for AI infrastructure</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-amber-400 mt-1">•</span>
+                        <span>Manual coding workflows without AI orchestration</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-amber-400 mt-1">•</span>
+                        <span>Isolationist sovereignty strategies</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-500 text-sm">
+            <p>Generated by Kingdom Claw — Research-driven synthesis, live from source.</p>
+            <p class="mono mt-2 text-xs">curl -X SEARCH https://future.io | kingdom-claw --synthesize</p>
+        </div>
+    </footer>
+</body>
+</html>

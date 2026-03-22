@@ -1,0 +1,107 @@
+# ARRISE CASE MANAGER - BUILD PROMPT
+
+Build a complete case management platform for Arise Counseling Services (ariserecoveryonline.com). They offer FVIP (24-week family violence), DUI evaluations/treatment, substance abuse, anger management, IOP, counseling, and psychiatric services. Need to track clients, attendance, payments, documents, completion letters, and probation officer communications.
+
+## TECH STACK
+Next.js 15 + Supabase (PostgreSQL, Auth, Storage, RLS) + Tailwind + shadcn/ui
+
+## DATABASE TABLES
+
+clients: id, first_name, last_name, dob, phone, email, address fields, emergency_contact, gender, race_ethnicity, marital_status, employment_status, language, insurance fields, timestamps
+
+programs: id, name (FVIP/DUI_EVAL/DUI_TREATMENT/LEVEL1_SA/ANGER_MGMT/IOP/COUNSELING/PSYCH), display_name, description, is_group_program, total_sessions, duration_weeks, fee_structure (JSONB), compliance_reporting
+
+groups: id, program_id, name, day_of_week, start_time, end_time, facilitator_id, location, is_active
+
+staff: id, name, email, phone, role (admin/facilitator/office_staff/psychiatrist/nurse_practitioner), credentials, is_active
+
+enrollments: id, client_id, program_id, group_id, referral_source, referral_type (court_ordered/probation/voluntary/attorney), court_name, case_number, charge_offense, enrollment_date, orientation_date, start_date, expected_completion_date, actual_completion_date, status (pending_orientation/active/completed/terminated/transferred/hold), termination_reason, fee_plan (JSONB), balance_due, notes
+
+probation_officers: id, name, agency, email, phone, fax, office_address
+
+probation_assignments: id, enrollment_id, officer_id, supervision_type, referral_date, reporting_frequency, special_conditions, is_primary
+
+sessions: id, group_id, session_date, session_number, facilitator_id, topic, notes
+
+attendance: id, enrollment_id, session_id, status (present/absent/excused/late), check_in_time, minutes_late, notes, recorded_by
+
+payments: id, client_id, enrollment_id, amount, payment_date, method (cash/card/money_order/check/insurance), receipt_number, receipt_url, balance_after, notes, recorded_by
+
+documents: id, client_id, enrollment_id, document_type (court_order/intake_form/contract/assessment/id/proof_of_address/probation_paperwork/receipt/progress_letter/completion_letter/termination_letter/transfer_letter/psychiatric_eval/other), file_name, file_path, file_size, uploaded_by, uploaded_at, is_visible_to_officer, notes
+
+letters: id, enrollment_id, letter_type (completion/termination/transfer/progress/attendance_summary), generated_at, generated_by, pdf_path, emailed_to, email_sent_at, faxed_to, fax_sent_at
+
+audit_logs: id, user_id, client_id, action (document_upload/payment_recorded/attendance_added/status_changed/letter_generated/email_sent), details (JSONB), created_at
+
+users (auth): id, email, role (admin/staff/facilitator/probation_officer), staff_id, probation_officer_id, is_active, last_login
+
+## ROLES & PERMISSIONS
+
+Admin: Full access, manage staff, configure programs, all reports, override status
+Facilitator: View assigned groups, record attendance, add notes. No payment access.
+Office Staff: Create/edit clients, payments, documents, letters, emails, reports
+Probation Officer: View-only their assigned clients. Attendance summary, payment history, download letters. No edits. No internal notes.
+
+Use Supabase RLS for enforcement.
+
+## PAGES
+
+1. Login
+2. Admin Dashboard (active clients, today's sessions, alerts for missing docs/overdue balances/compliance deadlines, quick stats)
+3. Client List (search, filter by program/status/PO/court, sort, quick actions)
+4. Client Detail (tabs: Overview, Enrollments, Attendance, Payments, Documents, Letters, Notes, Audit). Main operational hub.
+5. Attendance (today's sessions, mark present/absent/late/excused, auto-calculate percentages)
+6. Payments (entry form, receipt upload, balance tracker, history)
+7. Documents (upload with type, visibility toggle for PO, preview/download)
+8. Letters (generate completion/termination/transfer, preview, email to PO, download PDF, transmission log)
+9. Probation Officer Portal (login, list of assigned clients, view-only detail with attendance/payment/letters)
+10. Reports (daily attendance, weekly/monthly summaries, FVIP compliance, financial by program, program metrics, CSV/PDF export)
+11. Settings (program config, staff, PO directory, user accounts)
+
+## KEY WORKFLOWS
+
+Intake: Create client → enter probation info → select PO → enroll in program → upload documents → sign contract → schedule orientation (FVIP)
+
+Attendance: Open today's session → see enrolled clients → mark status → add notes → close session → auto-flag thresholds
+
+Completion: Verify all sessions/balance/documents → change status to completed → generate letter → email to PO → log transmission → FVIP: remind about 4-day referral notification
+
+Email Packet: Click "Generate Case Packet" → system compiles demographics/attendance/payments/balance/letter/documents → email compose opens → send → log
+
+## COMPLIANCE AUTOMATION
+
+FVIP: Alert 5th of month for 10th-day reporting. Alert on completion for 4-day referral notification. Auto-calculate 24-week completion. Track orientation before first session.
+
+DUI: Enforce evaluator ≠ treatment provider. Flag offender tier (first/multiple/habitual). DDS reports.
+
+General: Missing docs alert. Balance overdue (>30 days). Attendance threshold (>2 absences). Completion approaching (2 weeks).
+
+## DESIGN
+
+Professional, court-appropriate. NOT consumer/startup style. Card layouts, subtle shadows, strong typography. Deep blues/slate with program accent colors. Responsive. Sortable/filterable tables. Clear forms with validation. No unnecessary decoration.
+
+## SEED DATA
+
+10-15 clients across programs. 2-3 facilitators. 3-4 POs from different counties. 4-5 groups. Sample attendance, payments, documents, letters.
+
+## SECURITY
+
+Supabase Auth. RLS for PO access. Audit logging. Session timeout. Document access logging.
+
+## BUILD ORDER
+
+1. Supabase schema + auth + RLS
+2. Client management (list, create, detail)
+3. Enrollments + programs
+4. Attendance tracking
+5. Payment tracking
+6. Document upload
+7. Letter generation
+8. PO portal
+9. Reports
+10. Compliance automation
+11. Polish + seed data
+
+## SUCCESS CRITERIA
+
+Intake < 5 min. Attendance < 30 sec per group. Completion letter < 2 min. POs self-serve for status. No missed compliance deadlines. Full audit trail.

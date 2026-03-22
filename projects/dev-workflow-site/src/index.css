@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-water-400 to-water-600 bg-clip-text text-transparent;
+  }
+}

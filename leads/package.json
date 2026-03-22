@@ -1,0 +1,15 @@
+{
+  "name": "leads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "send-email.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "agentmail": "^0.4.9"
+  }
+}

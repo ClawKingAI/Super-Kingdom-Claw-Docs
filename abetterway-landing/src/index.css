@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-forest-green-600 hover:bg-forest-green-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-golden-500 text-golden-600 hover:bg-golden-500 hover:text-white font-semibold rounded-lg transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply py-20 md:py-28 px-4 md:px-8;
+  }
+  
+  .heading-primary {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-warm-brown-800 leading-tight;
+  }
+  
+  .heading-secondary {
+    @apply text-3xl md:text-4xl font-bold text-warm-brown-800;
+  }
+  
+  .text-body {
+    @apply text-lg text-warm-brown-600 leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, #f5e6d3 0%, #fdf8f3 50%, #e8f5e8 100%);
+  }
+  
+  .bg-gradient-hero {
+    background: linear-gradient(180deg, #fdf8f3 0%, #f5e6d3 100%);
+  }
+}

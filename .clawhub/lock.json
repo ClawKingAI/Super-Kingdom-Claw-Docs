@@ -12,6 +12,22 @@
     "memory-maintenance": {
       "version": "1.0.0",
       "installedAt": 1773689477572
+    },
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1773921578435
+    },
+    "ddg-web-search": {
+      "version": "1.0.0",
+      "installedAt": 1773921601643
+    },
+    "swift-expert": {
+      "version": "0.1.0",
+      "installedAt": 1773958622150
+    },
+    "agent-memory": {
+      "version": "1.0.0",
+      "installedAt": 1773967081282
     }
   }
 }

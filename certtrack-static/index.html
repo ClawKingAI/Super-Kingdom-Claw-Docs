@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CertTrack - A Better Way Ministries</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a5f',
+            accent: '#10b981',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-100 min-h-screen">
+  <aside class="fixed left-0 top-0 h-full w-64 bg-[#1e3a5f] text-white flex flex-col z-50">
+    <div class="p-6 border-b border-white/10">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-[#10b981] rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg">CertTrack</h1>
+          <p class="text-xs text-white/60">A Better Way Ministries</p>
+        </div>
+      </div>
+    </div>
+    <nav class="flex-1 p-4 space-y-1">
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-white/15 border-l-[3px] border-[#10b981]">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        Students
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        Certificates
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Time Tracking
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        Reports
+      </a>
+    </nav>
+    <div class="p-4 border-t border-white/10">
+      <div class="flex items-center gap-3 px-4 py-3">
+        <div class="w-9 h-9 bg-[#10b981]/20 rounded-full flex items-center justify-center"><span class="text-[#10b981] font-medium text-sm">DM</span></div>
+        <div><p class="text-sm font-medium">David Morgan</p><p class="text-xs text-white/60">Director of Education</p></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="ml-64 p-8">
+    <div class="mb-8">
+      <h1 class="text-2xl font-bold text-slate-800">Dashboard</h1>
+      <p class="text-slate-500 text-sm mt-1">Overview of vocational training activity</p>
+    </div>
+
+    <div class="grid grid-cols-4 gap-6 mb-8">
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800">47</h3>
+        <p class="text-slate-500 text-sm">Active Students</p>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800">63</h3>
+        <p class="text-slate-500 text-sm">Active Enrollments</p>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800">1,284</h3>
+        <p class="text-slate-500 text-sm">Hours This Month</p>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800">8</h3>
+        <p class="text-slate-500 text-sm">Near Completion</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl border border-slate-200 p-6 mb-8">
+      <h3 class="font-semibold text-slate-800 mb-4">14 Certificate Programs</h3>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="p-3 bg-amber-50 rounded-lg"><p class="font-medium text-amber-800">Wood Shop & Commercial Table Production</p><p class="text-amber-600 text-sm">900 hours</p></div>
+        <div class="p-3 bg-blue-50 rounded-lg"><p class="font-medium text-blue-800">Van/Truck Loading & Logistics Operations</p><p class="text-blue-600 text-sm">400 hours</p></div>
+        <div class="p-3 bg-indigo-50 rounded-lg"><p class="font-medium text-indigo-800">Truck Loading & Commercial Transportation</p><p class="text-indigo-600 text-sm">990 hours</p></div>
+        <div class="p-3 bg-green-50 rounded-lg"><p class="font-medium text-green-800">Lawn Care & Landscape Operations</p><p class="text-green-600 text-sm">800 hours</p></div>
+        <div class="p-3 bg-slate-50 rounded-lg"><p class="font-medium text-slate-800">Automotive Technician</p><p class="text-slate-600 text-sm">900 hours</p></div>
+        <div class="p-3 bg-red-50 rounded-lg"><p class="font-medium text-red-800">Small Engine Repair & Maintenance</p><p class="text-red-600 text-sm">400 hours</p></div>
+        <div class="p-3 bg-pink-50 rounded-lg"><p class="font-medium text-pink-800">Retail Operations & Inventory Systems</p><p class="text-pink-600 text-sm">500 hours</p></div>
+        <div class="p-3 bg-violet-50 rounded-lg"><p class="font-medium text-violet-800">Cashiering & Point-of-Sale Operations</p><p class="text-violet-600 text-sm">500 hours</p></div>
+        <div class="p-3 bg-orange-50 rounded-lg"><p class="font-medium text-orange-800">Facilities Maintenance & Property Services</p><p class="text-orange-600 text-sm">900 hours</p></div>
+        <div class="p-3 bg-yellow-50 rounded-lg"><p class="font-medium text-yellow-800">Food Service & Kitchen Operations</p><p class="text-yellow-600 text-sm">700 hours</p></div>
+        <div class="p-3 bg-cyan-50 rounded-lg"><p class="font-medium text-cyan-800">Moving Operations Dispatch & Customer Service</p><p class="text-cyan-600 text-sm">800 hours</p></div>
+        <div class="p-3 bg-teal-50 rounded-lg"><p class="font-medium text-teal-800">Donation Pickup Scheduling & Logistics Coordination</p><p class="text-teal-600 text-sm">700 hours</p></div>
+        <div class="p-3 bg-rose-50 rounded-lg"><p class="font-medium text-rose-800">Media Production & Digital Content Operations</p><p class="text-rose-600 text-sm">800 hours</p></div>
+        <div class="p-3 bg-emerald-50 rounded-lg"><p class="font-medium text-emerald-800">Christmas Tree & Seasonal Retail Operations</p><p class="text-emerald-600 text-sm">350 hours</p></div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl border border-slate-200 p-6">
+      <h3 class="font-semibold text-slate-800 mb-4">Hours by Certificate</h3>
+      <div class="space-y-4">
+        <div><div class="flex justify-between text-sm mb-1"><span>Wood Shop</span><span>456 / 900 hrs</span></div><div class="h-2 bg-slate-100 rounded-full"><div class="h-full bg-amber-500 rounded-full" style="width:51%"></div></div></div>
+        <div><div class="flex justify-between text-sm mb-1"><span>Truck Loading</span><span>312 / 990 hrs</span></div><div class="h-2 bg-slate-100 rounded-full"><div class="h-full bg-blue-500 rounded-full" style="width:32%"></div></div></div>
+        <div><div class="flex justify-between text-sm mb-1"><span>Lawn Care</span><span>198 / 800 hrs</span></div><div class="h-2 bg-slate-100 rounded-full"><div class="h-full bg-green-500 rounded-full" style="width:25%"></div></div></div>
+        <div><div class="flex justify-between text-sm mb-1"><span>Automotive</span><span>145 / 900 hrs</span></div><div class="h-2 bg-slate-100 rounded-full"><div class="h-full bg-slate-500 rounded-full" style="width:16%"></div></div></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

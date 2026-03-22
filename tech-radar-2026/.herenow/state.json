@@ -1,0 +1,7 @@
+{
+  "publishes": {
+    "jazzy-summit-jbkm": {
+      "siteUrl": "https://jazzy-summit-jbkm.here.now/"
+    }
+  }
+}

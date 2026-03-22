@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/certificates/page": "/certificates",
+  "/deletion-requests/page": "/deletion-requests",
+  "/page": "/",
+  "/reports/page": "/reports",
+  "/settings/page": "/settings",
+  "/students/page": "/students",
+  "/time-tracking/page": "/time-tracking"
+}
