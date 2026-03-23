@@ -1,0 +1,14 @@
+{
+  "id": "",
+  "timestamp": "",
+  "from_agent": "",
+  "to_agent": "",
+  "task": "",
+  "context": {},
+  "next_steps": [],
+  "artifacts": [],
+  "status": "pending",
+  "picked_up_at": null,
+  "completed_at": null,
+  "notes": ""
+}

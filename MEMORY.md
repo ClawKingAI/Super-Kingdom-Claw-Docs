@@ -84,6 +84,34 @@
 - **Campaign tracking:** `/data/.openclaw/workspace/leads/campaigns/`
 - **Key metrics:** Sent, opened, responded, response rate
 
+## Agent Memory System v2 (Lean)
+
+**Status:** Operational (2026-03-23)
+
+**Design:** Single agent (me) + file-based memory. No subagent spawning for complex tasks.
+
+**Components:**
+- `agent-memory/tasks/pending.json` — Work queue
+- `agent-memory/tasks/completed.json` — Done work archive
+- `agent-memory/context/*.json` — Role-specific knowledge (researcher, developer, designer, outreach)
+- `agent-memory/v2-LEAN-DESIGN.md` — Full design doc
+
+**Why this approach:**
+- Subagent spawning is unreliable (timeouts, 0 tokens)
+- I can do all work directly with file persistence
+- No handoff failures, no spawn overhead
+- Context files give role specialization without spawning
+
+**When I DO spawn:**
+- Simple one-shot file operations
+- Parallel quick tasks (research multiple topics)
+- Timeout: 180s minimum for any spawn
+
+**When I DON'T spawn:**
+- Multi-step workflows
+- Complex reasoning
+- Handoffs between "agents"
+
 ## Agent Self-Protection Rules
 - **NO `pkill`, `killall`, or broad process termination** — these cascade and crash the gateway
 - **NO signal-sending commands** (`kill -9`, `kill -TERM`) — causes gateway disconnect

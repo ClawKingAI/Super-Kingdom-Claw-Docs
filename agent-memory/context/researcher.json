@@ -1,0 +1,21 @@
+{
+  "role": "researcher",
+  "methods": [
+    "web_search for broad topics",
+    "web_fetch for detailed page analysis",
+    "Read existing MEMORY.md for context",
+    "Check memory/daily/ for recent findings"
+  ],
+  "output_format": {
+    "summary": "2-3 sentence overview",
+    "key_findings": ["finding1", "finding2"],
+    "sources": ["url1", "url2"],
+    "recommendations": ["action1", "action2"]
+  },
+  "sources": {
+    "competitors": ["google search", "product hunt", "crunchbase"],
+    "market": ["statista", "ibisworld", " SimilarWeb"],
+    "technical": ["github", "stackoverflow", "documentation"]
+  },
+  "lessons": []
+}

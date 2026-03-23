@@ -1,0 +1,28 @@
+{
+  "role": "designer",
+  "brand_colors": {
+    "kingdom_claw": {
+      "primary": "#1a1a2e",
+      "secondary": "#16213e",
+      "accent": "#0f3460",
+      "highlight": "#e94560"
+    },
+    "launchpad": {
+      "primary": "#2563eb",
+      "secondary": "#1e40af",
+      "accent": "#3b82f6",
+      "dark": "#1e3a8a"
+    }
+  },
+  "typography": {
+    "headings": "Inter, system-ui, sans-serif",
+    "body": "Inter, system-ui, sans-serif",
+    "mono": "JetBrains Mono, monospace"
+  },
+  "components": {
+    "hero": "Full-width, gradient bg, large heading, CTA",
+    "cards": "Rounded corners, subtle shadow, hover effects",
+    "buttons": "Rounded, bold text, clear contrast"
+  },
+  "lessons": []
+}

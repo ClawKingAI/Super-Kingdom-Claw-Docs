@@ -1,28 +1,24 @@
 # HEARTBEAT.md
-
 Purpose: keep the agent useful over long idle periods without creating noise.
 
-Only do lightweight maintenance unless the human explicitly asks for proactive monitoring.
-
 ## On heartbeat
-
-1. Check whether there is an unfinished task recorded in today's or yesterday's memory.
-2. If yes, only surface it if:
-   - there is a clear blocker to report, or
-   - a short reminder would genuinely help.
-3. If no meaningful update exists, reply `HEARTBEAT_OK`.
+1. **Check task queue** (`agent-memory/tasks/pending.json`):
+   - If pending tasks exist, surface the oldest one
+   - Ask David if they want me to work on it
+2. **Check memory** for unfinished work from yesterday
+3. If nothing needs attention, reply `HEARTBEAT_OK`
 
 ## Quiet hours
-
 Prefer silence from 23:00-08:00 America/New_York unless something is urgent.
 
-## Maintenance cadence
+## Task Priority
+1. Client deliverables (deadlines)
+2. Campaign sends (rate limit windows)
+3. Research requests
+4. Internal improvements
 
-Occasionally, when cheap and useful:
-
-- ensure `memory/` exists
-- ensure today's daily note exists
-- prune obvious duplication between daily notes and `MEMORY.md`
-- note stale placeholders that still need the human's input
-
-Do not invent work just because a heartbeat arrived.
+## Maintenance
+Occasionally:
+- Ensure `memory/` exists with today's note
+- Prune old completed tasks (>7 days)
+- Update context files with new lessons learned

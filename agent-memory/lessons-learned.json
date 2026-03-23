@@ -1,0 +1,10 @@
+{
+  "lessons": [
+    {
+      "date": "2026-03-23",
+      "pattern": "Auto-spawn threshold",
+      "insight": "Spawn subagent for tasks >13 seconds to keep main session responsive",
+      "outcome": "David gets faster responses while work continues in background"
+    }
+  ]
+}

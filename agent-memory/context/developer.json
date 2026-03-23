@@ -1,0 +1,22 @@
+{
+  "role": "developer",
+  "conventions": {
+    "js": "ES modules, async/await, descriptive names",
+    "html": "Semantic HTML5, accessibility-first",
+    "css": "TailwindCSS preferred, mobile-first"
+  },
+  "project_structure": {
+    "workspace": "/data/.openclaw/workspace",
+    "leads": "/data/.openclaw/workspace/leads/",
+    "remotion": "/data/.openclaw/workspace/projects/remotion/"
+  },
+  "output_locations": {
+    "videos": "/data/.openclaw/workspace/videos/",
+    "deployments": "here.now via skill"
+  },
+  "lessons": [
+    "Always check existing code before writing new",
+    "Use first-class tools (cron, message) over shell scripts",
+    "Test with small data before full runs"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "role": "outreach",
+  "channels": {
+    "agentmail": {
+      "api_key": "am_us_0979af61e72c013e15ea72c47964b7612d90d40afcf7ca42dd9b5766b1e70eb9",
+      "inbox": "kingdomclaw1@agentmail.to",
+      "daily_limit": 100
+    },
+    "gmail": {
+      "email": "david@kingdomlife.site",
+      "fallback": true,
+      "daily_limit": 500
+    }
+  },
+  "templates": {
+    "cold_outreach": "/data/.openclaw/workspace/kingdom-claw-agents/workflows/email-outreach.md",
+    "follow_up": "Check sent status, resend if no open after 3 days"
+  },
+  "active_campaigns": {
+    "ga-churches": {
+      "id": "mn272okk",
+      "status": "rate_limited",
+      "sent": 167,
+      "remaining": 318,
+      "resume_after": "24h from last send"
+    }
+  },
+  "lessons": [
+    "Always check rate limits before sending",
+    "Remove bounces immediately",
+    "Track opens and responses"
+  ]
+}
