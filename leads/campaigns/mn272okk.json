@@ -113,28 +113,6 @@
       "followUps": []
     },
     {
-      "email": "RMILLICAN@ANTIOCH-CHURCH.ORG",
-      "name": "Ronald E Millican",
-      "organization": "Antioch Baptist Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.135Z",
-      "sentAt": "2026-03-22T21:06:08.437Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "RCHANCE@ANTIOCH-CHURCH.ORG",
-      "name": "Raymon Chance",
-      "organization": "Antioch Baptist Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.135Z",
-      "sentAt": "2026-03-22T21:06:09.854Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "BILL.LLOYD@NGUMC.NET",
       "name": "William L Lloyd",
       "organization": "Apalachee United Methodist Chr",
@@ -223,17 +201,6 @@
       "followUps": []
     },
     {
-      "email": "LMILLS@BEECHHAVEN.ORG",
-      "name": "Lester D Mills",
-      "organization": "Beech Haven Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.135Z",
-      "sentAt": "2026-03-22T21:06:11.228Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "VICTOR.EDMONDS@COXINC.COM",
       "name": "Victor Edmonds",
       "organization": "Believers Baptist Church",
@@ -278,17 +245,6 @@
       "followUps": []
     },
     {
-      "email": "CHUCK@BEREACHRISTIAN.ORG",
-      "name": "Chuck Fontana",
-      "organization": "Berea Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.135Z",
-      "sentAt": "2026-03-22T21:06:12.769Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "SJACK@ATLANTABEREAN.COM",
       "name": "Sherwin Jack",
       "organization": "Berean SDA Church",
@@ -328,17 +284,6 @@
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T20:45:59.045Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "BILLY@BETHESDABAPTISTCHURCH.COM",
-      "name": "Billy Williams",
-      "organization": "Bethesda Baptist Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:06:14.356Z",
       "openedAt": null,
       "respondedAt": null,
       "followUps": []
@@ -394,17 +339,6 @@
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T20:46:05.451Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "TBFMIN@BELLSOUTH.NET",
-      "name": "Randy Byrd",
-      "organization": "Bible Fellwoship Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:03.863Z",
       "openedAt": null,
       "respondedAt": null,
       "followUps": []
@@ -520,34 +454,12 @@
       "followUps": []
     },
     {
-      "email": "MARC@BROOKHAVENCHRISTIAN.ORG",
-      "name": "Marc Burch",
-      "organization": "Brookhaven Christian Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:05.217Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "CTHURSTON@EAHEART.COM",
       "name": "Adam Johnson",
       "organization": "Browns Bridge Church",
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T20:46:15.787Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "TCARRUTH@BYRONUMC.ORG",
-      "name": "Tom Carruth",
-      "organization": "Byron United Methodist Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:06.613Z",
       "openedAt": null,
       "respondedAt": null,
       "followUps": []
@@ -641,17 +553,6 @@
       "followUps": []
     },
     {
-      "email": "RHETT@CALVARYUMC.ORG",
-      "name": "Rhett Jackson",
-      "organization": "Calvary United Methodist Chr",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:07.951Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "KCHRISTIANBURTON@GMAIL.COM",
       "name": "Christian Burton",
       "organization": "Calvary Way Baptist Church",
@@ -707,17 +608,6 @@
       "followUps": []
     },
     {
-      "email": "RWALKER@CARTECAYUMC.ORG",
-      "name": "Renee Walker",
-      "organization": "Cartecay United Methodist Chr",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:09.396Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "PREACHA@GMAIL.COM",
       "name": "Larry D Woodson",
       "organization": "Cedar Valley Church Of God",
@@ -746,17 +636,6 @@
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T20:47:17.271Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "ACRONIC@CENTRALBAPTISTNEWNAN.ORG",
-      "name": "Ann Cronic",
-      "organization": "Central Baptist Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:10.737Z",
       "openedAt": null,
       "respondedAt": null,
       "followUps": []
@@ -795,17 +674,6 @@
       "followUps": []
     },
     {
-      "email": "BILLY@CHRISTCHAPELGA.COM",
-      "name": "Billy T Smith",
-      "organization": "Christ Chapel Community Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:11.980Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "PASTORJASON@CCC-CONNECTION.COM",
       "name": "Jason Skipper",
       "organization": "Christ Community Church",
@@ -823,17 +691,6 @@
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T20:47:22.900Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "MARSHALB@CHRIST-CHURCH.NET",
-      "name": "Marshal B Day",
-      "organization": "Christ Episcopal Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:13.464Z",
       "openedAt": null,
       "respondedAt": null,
       "followUps": []
@@ -905,34 +762,12 @@
       "followUps": []
     },
     {
-      "email": "BLIGON@CHRISTIANRENEWAL.ORG",
-      "name": "Bill Ligon",
-      "organization": "Christian Renewal CHR-Brnswck",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:14.870Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "CFCBAPTIST@BELLSOUTH.NET",
       "name": "Dwight Rice",
       "organization": "Christians For Change Bapt Chr",
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T20:47:31.351Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "BARBARA@CLAIRMONTPRES.ORG",
-      "name": "Barbara W Powers",
-      "organization": "Clairmont Presbyterian Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:16.321Z",
       "openedAt": null,
       "respondedAt": null,
       "followUps": []
@@ -988,17 +823,6 @@
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T20:47:38.421Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "GDURKIN@CBCSAVANNAH.COM",
-      "name": "Greg Durkin",
-      "organization": "Community Bible Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:17.567Z",
       "openedAt": null,
       "respondedAt": null,
       "followUps": []
@@ -1092,17 +916,6 @@
       "followUps": []
     },
     {
-      "email": "RON.COLLINS@CBCLAKELAND.COM",
-      "name": "Ron Collins",
-      "organization": "Cornerstone Baptist Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:18.936Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "TOGETHERATCORNERSTONE@GMAIL.COM",
       "name": "Timothy Neal",
       "organization": "Cornerstone Baptist Church",
@@ -1180,17 +993,6 @@
       "followUps": []
     },
     {
-      "email": "RAYMOND@COVINGTONBIBLECHURCH.COM",
-      "name": "Raymond N Leonard",
-      "organization": "Covington Bible Baptist Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:20.511Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "VEITCHR@BELLSOUTH.NET",
       "name": "Jason Veitch",
       "organization": "Cross Point Church",
@@ -1224,34 +1026,12 @@
       "followUps": []
     },
     {
-      "email": "ALISONG@XPT.CC",
-      "name": "Alison Gaddis",
-      "organization": "Crosspoint Christian Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:21.819Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "ALAN@CROSSPOINTEOXFORD.COM",
       "name": "Alan Posey",
       "organization": "Crosspointe Baptist Church",
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T20:47:55.833Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "RBLACKSTOCK@CROSSVIEWBAPTISTCHURCH.COM",
-      "name": "Ronnie Blackstock",
-      "organization": "Crossview Baptist Church",
-      "status": "sent",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": "2026-03-22T21:07:23.180Z",
       "openedAt": null,
       "respondedAt": null,
       "followUps": []
@@ -2016,28 +1796,6 @@
       "followUps": []
     },
     {
-      "email": "RAINWATER@POWDERSPRINGSFUMC.ORG",
-      "name": "June Rainwater",
-      "organization": "First United Methodist Church",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "JBROOKS@FIRSTMETHODISTCHURCH.COM",
-      "name": "John Brooks",
-      "organization": "First United Methodist Church",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "CMCPRESCHOOL@WINDSTREAM.NET",
       "name": "Renee Moon",
       "organization": "First United Mthdst Chr Prschl",
@@ -2082,100 +1840,12 @@
       "followUps": []
     },
     {
-      "email": "MEFUPC@JUNO.COM",
-      "name": "Mark E Fogarty",
-      "organization": "First United Pentecostal Chr",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "MARSHA@FIVESTONESGA.COM",
-      "name": "Marsha Smith",
-      "organization": "Fivestones Church",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "DONALD.SPEARS@FLINTHILL.COM",
-      "name": "Don Spears",
-      "organization": "Flint Hill Baptist Church",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
       "email": "JAYBARCUS2@GMAIL.COM",
       "name": "Jay Barcus",
       "organization": "Forrester Community Church",
       "status": "sent",
       "addedAt": "2026-03-22T20:14:54.136Z",
       "sentAt": "2026-03-22T21:09:06.630Z",
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "CLARKEHAL@INTER-LINC.NET",
-      "name": "Hal Clarke",
-      "organization": "Forsyth Presbyterian Church",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "HGORE@FORSYTHUMC.ORG",
-      "name": "Holly Gore",
-      "organization": "Forsyth United Methodist Chr",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "ANDY.LETT@THEFOUNTAINCHURCH.ORG",
-      "name": "Andrew B Lett",
-      "organization": "Fountain United Methodist Chr",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "MHENDERSON@FREDERICABAPTIST.COM",
-      "name": "Monty Henderson",
-      "organization": "Frederica Baptist Church",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
-      "openedAt": null,
-      "respondedAt": null,
-      "followUps": []
-    },
-    {
-      "email": "TWINBRIDGES635@WINDSTREAM.NET",
-      "name": "Gary Horton",
-      "organization": "Friendship Baptist Chr At Lake",
-      "status": "pending",
-      "addedAt": "2026-03-22T20:14:54.136Z",
-      "sentAt": null,
       "openedAt": null,
       "respondedAt": null,
       "followUps": []

@@ -90,4 +90,28 @@
 - If a tool times out: report and wait, do not force-kill
 - These commands caused manual restart requirement on 2026-03-19
 
+## Auto-Spawn Rule
+**Threshold:** If a task will take >13 seconds, spawn a subagent immediately.
+
+**Why:** Keeps me free to respond to David while work continues in background.
+
+**How:**
+1. Estimate task duration before starting
+2. If >13s → call `sessions_spawn` with task details
+3. Return immediately with "Spawned [agent] for [task]"
+4. Use `sessions_yield` to receive results when done
+
+**Agent Dispatch:**
+| Task Type | Agent | Method |
+|-----------|-------|--------|
+| Video render | `developer` | sessions_spawn |
+| Web scraping | `leads` | sessions_spawn |
+| Research | `researcher` | sessions_spawn |
+| Email campaigns | `outreach` | sessions_spawn |
+| Landing pages | `designer` | sessions_spawn |
+| Deploy | `deployer` | sessions_spawn |
+| Complex multi-step | `orchestrator` | sessions_spawn |
+
+**Pattern:** Multi-Agent + Parallelization from Agentic Design Patterns skill.
+
 
