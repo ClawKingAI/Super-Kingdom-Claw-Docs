@@ -1,514 +1,837 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kingdom Claw Setup | Your Own AI Agent System</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
-  color: #f5f5f5;
-}
-h1, h2, h3, .cinzel {
-  font-family: 'Cinzel', serif;
-}
-.golden-text {
-  background: linear-gradient(135deg, #d4af37, #f4e4a6, #d4af37);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.glass-card {
-  background: rgba(26, 26, 46, 0.8);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  backdrop-filter: blur(10px);
-}
-.agent-card {
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  transition: all 0.3s ease;
-}
-.agent-card:hover {
-  border-color: rgba(212, 175, 55, 0.7);
-  transform: translateY(-4px);
-}
-.pricing-card {
-  background: linear-gradient(180deg, rgba(26, 26, 46, 0.9), rgba(10, 10, 10, 0.95));
-  border: 2px solid rgba(212, 175, 55, 0.3);
-}
-.pricing-card:hover {
-  border-color: #d4af37;
-}
-.pricing-card.popular {
-  border-color: #d4af37;
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
-}
-.feature-check { color: #10b981; }
-.feature-x { color: #ef4444; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingdom Claw Setup | Your Own AI Agent System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #050508;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, .display {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Powerful gradient background */
+    .hero-bg {
+      position: relative;
+      min-height: 100vh;
+      background: #050508;
+    }
+    
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 180, 50, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(255, 120, 50, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 0% 50%, rgba(255, 200, 100, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    /* Floating particles */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 180, 80, 0.6);
+      border-radius: 50%;
+      animation: float 15s infinite ease-in-out;
+      box-shadow: 0 0 10px rgba(255, 180, 80, 0.4);
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
+      10% { opacity: 1; transform: scale(1); }
+      90% { opacity: 1; }
+      100% { transform: translateY(-10vh) translateX(50px) scale(0.5); opacity: 0; }
+    }
+    
+    /* Warm golden text */
+    .golden-text {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 30%, #FFD700 50%, #FF8C00 70%, #FFD700 100%);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: goldShimmer 4s ease-in-out infinite;
+      text-shadow: 0 0 40px rgba(255, 180, 50, 0.3);
+    }
+    
+    @keyframes goldShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    /* Typewriter container */
+    .typewriter-container {
+      display: inline-block;
+      position: relative;
+    }
+    
+    .typewriter-text {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #FFD700;
+      animation: blink 0.7s step-end infinite;
+    }
+    
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    
+    /* Glass cards with warm glow */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 180, 80, 0.2);
+      backdrop-filter: blur(20px);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 200, 100, 0.1), transparent);
+      transition: left 0.5s;
+    }
+    
+    .glass-card:hover::before {
+      left: 100%;
+    }
+    
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 180, 80, 0.5);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(255, 180, 50, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Agent cards with pulse */
+    .agent-card {
+      position: relative;
+    }
+    
+    .agent-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      background: linear-gradient(135deg, rgba(255, 180, 80, 0.5), transparent, rgba(255, 200, 100, 0.3));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .agent-card:hover::after {
+      opacity: 1;
+    }
+    
+    /* Pricing popular glow */
+    .pricing-popular {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255, 180, 80, 0.1) 0%, transparent 50%);
+    }
+    
+    .pricing-popular::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(135deg, #FFD700, #FF8C00, #FFD700);
+      border-radius: 1.2rem;
+      z-index: -1;
+      animation: borderPulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes borderPulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+    
+    /* Button glow */
+    .btn-glow {
+      background: linear-gradient(135deg, #FFD700, #FF8C00);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(255, 180, 50, 0.4);
+      transition: all 0.3s;
+    }
+    
+    .btn-glow:hover {
+      box-shadow: 0 0 50px rgba(255, 180, 50, 0.6), 0 0 100px rgba(255, 180, 50, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .btn-glow::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: rotate(45deg);
+      animation: btnShine 3s infinite;
+    }
+    
+    @keyframes btnShine {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) rotate(45deg); }
+    }
+    
+    /* Stats counter animation */
+    .stat-number {
+      display: inline-block;
+      animation: countPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes countPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    /* Section fade in */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+    
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Gradient divider */
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255, 180, 80, 0.5), transparent);
+      margin: 4rem 0;
+    }
+    
+    /* Check marks */
+    .check { color: #22c55e; font-size: 1.2em; text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+    .x { color: #6b7280; opacity: 0.5; }
+    
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    
+    /* Hero headline glow */
+    .headline-glow {
+      text-shadow: 
+        0 0 20px rgba(255, 180, 50, 0.5),
+        0 0 40px rgba(255, 180, 50, 0.3),
+        0 0 60px rgba(255, 180, 50, 0.2);
+    }
+  </style>
 </head>
 <body class="min-h-screen">
 
-<!-- Hero -->
-<section class="px-4 py-16 md:py-24">
-  <div class="max-w-5xl mx-auto text-center">
-    <p class="text-amber-400 text-sm tracking-widest mb-4">KINGDOM CLAW SETUP SERVICE</p>
-    <h1 class="text-4xl md:text-6xl font-bold cinzel golden-text mb-6">
-      Your Own AI Agent System
-    </h1>
-    <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-4">
-      A team of 8 specialized AI agents working 24/7 for your business — 
-      finding leads, sending outreach, building websites, handling operations.
-    </p>
-    <p class="text-lg text-amber-400 font-semibold mb-8">
-      No AI token costs. Flat rate. Generous limits that don't run out.
-    </p>
-  </div>
-</section>
-
-<!-- How The Agents Work -->
-<section class="px-4 py-16 bg-black/30">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold cinzel golden-text mb-4">How Your AI Agents Work</h2>
-      <p class="text-gray-400 max-w-2xl mx-auto">
-        Built on proven design patterns for intelligent, reliable automation. 
-        Your agents don't just chat — they execute complex workflows, 
-        coordinate with each other, and improve over time.
-      </p>
+  <!-- Hero -->
+  <section class="hero-bg flex items-center px-4 py-20 relative">
+    <!-- Floating particles -->
+    <div class="particles">
+      <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+      <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+      <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+      <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
+      <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
+      <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+      <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
+      <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
+      <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
     </div>
-
-    <!-- Core Patterns -->
-    <div class="grid md:grid-cols-2 gap-6 mb-12">
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-xl font-semibold text-amber-400 mb-3">🔄 Multi-Agent Orchestration</h3>
-        <p class="text-gray-400 text-sm">
-          Eight specialists working together. When you request something complex, 
-          the Orchestrator routes tasks to the right agents — Developer builds, 
-          Designer creates, Outreach sends. They pass work between each other 
-          like a real team.
-        </p>
-      </div>
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-xl font-semibold text-amber-400 mb-3">📋 Task Planning & Routing</h3>
-        <p class="text-gray-400 text-sm">
-          Complex requests get decomposed into steps. The system classifies your 
-          intent and routes to specialists automatically. "Find me leads and 
-          email them" triggers Leads → Outreach in sequence.
-        </p>
-      </div>
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-xl font-semibold text-amber-400 mb-3">🔁 Reflection Loops</h3>
-        <p class="text-gray-400 text-sm">
-          Quality-critical outputs go through generate → critique → refine cycles. 
-          Code, content, and proposals are self-reviewed before delivery. 
-          The agents improve their own work.
-        </p>
-      </div>
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-xl font-semibold text-amber-400 mb-3">🧠 Persistent Memory</h3>
-        <p class="text-gray-400 text-sm">
-          Your agents remember. Conversations, projects, contacts, decisions — 
-          everything is stored and retrieved. They learn your preferences and 
-          build on past work.
-        </p>
-      </div>
-    </div>
-
-    <!-- 8 Agents -->
-    <h3 class="text-2xl font-bold cinzel text-center mb-8">Your 8 Specialized Agents</h3>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="agent-card rounded-xl p-5">
-        <div class="text-2xl mb-2">🧠</div>
-        <h4 class="font-semibold text-amber-300 mb-1">Orchestrator</h4>
-        <p class="text-xs text-gray-400">Coordinates all agents, manages projects, handles intake</p>
-      </div>
-      <div class="agent-card rounded-xl p-5">
-        <div class="text-2xl mb-2">💻</div>
-        <h4 class="font-semibold text-amber-300 mb-1">Developer</h4>
-        <p class="text-xs text-gray-400">Builds apps, websites, scripts, automations</p>
-      </div>
-      <div class="agent-card rounded-xl p-5">
-        <div class="text-2xl mb-2">🎨</div>
-        <h4 class="font-semibold text-amber-300 mb-1">Designer</h4>
-        <p class="text-xs text-gray-400">Creates landing pages, branding, visual content</p>
-      </div>
-      <div class="agent-card rounded-xl p-5">
-        <div class="text-2xl mb-2">📧</div>
-        <h4 class="font-semibold text-amber-300 mb-1">Outreach</h4>
-        <p class="text-xs text-gray-400">Sends personalized emails, follows up, tracks responses</p>
-      </div>
-      <div class="agent-card rounded-xl p-5">
-        <div class="text-2xl mb-2">🔍</div>
-        <h4 class="font-semibold text-amber-300 mb-1">Leads</h4>
-        <p class="text-xs text-gray-400">Finds contacts, scrapes directories, builds lists</p>
-      </div>
-      <div class="agent-card rounded-xl p-5">
-        <div class="text-2xl mb-2">📚</div>
-        <h4 class="font-semibold text-amber-300 mb-1">Researcher</h4>
-        <p class="text-xs text-gray-400">Competitive intel, documentation, deep analysis</p>
-      </div>
-      <div class="agent-card rounded-xl p-5">
-        <div class="text-2xl mb-2">📊</div>
-        <h4 class="font-semibold text-amber-300 mb-1">Analyst</h4>
-        <p class="text-xs text-gray-400">Tracks metrics, generates reports, monitors performance</p>
-      </div>
-      <div class="agent-card rounded-xl p-5">
-        <div class="text-2xl mb-2">🚀</div>
-        <h4 class="font-semibold text-amber-300 mb-1">Deployer</h4>
-        <p class="text-xs text-gray-400">Publishes websites live, handles hosting</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Capabilities -->
-<section class="px-4 py-16">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold cinzel text-center golden-text mb-12">What Your Agents Can Do</h2>
     
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3">🌐 Intelligent Web Scraping</h3>
-        <p class="text-sm text-gray-400">
-          Bypasses Cloudflare and anti-bot protections. Extracts data from directories, 
-          competitor sites, business listings. Builds clean contact lists automatically.
-        </p>
-      </div>
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3">📧 Automated Outreach Campaigns</h3>
-        <p class="text-sm text-gray-400">
-          Sends personalized emails with unique variations. Tracks opens, responses, 
-          follow-ups. 300+ emails per day. Full pipeline from contact to close.
-        </p>
-      </div>
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3">⚡ Instant Website Deployment</h3>
-        <p class="text-sm text-gray-400">
-          Landing pages, business sites, campaign pages — built and deployed in under 
-          an hour. Live URLs instantly. No hosting setup required.
-        </p>
-      </div>
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3">🎬 Code-Rendered Video Generation</h3>
-        <p class="text-sm text-gray-400">
-          Videos built with code, not templates. Custom animations, text overlays, 
-          branded content. Rendered programmatically and published automatically.
-        </p>
-      </div>
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3">⏰ Scheduled Automation</h3>
-        <p class="text-sm text-gray-400">
-          Recurring tasks run on schedule. Daily outreach, weekly reports, 
-          follow-up sequences — all automated. Works while you sleep.
-        </p>
-      </div>
-      <div class="glass-card rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3">💬 Multi-Channel Messaging</h3>
-        <p class="text-sm text-gray-400">
-          Telegram, WhatsApp, Discord, email — your agents respond wherever you need. 
-          One system, all channels. Unified conversation history.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- No AI Token Costs -->
-<section class="px-4 py-16 bg-gradient-to-b from-amber-900/20 to-transparent">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold cinzel golden-text mb-6">
-      No AI Token Costs
-    </h2>
-    <p class="text-xl text-gray-300 mb-4">
-      You pay a flat rate — not per token, not per word, not per request.
-    </p>
-    <p class="text-lg text-gray-400 mb-8">
-      There are rate limits per minute, but they're generous. 
-      Your agents can run all day without hitting hard caps.
-    </p>
-    <div class="glass-card rounded-xl p-8 inline-block">
-      <p class="text-gray-400 mb-4">Most AI subscriptions:</p>
-      <p class="text-3xl font-bold text-red-400 mb-4">$100-300/month</p>
-      <p class="text-gray-400 mb-4">Kingdom Claw system:</p>
-      <p class="text-5xl font-bold text-green-400">$0/month</p>
-      <p class="text-sm text-gray-500 mt-4">Flat rate setup. No ongoing AI fees.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Comparison -->
-<section class="px-4 py-16">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold cinzel text-center mb-12">Compare</h2>
-    <div class="overflow-x-auto">
-      <table class="w-full text-left">
-        <thead>
-          <tr class="border-b border-gray-700">
-            <th class="p-4 text-amber-400">Feature</th>
-            <th class="p-4 text-center">ChatGPT Plus</th>
-            <th class="p-4 text-center">Claude Pro</th>
-            <th class="p-4 text-center text-amber-400">Kingdom Claw</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Monthly AI cost</td>
-            <td class="p-4 text-center">$20</td>
-            <td class="p-4 text-center">$20</td>
-            <td class="p-4 text-center font-bold text-green-400">$0</td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Multi-agent team</td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-check">✓ 8 agents</span></td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Automated workflows</td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-check">✓</span></td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Web scraping</td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-check">✓</span></td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Email outreach</td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-check">✓</span></td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Website builder</td>
-            <td class="p-4 text-center">Limited</td>
-            <td class="p-4 text-center">Limited</td>
-            <td class="p-4 text-center"><span class="feature-check">✓ Full</span></td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Video generation</td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-check">✓ Code-rendered</span></td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">24/7 operation</td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-check">✓</span></td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Persistent memory</td>
-            <td class="p-4 text-center">Limited</td>
-            <td class="p-4 text-center">Limited</td>
-            <td class="p-4 text-center"><span class="feature-check">✓ Full</span></td>
-          </tr>
-          <tr>
-            <td class="p-4">You own it</td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-x">✗</span></td>
-            <td class="p-4 text-center"><span class="feature-check">✓ Forever</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- Pricing -->
-<section id="pricing" class="px-4 py-16 bg-black/40">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold cinzel golden-text mb-4">Setup Pricing</h2>
-      <p class="text-gray-400">One-time setup. You own everything. No ongoing AI fees.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Tier 1: $500 -->
-      <div class="pricing-card rounded-2xl p-6">
-        <div class="text-center mb-6">
-          <p class="text-amber-400 text-xs tracking-widest mb-2">STARTER</p>
-          <h3 class="text-xl font-bold cinzel mb-2">Essential Setup</h3>
-        </div>
-        <div class="text-center mb-6">
-          <span class="text-4xl font-bold text-white">$500</span>
-          <p class="text-gray-500 text-sm">one-time</p>
-        </div>
-        <ul class="space-y-2 mb-6 text-sm">
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Core agent system
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> 4 essential agents
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Messaging channels
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Basic training
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> 30-day support
-          </li>
-        </ul>
-        <a href="sms:14703716263?body=Interested%20in%20Kingdom%20Claw%20Essential%20Setup%20($500)" class="block w-full py-3 bg-gradient-to-r from-amber-600 to-amber-700 rounded-lg font-semibold text-center hover:from-amber-500 hover:to-amber-600 transition">
-          Text to Get Started
-        </a>
-      </div>
-
-      <!-- Tier 2: $1500 -->
-      <div class="pricing-card popular rounded-2xl p-6">
-        <div class="text-center mb-6">
-          <p class="text-amber-400 text-xs tracking-widest mb-2">RECOMMENDED</p>
-          <h3 class="text-xl font-bold cinzel mb-2">Professional Setup</h3>
-        </div>
-        <div class="text-center mb-6">
-          <span class="text-4xl font-bold text-white">$1,500</span>
-          <p class="text-gray-500 text-sm">one-time</p>
-        </div>
-        <ul class="space-y-2 mb-6 text-sm">
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Full 8-agent team
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Web scraping enabled
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Email outreach configured
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Website deployment
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> First campaign ready
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Full training + 30-day support
-          </li>
-        </ul>
-        <a href="sms:14703716263?body=Interested%20in%20Kingdom%20Claw%20Professional%20Setup%20($1500)" class="block w-full py-3 bg-gradient-to-r from-amber-600 to-amber-700 rounded-lg font-semibold text-center hover:from-amber-500 hover:to-amber-600 transition">
-          Text to Get Started
-        </a>
-      </div>
-
-      <!-- Tier 3: $3000 -->
-      <div class="pricing-card rounded-2xl p-6">
-        <div class="text-center mb-6">
-          <p class="text-amber-400 text-xs tracking-widest mb-2">ENTERPRISE</p>
-          <h3 class="text-xl font-bold cinzel mb-2">Full Automation</h3>
-        </div>
-        <div class="text-center mb-6">
-          <span class="text-4xl font-bold text-white">$3,000</span>
-          <p class="text-gray-500 text-sm">one-time</p>
-        </div>
-        <ul class="space-y-2 mb-6 text-sm">
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Everything in Professional
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Video generation
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Custom agent workflows
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Advanced integrations
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Multiple campaigns
-          </li>
-          <li class="flex items-center gap-2 text-gray-300">
-            <span class="text-green-400">✓</span> Dedicated onboarding
-          </li>
-        </ul>
-        <a href="sms:14703716263?body=Interested%20in%20Kingdom%20Claw%20Enterprise%20Setup%20($3000)" class="block w-full py-3 bg-gradient-to-r from-amber-600 to-amber-700 rounded-lg font-semibold text-center hover:from-amber-500 hover:to-amber-600 transition">
-          Text to Get Started
-        </a>
-      </div>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="text-center mt-12">
-      <p class="text-gray-400 mb-4">Prefer email? Contact us directly:</p>
-      <p class="text-lg">
-        <a href="mailto:kingdomclaw1@agentmail.to" class="text-amber-400 hover:text-amber-300">
-          kingdomclaw1@agentmail.to
-        </a>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <p class="text-amber-400/80 text-sm tracking-[0.4em] uppercase mb-8 fade-section" style="animation-delay: 0.1s;">
+        Kingdom Claw Setup
       </p>
-      <p class="text-gray-500 text-sm mt-2">
-        Or text: <a href="sms:14703716263" class="text-amber-400">470-371-6263</a>
+      
+      <!-- Typewriter headline -->
+      <div class="mb-8 fade-section" style="animation-delay: 0.2s;">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold display golden-text headline-glow inline-block">
+          <span id="typewriter" class="typewriter-text"></span>
+        </h1>
+      </div>
+      
+      <script>
+        const phrases = [
+          "Your Own AI Agent System",
+          "8 Agents Working 24/7",
+          "Zero AI Token Costs",
+          "Find Leads Automatically",
+          "Send Outreach While You Sleep"
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 80;
+        
+        function type() {
+          const currentPhrase = phrases[phraseIndex];
+          const typewriter = document.getElementById('typewriter');
+          
+          if (isDeleting) {
+            typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 40;
+          } else {
+            typewriter.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 80;
+          }
+          
+          if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true;
+            typingSpeed = 2000; // Pause at full text
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typingSpeed = 500; // Pause before typing new phrase
+          }
+          
+          setTimeout(type, typingSpeed);
+        }
+        
+        // Start after page load
+        setTimeout(type, 1000);
+      </script>
+      
+      <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed fade-section" style="animation-delay: 0.5s;">
+        Eight specialized agents working <span class="text-amber-400 font-semibold">24/7</span> — finding leads, sending outreach, building websites.
+      </p>
+      
+      <!-- Key stats with pulse -->
+      <div class="grid grid-cols-3 gap-8 max-w-lg mx-auto mb-12 fade-section" style="animation-delay: 0.6s;">
+        <div class="glass-card rounded-xl p-4">
+          <p class="text-4xl md:text-5xl font-bold stat-number golden-text">8</p>
+          <p class="text-gray-500 text-sm mt-1">Agents</p>
+        </div>
+        <div class="glass-card rounded-xl p-4">
+          <p class="text-4xl md:text-5xl font-bold stat-number golden-text">$0</p>
+          <p class="text-gray-500 text-sm mt-1">AI Costs</p>
+        </div>
+        <div class="glass-card rounded-xl p-4">
+          <p class="text-4xl md:text-5xl font-bold stat-number golden-text">24/7</p>
+          <p class="text-gray-500 text-sm mt-1">Operation</p>
+        </div>
+      </div>
+      
+      <!-- CTA buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center fade-section" style="animation-delay: 0.7s;">
+        <a href="#pricing" class="btn-glow px-10 py-4 rounded-xl font-bold text-black text-lg relative">
+          <span class="relative z-10">View Pricing</span>
+        </a>
+        <a href="sms:14703716263?body=Tell%20me%20more%20about%20Kingdom%20Claw" 
+           class="px-10 py-4 rounded-xl font-semibold text-lg border-2 border-amber-500/60 hover:border-amber-400 hover:bg-amber-500/10 transition-all text-amber-400">
+          Text: 470-371-6263
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- How It Works -->
+  <section class="px-4 py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold display golden-text mb-4">How Your Agents Work</h2>
+        <p class="text-gray-500 max-w-xl mx-auto">Proven patterns for intelligent automation</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass-card rounded-2xl p-8">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">🔄</span>
+          </div>
+          <h3 class="text-xl font-bold text-amber-400 mb-3">Multi-Agent Orchestration</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Eight specialists. One orchestrator routes tasks to the right agent — Developer builds, Designer creates, Outreach sends.
+          </p>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-8">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">🧠</span>
+          </div>
+          <h3 class="text-xl font-bold text-amber-400 mb-3">Persistent Memory</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Your agents remember everything. Conversations, contacts, decisions — stored and retrieved for every interaction.
+          </p>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-8">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">🔁</span>
+          </div>
+          <h3 class="text-xl font-bold text-amber-400 mb-3">Reflection Loops</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Quality outputs go through generate → critique → refine cycles. The agents improve their own work.
+          </p>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-8">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">📋</span>
+          </div>
+          <h3 class="text-xl font-bold text-amber-400 mb-3">Task Routing</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Complex requests decompose into steps. "Find leads and email them" triggers Leads → Outreach automatically.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- 8 Agents -->
+  <section class="px-4 py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold display golden-text mb-4">Your 8 Specialized Agents</h2>
+        <p class="text-gray-500">Each built for a specific purpose</p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-card agent-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🧠</div>
+          <h4 class="font-bold text-amber-400 mb-1">Orchestrator</h4>
+          <p class="text-xs text-gray-500">Coordinates & routes</p>
+        </div>
+        
+        <div class="glass-card agent-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">💻</div>
+          <h4 class="font-bold text-amber-400 mb-1">Developer</h4>
+          <p class="text-xs text-gray-500">Apps & automations</p>
+        </div>
+        
+        <div class="glass-card agent-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🎨</div>
+          <h4 class="font-bold text-amber-400 mb-1">Designer</h4>
+          <p class="text-xs text-gray-500">Landing pages & visuals</p>
+        </div>
+        
+        <div class="glass-card agent-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">📧</div>
+          <h4 class="font-bold text-amber-400 mb-1">Outreach</h4>
+          <p class="text-xs text-gray-500">Email campaigns</p>
+        </div>
+        
+        <div class="glass-card agent-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🔍</div>
+          <h4 class="font-bold text-amber-400 mb-1">Leads</h4>
+          <p class="text-xs text-gray-500">Contact finding</p>
+        </div>
+        
+        <div class="glass-card agent-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">📚</div>
+          <h4 class="font-bold text-amber-400 mb-1">Researcher</h4>
+          <p class="text-xs text-gray-500">Intel & analysis</p>
+        </div>
+        
+        <div class="glass-card agent-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">📊</div>
+          <h4 class="font-bold text-amber-400 mb-1">Analyst</h4>
+          <p class="text-xs text-gray-500">Metrics & reports</p>
+        </div>
+        
+        <div class="glass-card agent-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🚀</div>
+          <h4 class="font-bold text-amber-400 mb-1">Deployer</h4>
+          <p class="text-xs text-gray-500">Goes live</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Capabilities -->
+  <section class="px-4 py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold display golden-text mb-4">What Your Agents Can Do</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-card rounded-xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">🌐</span>
+          </div>
+          <h3 class="text-lg font-bold text-amber-400 mb-2">Web Scraping</h3>
+          <p class="text-sm text-gray-500">Bypasses Cloudflare. Extracts from directories, competitors, listings.</p>
+        </div>
+        
+        <div class="glass-card rounded-xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">📧</span>
+          </div>
+          <h3 class="text-lg font-bold text-amber-400 mb-2">Email Outreach</h3>
+          <p class="text-sm text-gray-500">Personalized emails. Tracks opens, responses. 300+ per day.</p>
+        </div>
+        
+        <div class="glass-card rounded-xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">⚡</span>
+          </div>
+          <h3 class="text-lg font-bold text-amber-400 mb-2">Instant Deploy</h3>
+          <p class="text-sm text-gray-500">Landing pages built and live in under an hour.</p>
+        </div>
+        
+        <div class="glass-card rounded-xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">🎬</span>
+          </div>
+          <h3 class="text-lg font-bold text-amber-400 mb-2">Video Generation</h3>
+          <p class="text-sm text-gray-500">Code-rendered videos. Custom animations. Published automatically.</p>
+        </div>
+        
+        <div class="glass-card rounded-xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">⏰</span>
+          </div>
+          <h3 class="text-lg font-bold text-amber-400 mb-2">Scheduled Tasks</h3>
+          <p class="text-sm text-gray-500">Recurring outreach, reports, follow-ups. Runs while you sleep.</p>
+        </div>
+        
+        <div class="glass-card rounded-xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-5">
+            <span class="text-3xl">💬</span>
+          </div>
+          <h3 class="text-lg font-bold text-amber-400 mb-2">Multi-Channel</h3>
+          <p class="text-sm text-gray-500">Telegram, WhatsApp, Discord, email — unified history.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zero AI Cost - Big statement -->
+  <section class="px-4 py-24">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-6xl font-bold display golden-text mb-8 headline-glow">
+        Zero AI Token Costs
+      </h2>
+      <p class="text-xl text-gray-400 mb-12">
+        Flat rate setup. No per-token fees. Generous rate limits that don't run out.
+      </p>
+      
+      <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
+        <div class="glass-card rounded-2xl p-10 w-72">
+          <p class="text-gray-500 mb-3">Most AI tools</p>
+          <p class="text-5xl font-bold text-red-400/80 line-through">$100-300</p>
+          <p class="text-gray-600 text-sm mt-2">per month</p>
+        </div>
+        
+        <div class="text-5xl text-amber-400 font-bold">→</div>
+        
+        <div class="glass-card rounded-2xl p-10 w-72" style="border-color: rgba(255, 180, 80, 0.5); box-shadow: 0 0 50px rgba(255, 180, 50, 0.2);">
+          <p class="text-amber-400 mb-3 font-semibold">Kingdom Claw</p>
+          <p class="text-6xl font-bold text-green-400">$0</p>
+          <p class="text-gray-400 text-sm mt-2">ongoing AI fees</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="px-4 py-24">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-5xl font-bold display golden-text mb-4">Compare</h2>
+      </div>
+      
+      <div class="glass-card rounded-2xl overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-800">
+              <th class="p-5 text-left text-gray-500">Feature</th>
+              <th class="p-5 text-center text-gray-500">ChatGPT</th>
+              <th class="p-5 text-center text-gray-500">Claude</th>
+              <th class="p-5 text-center text-amber-400 font-bold">Kingdom Claw</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-400">
+            <tr class="border-b border-gray-800/50 hover:bg-amber-500/5 transition">
+              <td class="p-5">Monthly AI cost</td>
+              <td class="p-5 text-center">$20</td>
+              <td class="p-5 text-center">$20</td>
+              <td class="p-5 text-center font-bold text-green-400">$0</td>
+            </tr>
+            <tr class="border-b border-gray-800/50 hover:bg-amber-500/5 transition">
+              <td class="p-5">Multi-agent team</td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="check">✓</span> 8 agents</td>
+            </tr>
+            <tr class="border-b border-gray-800/50 hover:bg-amber-500/5 transition">
+              <td class="p-5">Automated workflows</td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-b border-gray-800/50 hover:bg-amber-500/5 transition">
+              <td class="p-5">Web scraping</td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-b border-gray-800/50 hover:bg-amber-500/5 transition">
+              <td class="p-5">Email outreach</td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-b border-gray-800/50 hover:bg-amber-500/5 transition">
+              <td class="p-5">Video generation</td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-b border-gray-800/50 hover:bg-amber-500/5 transition">
+              <td class="p-5">24/7 operation</td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="check">✓</span></td>
+            </tr>
+            <tr class="hover:bg-amber-500/5 transition">
+              <td class="p-5">You own it</td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="x">✗</span></td>
+              <td class="p-5 text-center"><span class="check">✓</span> Forever</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="px-4 py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold display golden-text mb-4">Setup Pricing</h2>
+        <p class="text-gray-500">One-time setup. You own everything.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Starter -->
+        <div class="glass-card rounded-2xl p-8">
+          <div class="text-center mb-8">
+            <p class="text-gray-500 text-xs tracking-widest uppercase mb-3">Starter</p>
+            <h3 class="text-xl font-bold mb-4">Essential Setup</h3>
+            <p class="text-5xl font-bold golden-text">$500</p>
+            <p class="text-gray-600 text-sm mt-2">one-time</p>
+          </div>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Core agent system
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> 4 essential agents
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Messaging channels
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Basic training
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> 30-day support
+            </li>
+          </ul>
+          
+          <a href="sms:14703716263?body=Interested%20in%20Kingdom%20Claw%20Starter%20Setup%20($500)" 
+             class="block w-full py-3 border-2 border-amber-500/50 rounded-xl font-semibold text-center hover:bg-amber-500/10 hover:border-amber-400 transition text-amber-400">
+            Get Started
+          </a>
+        </div>
+        
+        <!-- Professional - Featured -->
+        <div class="pricing-popular glass-card rounded-2xl p-8">
+          <div class="text-center mb-8">
+            <p class="text-amber-400 text-xs tracking-widest uppercase mb-3 font-bold">Recommended</p>
+            <h3 class="text-xl font-bold mb-4">Professional</h3>
+            <p class="text-5xl font-bold golden-text">$1,500</p>
+            <p class="text-gray-500 text-sm mt-2">one-time</p>
+          </div>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Full 8-agent team
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Web scraping enabled
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Email outreach configured
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Website deployment
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> First campaign ready
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Full training + support
+            </li>
+          </ul>
+          
+          <a href="sms:14703716263?body=Interested%20in%20Kingdom%20Claw%20Professional%20Setup%20($1500)" 
+             class="btn-glow block w-full py-4 rounded-xl font-bold text-center text-black text-lg relative">
+            <span class="relative z-10">Get Started</span>
+          </a>
+        </div>
+        
+        <!-- Enterprise -->
+        <div class="glass-card rounded-2xl p-8">
+          <div class="text-center mb-8">
+            <p class="text-gray-500 text-xs tracking-widest uppercase mb-3">Enterprise</p>
+            <h3 class="text-xl font-bold mb-4">Full Automation</h3>
+            <p class="text-5xl font-bold golden-text">$3,000</p>
+            <p class="text-gray-600 text-sm mt-2">one-time</p>
+          </div>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Everything in Professional
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Video generation
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Custom workflows
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Advanced integrations
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Multiple campaigns
+            </li>
+            <li class="flex items-center gap-3 text-gray-400 text-sm">
+              <span class="check">✓</span> Dedicated onboarding
+            </li>
+          </ul>
+          
+          <a href="sms:14703716263?body=Interested%20in%20Kingdom%20Claw%20Enterprise%20Setup%20($3000)" 
+             class="block w-full py-3 border-2 border-amber-500/50 rounded-xl font-semibold text-center hover:bg-amber-500/10 hover:border-amber-400 transition text-amber-400">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It's For -->
+  <section class="px-4 py-24">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-5xl font-bold display golden-text mb-4">Who This Is For</h2>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🏢</div>
+          <h3 class="font-bold mb-1">Business</h3>
+          <p class="text-xs text-gray-500">Automation without overhead</p>
+        </div>
+        
+        <div class="glass-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">📊</div>
+          <h3 class="font-bold mb-1">Agencies</h3>
+          <p class="text-xs text-gray-500">Scale without hiring</p>
+        </div>
+        
+        <div class="glass-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🎤</div>
+          <h3 class="font-bold mb-1">Coaches</h3>
+          <p class="text-xs text-gray-500">24/7 lead capture</p>
+        </div>
+        
+        <div class="glass-card rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">⛪</div>
+          <h3 class="font-bold mb-1">Ministries</h3>
+          <p class="text-xs text-gray-500">Reach more people</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="px-4 py-24">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-bold display golden-text mb-6 headline-glow">
+        Own Your AI System
+      </h2>
+      <p class="text-xl text-gray-400 mb-8">
+        Full setup. Your agents start working immediately.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="sms:14703716263?body=I%20want%20to%20learn%20more%20about%20Kingdom%20Claw" 
+           class="btn-glow px-10 py-4 rounded-xl font-bold text-lg text-black relative">
+          <span class="relative z-10">Text: 470-371-6263</span>
+        </a>
+        <a href="mailto:kingdomclaw1@agentmail.to" 
+           class="px-10 py-4 rounded-xl font-semibold text-lg border-2 border-amber-500/50 hover:bg-amber-500/10 hover:border-amber-400 transition text-amber-400">
+          Email Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800/30 py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="display text-2xl golden-text mb-2">Kingdom Life Ascension</p>
+      <p class="text-gray-600 text-sm mb-4">Your own AI agent system — running 24/7 with no AI token costs.</p>
+      <p class="text-gray-700 text-xs">
+        <a href="sms:14703716263" class="text-amber-400 hover:text-amber-300">470-371-6263</a>
+        <span class="mx-2">•</span>
+        <a href="mailto:kingdomclaw1@agentmail.to" class="text-amber-400 hover:text-amber-300">kingdomclaw1@agentmail.to</a>
       </p>
     </div>
-  </div>
-</section>
-
-<!-- Who This Is For -->
-<section class="px-4 py-16">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold cinzel mb-12">Who This Is For</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="glass-card rounded-lg p-6">
-        <div class="text-3xl mb-3">🏢</div>
-        <h3 class="font-semibold mb-2">Business Owners</h3>
-        <p class="text-sm text-gray-400">Automation without the overhead</p>
-      </div>
-      <div class="glass-card rounded-lg p-6">
-        <div class="text-3xl mb-3">📊</div>
-        <h3 class="font-semibold mb-2">Agencies</h3>
-        <p class="text-sm text-gray-400">Scale outreach without hiring</p>
-      </div>
-      <div class="glass-card rounded-lg p-6">
-        <div class="text-3xl mb-3">🎤</div>
-        <h3 class="font-semibold mb-2">Coaches</h3>
-        <p class="text-sm text-gray-400">24/7 lead capture & follow-up</p>
-      </div>
-      <div class="glass-card rounded-lg p-6">
-        <div class="text-3xl mb-3">⛪</div>
-        <h3 class="font-semibold mb-2">Ministries</h3>
-        <p class="text-sm text-gray-400">Reach more people automatically</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="px-4 py-16 bg-gradient-to-t from-amber-900/30 to-transparent">
-  <div class="max-w-2xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold cinzel mb-6">
-      Own Your AI System
-    </h2>
-    <p class="text-xl text-gray-300 mb-8">
-      Full setup. Your agents start working immediately.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="sms:14703716263?body=Interested%20in%20Kingdom%20Claw%20Setup" class="px-8 py-4 bg-gradient-to-r from-amber-600 to-amber-700 rounded-lg font-semibold text-lg hover:from-amber-500 hover:to-amber-600 transition text-center">
-        Text: 470-371-6263
-      </a>
-      <a href="mailto:kingdomclaw1@agentmail.to" class="px-8 py-4 bg-transparent border-2 border-amber-500 rounded-lg font-semibold text-lg hover:bg-amber-500/10 transition text-center">
-        Email Us
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="border-t border-gray-800 py-8 px-4">
-  <div class="max-w-4xl mx-auto text-center">
-    <p class="cinzel text-xl text-amber-400 mb-2">Kingdom Life Ascension</p>
-    <p class="text-gray-500 text-sm">Your own AI agent system — running 24/7 with no AI token costs.</p>
-    <p class="text-gray-600 text-xs mt-4">
-      Kingdom Claw Setup Service • 
-      <a href="sms:14703716263" class="text-amber-400">470-371-6263</a> • 
-      <a href="mailto:kingdomclaw1@agentmail.to" class="text-amber-400">kingdomclaw1@agentmail.to</a>
-    </p>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>

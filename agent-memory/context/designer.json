@@ -1,11 +1,14 @@
 {
   "role": "designer",
+  "source": "agency-agents + kingdom-claw",
+  
   "brand_colors": {
     "kingdom_claw": {
-      "primary": "#1a1a2e",
-      "secondary": "#16213e",
-      "accent": "#0f3460",
-      "highlight": "#e94560"
+      "primary": "#FFD700",
+      "secondary": "#FFA500",
+      "accent": "#FF8C00",
+      "dark": "#050508",
+      "highlight": "#FFD700"
     },
     "launchpad": {
       "primary": "#2563eb",
@@ -14,15 +17,103 @@
       "dark": "#1e3a8a"
     }
   },
-  "typography": {
-    "headings": "Inter, system-ui, sans-serif",
-    "body": "Inter, system-ui, sans-serif",
-    "mono": "JetBrains Mono, monospace"
+
+  "design_tokens": {
+    "color": {
+      "primary_100": "#f0f9ff",
+      "primary_500": "#FFD700",
+      "primary_900": "#B8860B",
+      "success": "#22c55e",
+      "warning": "#f59e0b",
+      "error": "#ef4444"
+    },
+    "typography": {
+      "font_family_primary": "'Inter', system-ui, sans-serif",
+      "font_family_display": "'Playfair Display', serif",
+      "font_family_mono": "'JetBrains Mono', monospace",
+      "sizes": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem",
+        "7xl": "4.5rem"
+      }
+    },
+    "spacing": {
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "12": "3rem",
+      "16": "4rem",
+      "24": "6rem"
+    },
+    "shadow": {
+      "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      "md": "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+      "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1)",
+      "glow_gold": "0 0 30px rgba(255, 180, 50, 0.4)"
+    }
   },
+
   "components": {
-    "hero": "Full-width, gradient bg, large heading, CTA",
-    "cards": "Rounded corners, subtle shadow, hover effects",
-    "buttons": "Rounded, bold text, clear contrast"
+    "hero": {
+      "full_width": true,
+      "gradient_bg": "radial-gradient",
+      "large_heading": "text-4xl md:text-7xl",
+      "cta": "btn-glow with shine effect",
+      "typewriter_effect": "enabled"
+    },
+    "cards": {
+      "glass_card": "rgba(255, 255, 255, 0.03) + border + blur",
+      "hover_effect": "translateY(-8px) + scale(1.02)",
+      "rounded": "rounded-xl or rounded-2xl",
+      "sweep_glow": "linear gradient on hover"
+    },
+    "buttons": {
+      "primary": "btn-glow with box-shadow",
+      "secondary": "border-2 border-amber-500/50",
+      "rounded": "rounded-xl",
+      "padding": "px-10 py-4"
+    }
   },
-  "lessons": []
+
+  "workflow": {
+    "step1": "Establish design system (tokens, components)",
+    "step2": "Design for mobile-first, scale up",
+    "step3": "Build accessibility into foundation (WCAG AA)",
+    "step4": "Add micro-animations and polish",
+    "step5": "Performance check (Lighthouse 90+)"
+  },
+
+  "accessibility": {
+    "wcag_level": "AA minimum",
+    "contrast_ratio": "4.5:1 for text",
+    "focus_states": "Always visible",
+    "aria_labels": "Required for interactive elements",
+    "keyboard_nav": "Must work without mouse"
+  },
+
+  "success_metrics": {
+    "lighthouse_performance": "90+",
+    "lighthouse_accessibility": "100",
+    "mobile_first": true,
+    "cross_browser": "Chrome, Firefox, Safari, Edge"
+  },
+
+  "lessons": [
+    "Design system first, individual screens second",
+    "Performance-conscious design from the start",
+    "Dark mode with proper contrast ratios",
+    "Animations should enhance, not distract",
+    "Always check real browser rendering"
+  ]
 }

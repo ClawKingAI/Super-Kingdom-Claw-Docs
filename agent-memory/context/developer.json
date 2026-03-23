@@ -1,22 +1,92 @@
 {
   "role": "developer",
+  "source": "agency-agents + kingdom-claw",
+  
   "conventions": {
-    "js": "ES modules, async/await, descriptive names",
-    "html": "Semantic HTML5, accessibility-first",
-    "css": "TailwindCSS preferred, mobile-first"
+    "js": {
+      "style": "ES modules, async/await",
+      "naming": "camelCase for variables, PascalCase for components",
+      "error_handling": "try-catch with meaningful messages",
+      "comments": "JSDoc for public functions"
+    },
+    "html": {
+      "semantic": true,
+      "accessibility": "aria-labels, role attributes",
+      "meta": "viewport, charset, title required"
+    },
+    "css": {
+      "framework": "TailwindCSS preferred",
+      "approach": "mobile-first, responsive",
+      "dark_mode": "CSS variables for theming"
+    }
   },
+
   "project_structure": {
     "workspace": "/data/.openclaw/workspace",
     "leads": "/data/.openclaw/workspace/leads/",
-    "remotion": "/data/.openclaw/workspace/projects/remotion/"
+    "remotion": "/data/.openclaw/workspace/projects/remotion/",
+    "skills": "/data/.openclaw/workspace/skills/",
+    "agent_memory": "/data/.openclaw/workspace/agent-memory/"
   },
+
   "output_locations": {
     "videos": "/data/.openclaw/workspace/videos/",
-    "deployments": "here.now via skill"
+    "deployments": "here.now via skill",
+    "landing_pages": "/data/.openclaw/workspace/[project-name]/"
   },
+
+  "code_patterns": {
+    "react_component": {
+      "pattern": "memo + useCallback + useMemo for optimization",
+      "accessibility": "role, aria-label, tabIndex",
+      "performance": "virtualization for lists >50 items"
+    },
+    "api_call": {
+      "pattern": "async/await with try-catch",
+      "retry": "3 attempts with exponential backoff",
+      "timeout": "30s default"
+    },
+    "file_operations": {
+      "read": "fs.readFile or read tool",
+      "write": "write tool for overwrite, edit tool for precise changes",
+      "validate": "Always validate before write"
+    }
+  },
+
+  "workflow": {
+    "step1": "Check existing code before writing new",
+    "step2": "Write tests alongside implementation",
+    "step3": "Use first-class tools (cron, message) over shell scripts",
+    "step4": "Test with small data before full runs",
+    "step5": "Commit in coherent batches with clear messages"
+  },
+
+  "testing": {
+    "unit": "Test critical functions",
+    "integration": "Test API interactions",
+    "manual": "Verify in real browser before deploy",
+    "small_data": "Always test with 1-3 items first"
+  },
+
+  "performance": {
+    "bundle_size": "Keep under 500KB",
+    "lazy_loading": "Use for images and heavy components",
+    "caching": "Implement for repeated API calls",
+    "debounce": "Use for user input handlers"
+  },
+
+  "success_metrics": {
+    "test_coverage": "Critical paths covered",
+    "lighthouse_performance": "90+",
+    "accessibility_score": "100",
+    "error_rate": "<1% in production"
+  },
+
   "lessons": [
     "Always check existing code before writing new",
     "Use first-class tools (cron, message) over shell scripts",
-    "Test with small data before full runs"
+    "Test with small data before full runs",
+    "Meaningful commit messages for future context",
+    "Error messages should help debugging, not confuse"
   ]
 }

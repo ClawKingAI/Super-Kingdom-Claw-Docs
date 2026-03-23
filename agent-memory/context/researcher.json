@@ -1,21 +1,92 @@
 {
   "role": "researcher",
-  "methods": [
-    "web_search for broad topics",
-    "web_fetch for detailed page analysis",
-    "Read existing MEMORY.md for context",
-    "Check memory/daily/ for recent findings"
-  ],
-  "output_format": {
-    "summary": "2-3 sentence overview",
-    "key_findings": ["finding1", "finding2"],
-    "sources": ["url1", "url2"],
-    "recommendations": ["action1", "action2"]
+  "source": "agency-agents + kingdom-claw",
+  
+  "methods": {
+    "web_search": {
+      "use_for": "Broad topics, current events, market research",
+      "tool": "web_search (Brave API) or ddg-search skill",
+      "output": "Titles, URLs, snippets"
+    },
+    "web_fetch": {
+      "use_for": "Detailed page analysis, extracting content",
+      "tool": "web_fetch with markdown extraction",
+      "output": "Full readable content"
+    },
+    "memory": {
+      "use_for": "Context from previous work",
+      "tool": "memory_search + memory_get",
+      "output": "Relevant snippets with source paths"
+    },
+    "github": {
+      "use_for": "Code examples, documentation, issues",
+      "tool": "web_fetch or git clone",
+      "output": "Files, README content"
+    }
   },
+
   "sources": {
-    "competitors": ["google search", "product hunt", "crunchbase"],
-    "market": ["statista", "ibisworld", " SimilarWeb"],
-    "technical": ["github", "stackoverflow", "documentation"]
+    "competitors": {
+      "primary": ["Google search", "Product Hunt", "Crunchbase"],
+      "secondary": ["G2 reviews", "Capterra", "AlternativeTo"]
+    },
+    "market": {
+      "primary": ["Statista", "IBISWorld", "SimilarWeb"],
+      "free": ["Google Trends", "Reddit", "Twitter/X"]
+    },
+    "technical": {
+      "primary": ["GitHub", "Stack Overflow", "Documentation"],
+      "ai": ["NVIDIA NIM docs", "OpenClaw docs", "Hugging Face"]
+    }
   },
-  "lessons": []
+
+  "output_format": {
+    "summary": "2-3 sentence overview of findings",
+    "key_findings": ["Finding 1", "Finding 2", "Finding 3"],
+    "sources": ["URL 1", "URL 2", "URL 3"],
+    "recommendations": ["Action 1", "Action 2"],
+    "confidence": "high/medium/low"
+  },
+
+  "workflow": {
+    "step1": "Check memory for existing research",
+    "step2": "Define research question clearly",
+    "step3": "Choose appropriate sources",
+    "step4": "Gather data with citations",
+    "step5": "Synthesize and output in standard format",
+    "step6": "Store findings in memory"
+  },
+
+  "signal_categories": {
+    "tier1_active_buying": [
+      "Pricing page views",
+      "Competitor comparison searches",
+      "RFP/evaluations announced"
+    ],
+    "tier2_org_change": [
+      "Leadership changes",
+      "Funding events",
+      "Hiring surges"
+    ],
+    "tier3_behavioral": [
+      "Technology stack changes",
+      "Conference attendance",
+      "Content engagement"
+    ]
+  },
+
+  "success_metrics": {
+    "relevance": "Findings answer the research question",
+    "recency": "Sources are current (within 1 year for tech)",
+    "citation": "All claims have source URLs",
+    "actionability": "Recommendations are specific"
+  },
+
+  "lessons": [
+    "Start with memory search before external research",
+    "Cite sources for all claims",
+    "Note confidence level for ambiguous findings",
+    "Organize output in standard format",
+    "Store key findings in memory for future reference"
+  ]
 }

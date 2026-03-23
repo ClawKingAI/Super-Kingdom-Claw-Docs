@@ -1,5 +1,7 @@
 {
   "role": "outreach",
+  "source": "agency-agents + kingdom-claw",
+  
   "channels": {
     "agentmail": {
       "api_key": "am_us_0979af61e72c013e15ea72c47964b7612d90d40afcf7ca42dd9b5766b1e70eb9",
@@ -12,10 +14,12 @@
       "daily_limit": 500
     }
   },
+  
   "templates": {
     "cold_outreach": "/data/.openclaw/workspace/kingdom-claw-agents/workflows/email-outreach.md",
     "follow_up": "Check sent status, resend if no open after 3 days"
   },
+  
   "active_campaigns": {
     "ga-churches": {
       "id": "mn272okk",
@@ -25,9 +29,81 @@
       "resume_after": "24h from last send"
     }
   },
+
+  "signal_based_framework": {
+    "tier1_active_buying": [
+      "Pricing page views",
+      "Competitor comparison searches",
+      "RFP/evaluations announced",
+      "Technology job postings"
+    ],
+    "tier2_org_change": [
+      "Leadership changes in buying persona",
+      "Funding events (Series B+)",
+      "Hiring surges in relevant department",
+      "M&A activity"
+    ],
+    "tier3_technographic": [
+      "Technology stack changes (BuiltWith, Wappalyzer)",
+      "Conference attendance/speaking",
+      "Content engagement (whitepapers, webinars)",
+      "Competitor renewal timing"
+    ]
+  },
+
+  "speed_to_signal": {
+    "rule": "Route signals to rep within 30 minutes",
+    "stale_after_24h": true,
+    "competitor_wins_after_72h": true
+  },
+
+  "icp_definition": {
+    "firmographic_filters": [
+      "Industry verticals (2-4 specific)",
+      "Revenue range or employee count",
+      "Geography",
+      "Technology stack requirements"
+    ],
+    "behavioral_qualifiers": [
+      "What business event makes them a buyer now?",
+      "What pain does product solve that they cannot ignore?",
+      "Who inside org feels that pain most acutely?",
+      "What does their current workaround look like?"
+    ],
+    "disqualifiers": [
+      "Industries where win rate <15%",
+      "Company stages where product is premature/overkill"
+    ]
+  },
+
+  "multi_channel_sequence": {
+    "email": {
+      "timing": "Day 1, 4, 10, 17",
+      "rule": "Never send without personalization signal"
+    },
+    "linkedin": {
+      "timing": "Day 2, 7, 14",
+      "connection_first": true
+    },
+    "phone": {
+      "timing": "Day 5, 12",
+      "rule": "Only if email opened but no reply"
+    }
+  },
+
+  "success_metrics": {
+    "reply_rate_target": "10%+",
+    "meeting_booked_from_reply": "25%+",
+    "unsubscribe_rate_max": "0.5%",
+    "spam_complaint_max": "0.1%"
+  },
+
   "lessons": [
     "Always check rate limits before sending",
     "Remove bounces immediately",
-    "Track opens and responses"
+    "Track opens and responses",
+    "Never send 'just checking in' emails",
+    "Signal-based outreach converts 4-8x higher than cold",
+    "Speed to signal is critical — route within 30 min"
   ]
 }
