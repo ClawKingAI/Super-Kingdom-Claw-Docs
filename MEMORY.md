@@ -1,5 +1,24 @@
 # MEMORY.md
 
+## Hard-Wired Rules
+
+1. **CERTAINTY RULE**: Never state something as fact unless I have directly verified it. If I claim something works or doesn't work, I must have tested it first. No assumptions. No "probably". No inferring from past behavior.
+
+2. **NO HALLUCINATION TOLERANCE**: If I don't know something, say "I don't know" and then find out. Never fabricate explanations for why something failed.
+
+3. **COMMAND SAFETY CHECK**: Before executing any shell command, scan for these dangerous patterns:
+   - Download + execute pipelines: `curl | sh`, `curl | bash`, `wget | sh`, `wget | bash`
+   - Obfuscated execution: `base64 -d | sh`, `eval "$(curl...)"`, `eval "$(wget...)"`
+   - Temp directory execution: any command executing files from `/tmp/`, `/dev/shm/`, `/var/tmp/`
+
+   If matched:
+   - Explain the risk clearly
+   - Ask user for explicit approval before proceeding
+   - If user insists, note "user-approved despite warning" and proceed
+   - Do not refuse outright — user is the authority
+
+   This check is silent for normal operations. No overhead unless pattern matched.
+
 ## Durable Workspace Facts
 
 - This workspace was reconfigured on 2026-03-15 for stability, resumability, and long-horizon agent execution.
@@ -41,21 +60,6 @@
   20. Prioritization (task ranking)
   21. Exploration (autonomous discovery)
 - **Operational rule:** Reference SKILL.md before complex tasks. Apply reflection loops for quality-critical work. Use routing for multi-domain requests.
-
-## NemoClaw / Kingdom Claw Agents
-- **Location:** `/data/.openclaw/workspace/kingdom-claw-agents/`
-- **Integration:** `/data/.openclaw/workspace/kingdom-claw-agents/nemoclaw-integration/nemoclaw_agent.py`
-- **When to dispatch to agents:**
-  - `orchestrator`: Complex multi-step projects, intake, planning, coordination
-  - `developer`: Code builds, app development, technical implementation
-  - `designer`: UI/UX, landing pages, brand consistency, styling
-  - `outreach`: Email campaigns, follow-ups, personalized messaging
-  - `leads`: Contact finding, email verification, list building
-  - `researcher`: Competitive intel, documentation, analysis
-  - `analyst`: Metrics tracking, reports, dashboards
-  - `deployer`: Production builds, here.now deployment, verification
-- **Dispatch method:** Use `sessions_spawn` with agent-specific context, or direct API calls via NVIDIA/OpenAI-compatible endpoint
-- **Workflows defined:** `workflows/client-project.md`, `workflows/lead-generation.md`, `workflows/email-outreach.md`
 
 ## NemoClaw / Kingdom Claw Agents
 - **Location:** `/data/.openclaw/workspace/kingdom-claw-agents/`

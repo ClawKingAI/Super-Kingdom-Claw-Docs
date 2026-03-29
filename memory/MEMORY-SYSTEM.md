@@ -11,6 +11,7 @@ Tracks repeated corrections. When a correction appears 3+ times, it becomes a ca
 | Date | Action | Notes |
 |------|--------|-------|
 | 2026-03-22 | Weekly maintenance | No duplicates, no stale items, archive dir created |
+| 2026-03-29 | Weekly maintenance | Removed duplicate "NemoClaw / Kingdom Claw Agents" section from MEMORY.md (kept fuller version with 5 workflows). No stale items to archive. Corrections log unchanged. |
 
 ## Permanent Rules
 *(Auto-promoted from corrections with 3+ entries after David approval)*
@@ -19,4 +20,4 @@ Tracks repeated corrections. When a correction appears 3+ times, it becomes a ca
 2. **NO signal-sending commands** (`kill -9`, `kill -TERM`) — causes gateway disconnect
 
 ## Pending Rule Candidates
-*(None yet — will populate as corrections accumulate)*
+*(None — all identified rules have been promoted)*

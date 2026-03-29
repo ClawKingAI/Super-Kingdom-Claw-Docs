@@ -28,6 +28,8 @@ Old rules that are no longer active but preserved for reference.
 
 *Empty - will be populated during weekly maintenance*
 
+### Next Review: 2026-04-05
+
 ---
 
 ## CORRECTIONS LOG
@@ -42,7 +44,7 @@ Log of explicit corrections from user.
 ## WEEKLY MAINTENANCE
 Run every Sunday: Review corrections, promote rules, archive stale items.
 
-### Next Review: 2026-03-22
+### Next Review: 2026-04-05
 
 ---
 
