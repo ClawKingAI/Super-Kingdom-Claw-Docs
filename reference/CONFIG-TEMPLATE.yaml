@@ -1,0 +1,434 @@
+# Kingdom Claw — Reference Configuration
+
+> **Complete Configuration Template** — All options documented
+
+---
+
+## Full Configuration Template
+
+```yaml
+# ===========================================
+# KINGDOM CLAW CONFIGURATION
+# ===========================================
+# This file contains all available configuration options.
+# Copy and modify for your deployment.
+
+# ===========================================
+# MODEL CONFIGURATION
+# ===========================================
+model:
+  # Primary provider
+  provider: nvidia          # nvidia | openai | anthropic | google
+  
+  # Primary model
+  model: z-ai/glm5
+  
+  # API key (use environment variable)
+  apiKey: $NVIDIA_API_KEY
+  
+  # Custom endpoint (optional)
+  baseUrl: https://integrate.api.nvidia.com/v1
+  
+  # Model aliases for convenience
+  aliases:
+    default: nvidia/z-ai/glm5
+    fast: nvidia/qwen/qwen3-coder
+    smart: openai/gpt-4
+    reasoning: anthropic/claude-3-opus
+  
+  # Fallback providers (in order)
+  fallback:
+    - provider: openai
+      model: gpt-4
+    - provider: anthropic
+      model: claude-3-sonnet
+
+# ===========================================
+# GATEWAY CONFIGURATION
+# ===========================================
+gateway:
+  # Server settings
+  port: 8080
+  bind: 0.0.0.0
+  
+  # CORS settings
+  cors:
+    origins:
+      - https://yourdomain.com
+      - https://app.yourdomain.com
+  
+  # Rate limiting
+  rateLimit:
+    windowMs: 60000
+    max: 100
+  
+  # SSL (if not using reverse proxy)
+  ssl:
+    enabled: false
+    cert: /etc/ssl/cert.pem
+    key: /etc/ssl/key.pem
+
+# ===========================================
+# CHANNEL CONFIGURATION
+# ===========================================
+channels:
+  # ----- TELEGRAM -----
+  - provider: telegram
+    token: $TELEGRAM_BOT_TOKEN
+    username: YourBotUsername
+    
+    # Polling (default)
+    polling:
+      enabled: true
+      interval: 1000
+    
+    # Webhook (alternative)
+    webhook:
+      enabled: false
+      url: https://yourdomain.com/webhook/telegram
+    
+    # Features
+    reactions:
+      enabled: true
+      mode: minimal
+    
+    inlineButtons:
+      enabled: true
+    
+    # Rate limiting
+    rateLimit:
+      windowMs: 60000
+      max: 30
+
+  # ----- DISCORD -----
+  - provider: discord
+    token: $DISCORD_BOT_TOKEN
+    appId: $DISCORD_APP_ID
+    
+    intents:
+      - guilds
+      - guildMessages
+      - directMessages
+      - messageContent
+    
+    presence:
+      status: online
+      activity:
+        name: "helping users"
+        type: 0
+    
+    slashCommands:
+      enabled: true
+      autoRegister: true
+
+  # ----- WHATSAPP -----
+  - provider: whatsapp
+    sessionId: default
+    
+    session:
+      persist: true
+      path: ~/.openclaw/whatsapp-session
+    
+    qrTimeout: 60000
+    autoRestart: true
+
+# ===========================================
+# TOOL CONFIGURATION
+# ===========================================
+tools:
+  # Enabled tools (all if not specified)
+  enabled:
+    - read
+    - write
+    - edit
+    - exec
+    - web_search
+    - web_fetch
+    - browser
+    - image
+    - pdf
+    - message
+    - tts
+  
+  # Explicitly disabled tools
+  disabled:
+    - dangerous_tool_name
+  
+  # Permission levels for specific tools
+  permissions:
+    read: normal
+    write: elevated
+    edit: elevated
+    exec: dangerous
+    browser: elevated
+    web_search: normal
+    web_fetch: normal
+    image: normal
+    pdf: normal
+    message: elevated
+    tts: normal
+  
+  # Tool-specific configuration
+  config:
+    exec:
+      timeout: 60000
+      sandbox: true
+    
+    browser:
+      headless: true
+      timeout: 30000
+    
+    web_fetch:
+      maxChars: 50000
+      timeout: 30000
+    
+    image:
+      maxBytesMb: 10
+      maxImages: 20
+    
+    pdf:
+      maxBytesMb: 20
+      maxPdfs: 10
+
+# ===========================================
+# SESSION CONFIGURATION
+# ===========================================
+session:
+  # Enable persistence
+  persist: true
+  
+  # Auto-delete old sessions
+  maxAge: 7d
+  
+  # Maximum messages per session
+  maxMessages: 100
+  
+  # Auto-compaction settings
+  compaction:
+    enabled: true
+    threshold: 50
+    keepLast: 20
+
+# ===========================================
+# SKILLS CONFIGURATION
+# ===========================================
+skills:
+  # Enable skills system
+  enabled: true
+  
+  # Directories to load skills from
+  directories:
+    - ~/.openclaw/skills
+    - ~/.openclaw/workspace/skills
+  
+  # Load bundled skills
+  bundled:
+    enabled: true
+
+# ===========================================
+# CRON CONFIGURATION
+# ===========================================
+cron:
+  # Enable cron scheduler
+  enabled: true
+  
+  # Maximum jobs
+  maxJobs: 100
+  
+  # Default timezone
+  defaultTimezone: America/New_York
+
+# ===========================================
+# LOGGING CONFIGURATION
+# ===========================================
+logging:
+  # Log level
+  level: info              # debug | info | warn | error
+  
+  # Output format
+  format: json             # json | pretty
+  
+  # Output destination
+  output: file             # console | file | both
+  
+  # File settings
+  file:
+    path: ~/.openclaw/logs/gateway.log
+    maxSize: 10m
+    maxFiles: 5
+
+# ===========================================
+# PERMISSION SETTINGS
+# ===========================================
+permissions:
+  # Default deny prefixes
+  denyPrefixes:
+    - pkill
+    - killall
+    - kill -9
+    - rm -rf
+    - dd if=
+    - mkfs
+    - format
+    - "> /dev/"
+    - chmod 777
+  
+  # Authorized senders (empty = all)
+  authorizedSenders: []
+  
+  # Audit log
+  audit:
+    enabled: true
+    path: ~/.openclaw/logs/permission_audit.jsonl
+
+# ===========================================
+# NODE CONFIGURATION (Mobile Apps)
+# ===========================================
+node:
+  pairing:
+    enabled: true
+    publicKey: ~/.openclaw/keys/public.pem
+    privateKey: ~/.openclaw/keys/private.pem
+  
+  remote:
+    enabled: true
+    url: https://your-node.openclaw.ai
+
+# ===========================================
+# MEMORY CONFIGURATION
+# ===========================================
+memory:
+  # Long-term memory file
+  longTerm: ~/.openclaw/workspace/MEMORY.md
+  
+  # Daily memory directory
+  daily: ~/.openclaw/workspace/memory
+  
+  # Context files
+  context:
+    - ~/.openclaw/workspace/USER.md
+    - ~/.openclaw/workspace/TOOLS.md
+    - ~/.openclaw/workspace/SOUL.md
+    - ~/.openclaw/workspace/IDENTITY.md
+
+# ===========================================
+# AGENT CONFIGURATION
+# ===========================================
+agent:
+  # Auto-spawn threshold (seconds)
+  autoSpawnThreshold: 13
+  
+  # Maximum subagents
+  maxSubagents: 5
+  
+  # Subagent timeout
+  subagentTimeout: 180
+  
+  # Thinking level
+  thinking: low            # low | medium | high
+```
+
+---
+
+## Environment Variables
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `NVIDIA_API_KEY` | NVIDIA NIM API key | `nvapi-xxx` |
+| `OPENAI_API_KEY` | OpenAI API key | `sk-xxx` |
+| `ANTHROPIC_API_KEY` | Anthropic API key | `sk-ant-xxx` |
+| `GOOGLE_API_KEY` | Google API key | `AIzaxxx` |
+| `TELEGRAM_BOT_TOKEN` | Telegram bot token | `123:ABC` |
+| `DISCORD_BOT_TOKEN` | Discord bot token | `OTkx.xxx` |
+| `DISCORD_APP_ID` | Discord application ID | `991234567` |
+| `OPENCLAW_CONFIG` | Config file path | `/path/to/config.yaml` |
+| `OPENCLAW_LOG_LEVEL` | Log level | `info` |
+| `OPENCLAW_PORT` | Gateway port | `8080` |
+| `OPENCLAW_DATA_DIR` | Data directory | `/data/.openclaw` |
+
+---
+
+## Minimal Configuration
+
+```yaml
+model:
+  provider: nvidia
+  model: z-ai/glm5
+
+channels:
+  - provider: telegram
+    token: $TELEGRAM_BOT_TOKEN
+```
+
+---
+
+## Development Configuration
+
+```yaml
+model:
+  provider: nvidia
+  model: z-ai/glm5
+
+gateway:
+  port: 8080
+  bind: 0.0.0.0
+
+channels:
+  - provider: telegram
+    token: $TELEGRAM_BOT_TOKEN
+
+logging:
+  level: debug
+  format: pretty
+  output: console
+
+session:
+  persist: false
+
+tools:
+  permissions:
+    exec: normal  # Allow exec in development
+```
+
+---
+
+## Production Configuration
+
+See the full template above. Key differences:
+- Rate limiting enabled
+- SSL/TLS configured
+- Restricted permissions
+- JSON logging
+- Session persistence
+- Backup configuration
+
+---
+
+## Validation
+
+```bash
+# Validate configuration
+openclaw config validate
+
+# Show effective config
+openclaw config show
+
+# Check specific value
+openclaw config get model.provider
+```
+
+---
+
+## Hot Reload
+
+Some changes can be applied without restart:
+
+```bash
+openclaw gateway reload
+```
+
+Changes requiring restart:
+- Model provider
+- Channel additions
+- Port changes
+- SSL certificates
