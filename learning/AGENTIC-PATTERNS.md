@@ -1,6 +1,6 @@
-# Agentic Design Patterns
+# Agentic Design Patterns — Production Implementations
 
-> **21 Core Patterns for AI Agent Systems** — A comprehensive reference
+> **21 Core Patterns for AI Agent Systems** — With working code implementations
 
 ---
 
@@ -8,7 +8,28 @@
 
 These 21 patterns form the foundation for building intelligent agent workflows. They were synthesized from multiple sources including Anthropic's research, OpenAI's patterns, and practical experience.
 
+**Implementation Source:** `kingdom-claw-core/patterns/agentic_patterns.py`
+
 **Key Insight:** Apply these patterns by default for complex tasks. Reference this document BEFORE attempting complex work.
+
+---
+
+## Implementation Architecture
+
+```
+kingdom-claw-core/patterns/
+├── agentic_patterns.py
+│   ├── PromptChaining      # Pattern 1
+│   ├── Router              # Pattern 2
+│   ├── ParallelExecutor    # Pattern 3
+│   ├── Reflector           # Pattern 4
+│   ├── ToolRegistry        # Pattern 5
+│   ├── Planner             # Pattern 6
+│   ├── MultiAgentOrchestrator  # Pattern 7
+│   ├── MemoryManager       # Pattern 8
+│   ├── AdaptationEngine    # Pattern 9
+│   └── RAGSystem           # Pattern 10
+└── (Patterns 11-21 in future iterations)
 
 ---
 
