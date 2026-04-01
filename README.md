@@ -55,7 +55,8 @@ Super-Kingdom-Claw-Docs/
 │   ├── NEMOCLAW-AGENTS.md          ← NVIDIA NemoClaw integration
 │   ├── MODEL-PROVIDERS.md          ← Multi-model support
 │   ├── CHANNEL-MULTIPLEXING.md     ← Multiple communication channels
-│   └── GLM5-SKILLS.md              ← GLM-5 official skill ecosystem
+│   ├── GLM5-SKILLS.md              ← GLM-5 official skill ecosystem
+│   └── KIMI-K25-SWARM.md           ← Kimi K2.5 agent swarm architecture
 │
 ├── 🚀 deployment/
 │   ├── VPS-SETUP.md                ← Complete VPS deployment
