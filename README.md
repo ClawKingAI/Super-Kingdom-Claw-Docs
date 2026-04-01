@@ -54,7 +54,8 @@ Super-Kingdom-Claw-Docs/
 │   ├── TELEGRAM-INTEGRATION.md     ← Telegram bot setup
 │   ├── NEMOCLAW-AGENTS.md          ← NVIDIA NemoClaw integration
 │   ├── MODEL-PROVIDERS.md          ← Multi-model support
-│   └── CHANNEL-MULTIPLEXING.md     ← Multiple communication channels
+│   ├── CHANNEL-MULTIPLEXING.md     ← Multiple communication channels
+│   └── GLM5-SKILLS.md              ← GLM-5 official skill ecosystem
 │
 ├── 🚀 deployment/
 │   ├── VPS-SETUP.md                ← Complete VPS deployment
@@ -121,6 +122,14 @@ Coordinate specialized agents:
 - ...and 13 more
 
 [→ Read the Patterns](learning/AGENTIC-PATTERNS.md)
+
+### 5. **GLM-5 Official Skills**
+Model-specific skills for GLM-5 (the model Kingdom Claw runs on):
+- GLM-OCR: Text, table, formula, handwriting extraction
+- GLM-V: Vision, captioning, document processing
+- GLM-Image: Text-to-image generation
+
+[→ Read GLM-5 Integration](integration/GLM5-SKILLS.md)
 
 ---
 
@@ -250,13 +259,16 @@ This documentation synthesizes knowledge from:
 | Source | What We Learned |
 |--------|-----------------|
 | **Claw Code** (Claude Code port) | Harness architecture, tool registry, permission patterns, session management |
+| **Anthropic's Claude Code** | Official plugin patterns, parallel agents, hooks, confidence scoring |
 | **Agentic Design Patterns** | 21 core patterns for AI systems |
+| **GLM-5 Official** | Model-specific skills, OCR, vision, document processing |
 | **OpenClaw Source** | Gateway architecture, channel integration, cron system |
 | **NemoClaw SDK** | Multi-agent coordination, model failover |
 | **Here.now** | Instant web deployment |
 | **Remotion** | Programmatic video generation |
 
-[→ Read the Analysis](learning/CLAW-CODE-ANALYSIS.md)
+[→ Read Claw Code Analysis](learning/CLAW-CODE-ANALYSIS.md)
+[→ Read GLM-5 Integration](integration/GLM5-SKILLS.md)
 
 ---
 
