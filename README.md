@@ -45,9 +45,11 @@ Super-Kingdom-Claw-Docs/
 ├── 🧠 skills/
 │   ├── SKILLS-SYSTEM.md            ← How skills work
 │   ├── AGENT-ORCHESTRATION.md      ← Multi-agent coordination
+│   ├── OFFICIAL-PATTERNS.md        ← Official plugin patterns
 │   ├── PROMPT-ENGINEERING.md       ← How to write agent prompts
 │   ├── MEMORY-SYSTEM.md            ← Long-term and short-term memory
-│   └── SELF-IMPROVEMENT.md         ← How the agent learns and evolves
+│   ├── SELF-IMPROVEMENT.md         ← How the agent learns and evolves
+│   └── AGENT-PERSONAS.md           ← 194 specialized personas
 │
 ├── 🔗 integration/
 │   ├── OPENCLAW-SETUP.md           ← OpenClaw configuration
@@ -124,13 +126,32 @@ Coordinate specialized agents:
 
 [→ Read the Patterns](learning/AGENTIC-PATTERNS.md)
 
-### 5. **GLM-5 Official Skills**
+### 6. **GLM-5 Official Skills**
 Model-specific skills for GLM-5 (the model Kingdom Claw runs on):
 - GLM-OCR: Text, table, formula, handwriting extraction
 - GLM-V: Vision, captioning, document processing
 - GLM-Image: Text-to-image generation
 
 [→ Read GLM-5 Integration](integration/GLM5-SKILLS.md)
+
+### 7. **Kimi K2.5 Agent Swarm**
+Moonshot's 1T/32B model with agent swarm architecture:
+- Native multimodal (256K context)
+- Agent swarm parallel execution
+- UI-to-code generation
+
+[→ Read Kimi K2.5 Integration](integration/KIMI-K25-SWARM.md)
+
+### 8. **Agent Personas (194)**
+Pre-crafted agent personalities from Agency-Agents:
+- Engineering (23): Frontend, Backend, AI, DevOps, Security
+- Design (8): UI, UX, Brand, Motion
+- Marketing (28): Content, Growth, Social
+- Sales (8): Outbound, Deals, Pipeline
+- Product (5): PM, Prioritization
+- And 6 more categories
+
+[→ Read Agent Personas](skills/AGENT-PERSONAS.md)
 
 ---
 
