@@ -49,7 +49,8 @@ Super-Kingdom-Claw-Docs/
 │   ├── PROMPT-ENGINEERING.md       ← How to write agent prompts
 │   ├── MEMORY-SYSTEM.md            ← Long-term and short-term memory
 │   ├── SELF-IMPROVEMENT.md         ← How the agent learns and evolves
-│   └── AGENT-PERSONAS.md           ← 194 specialized personas
+│   ├── AGENT-PERSONAS.md           ← 194 specialized personas
+│   └── ANTIGRAVITY-SKILLS.md       ← 21 production task skills
 │
 ├── 🔗 integration/
 │   ├── OPENCLAW-SETUP.md           ← OpenClaw configuration
@@ -152,6 +153,14 @@ Pre-crafted agent personalities from Agency-Agents:
 - And 6 more categories
 
 [→ Read Agent Personas](skills/AGENT-PERSONAS.md)
+
+### 9. **Antigravity Skills (21)**
+Production-ready task skills from Antigravity:
+- codebase-analyzer, bug-fixer, security-auditor
+- performance-profiler, test-generator, refactorer
+- And 15 more specialized skills
+
+[→ Read Antigravity Skills](skills/ANTIGRAVITY-SKILLS.md)
 
 ---
 
