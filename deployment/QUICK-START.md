@@ -151,4 +151,4 @@ cat ~/.openclaw/workspace/kingdom-claw/skills/kingdom-mastery/SKILL.md
 
 ---
 
-**You now have a $50K enterprise AI system running.** 🎉
+**You now have an enterprise AI system running.** 🎉

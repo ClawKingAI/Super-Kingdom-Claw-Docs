@@ -1,7 +1,8 @@
 # KINGDOM CLAW ENTERPRISE LICENSE
 
 **Effective Date: Upon Purchase**
-**License Fee: $50,000 USD**
+
+**License Fee: Contact for Pricing**
 
 ---
 
@@ -59,21 +60,24 @@ Upon payment of the license fee, you are granted a **perpetual, non-exclusive, w
 ## 4. SUPPORT & MAINTENANCE
 
 ### Included
+
 - 1 year of updates and patches
 - Access to all future skill additions
 - Bug fixes and security updates
 
 ### Add-On Services
-- **Premium Support** — $10,000/year
-- **Custom Development** — $200/hour
-- **Training Sessions** — $5,000/day
-- **On-Site Deployment** — $20,000 + expenses
+
+- **Premium Support** — Available
+- **Custom Development** — Available
+- **Training Sessions** — Available
+- **On-Site Deployment** — Available
 
 ---
 
 ## 5. INDEMNIFICATION
 
 The licensor is not liable for:
+
 - Business losses from using this system
 - Model provider API costs
 - Third-party service failures
@@ -83,9 +87,7 @@ The licensor is not liable for:
 
 ## 6. WARRANTY DISCLAIMER
 
-THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
 
@@ -99,11 +101,12 @@ This license shall be governed by the laws of the jurisdiction in which the lice
 
 **To Purchase This License:**
 
-- **Price**: $50,000 USD
-- **Payment**: Wire transfer, crypto, or payment plan
+- **Pricing**: Contact for enterprise pricing
+- **Payment**: Wire transfer, crypto, or payment plan available
 - **Delivery**: Immediate access upon payment confirmation
 
 **License Certificate** will be issued with:
+
 - Unique license key
 - Organization name
 - Authorized domains/IPs

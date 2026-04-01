@@ -2,7 +2,7 @@
 
 <div align="center">
 
-## **$50,000 ENTERPRISE AI AGENT SYSTEM**
+## **ENTERPRISE AI AGENT SYSTEM**
 
 **The Last AI Platform You'll Ever Need**
 
@@ -73,12 +73,12 @@ Build custom AI solutions for clients.
 ## Why Kingdom Claw?
 
 ### vs. Custom Development ($200K+)
-- ✅ $50K vs $200K+
+- ✅ Lower cost vs $200K+
 - ✅ Ready now vs 6-12 months
 - ✅ Proven vs experimental
 
 ### vs. Hiring AI Team ($500K/yr)
-- ✅ $50K vs $500K/yr
+- ✅ Lower cost vs $500K/yr
 - ✅ 60+ agents vs 1-3 engineers
 - ✅ 24/7 vs 40hr weeks
 
@@ -97,10 +97,10 @@ Build custom AI solutions for clients.
 | AI Engineer: $180K | $0 (1,340 skills) |
 | Marketing Team: $200K | $0 (20 agents) |
 | Operations: $120K | $0 (automated) |
-| **Total: $650K/yr** | **$50K one-time** |
+| **Total: $650K/yr** | **Contact for pricing** |
 
-**Year 1 Savings: $600K**
-**3-Year Savings: $1.9M**
+**Year 1 Savings: Significant**
+**3-Year Savings: Substantial**
 
 ---
 
@@ -108,7 +108,7 @@ Build custom AI solutions for clients.
 
 > *"You're not buying software. You're buying a business transformation."*
 
-**For $50K, you get:**
+**What you get:**
 - Complete AI agent system
 - 60+ specialized agents
 - 1,340+ production skills
@@ -123,14 +123,7 @@ Build custom AI solutions for clients.
 
 ## Close
 
-### Three Ways to Buy:
-
-1. **Wire Transfer** — Immediate access
-2. **Crypto Payment** — BTC/ETH/USDC
-3. **Payment Plan** — 3 payments of $18K
-
 ### What Happens Next:
-
 1. Payment confirmation
 2. License key issued
 3. Repository access granted
@@ -145,6 +138,6 @@ Build custom AI solutions for clients.
 
 **[Contact for Purchase]**
 
-*Limited to 50 enterprise licenses in 2026*
+*Limited enterprise licenses in 2026*
 
 </div>
