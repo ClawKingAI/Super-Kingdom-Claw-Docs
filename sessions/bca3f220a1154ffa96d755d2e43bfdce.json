@@ -1,0 +1,31 @@
+{
+  "session_id": "bca3f220a1154ffa96d755d2e43bfdce",
+  "created_at": "2026-03-31T19:22:37.227305",
+  "updated_at": "2026-03-31T19:22:37.227480",
+  "messages": [
+    {
+      "role": "user",
+      "content": "read the config file",
+      "timestamp": "2026-03-31T19:22:37.227450",
+      "metadata": {
+        "matched_commands": 0,
+        "matched_tools": 2,
+        "denials": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Processed: read the config file...\nMatched commands: none\nMatched tools: read, write\nBlocked tools: none",
+      "timestamp": "2026-03-31T19:22:37.227470",
+      "metadata": {
+        "matched_commands": 0,
+        "matched_tools": 2
+      }
+    }
+  ],
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "metadata": {}
+}

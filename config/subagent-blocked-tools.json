@@ -1,0 +1,53 @@
+{
+  "description": "Tools blocked from subagent spawning to prevent recursive delegation, user interaction, and cross-platform side effects. Based on Hermes Agent delegate_tool.py DELEGATE_BLOCKED_TOOLS.",
+  "blocked_tools": [
+    {
+      "name": "delegate_task",
+      "reason": "No recursive delegation - prevents infinite spawn loops",
+      "severity": "critical"
+    },
+    {
+      "name": "sessions_spawn",
+      "reason": "No recursive spawning - prevents infinite spawn loops", 
+      "severity": "critical"
+    },
+    {
+      "name": "clarify",
+      "reason": "No user interaction from children - parent handles all user communication",
+      "severity": "high"
+    },
+    {
+      "name": "memory",
+      "reason": "No writes to shared MEMORY.md - prevents corruption from concurrent access",
+      "severity": "high"
+    },
+    {
+      "name": "send_message",
+      "reason": "No cross-platform side effects - parent controls all messaging",
+      "severity": "high"
+    },
+    {
+      "name": "message",
+      "reason": "No cross-platform side effects - parent controls all messaging",
+      "severity": "high"
+    },
+    {
+      "name": "execute_code",
+      "reason": "Children should reason step-by-step, not write scripts",
+      "severity": "medium"
+    },
+    {
+      "name": "tts",
+      "reason": "No audio output from children - prevents unexpected audio",
+      "severity": "low"
+    }
+  ],
+  "max_depth": 2,
+  "max_concurrent": 3,
+  "notes": [
+    "Blocked tools are stripped from the toolset when spawning subagents",
+    "Max depth prevents recursive spawning beyond parent -> child -> grandchild",
+    "Max concurrent limits parallel subagents to prevent resource exhaustion",
+    "Based on Hermes Agent patterns: tools/delegate_tool.py"
+  ]
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Benchmarks 2026 — GLM-5, GPT-5.4, Claude Opus 4.6, Kimi K2.5, Qwen 3.5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bar { transition: width 0.5s ease-out; }
+        .highlight-row:hover { background: rgba(59, 130, 246, 0.05); }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-gray-900 to-gray-800 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                AI Model Benchmarks 2026
+            </h1>
+            <p class="text-gray-400 mt-2">GLM-5, GPT-5.4, Claude Opus 4.6, Kimi K2.5, Qwen 3.5 — Head-to-Head</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Quick Summary -->
+        <section class="mb-10">
+            <h2 class="text-xl font-bold mb-4 text-blue-400">Quick Takeaway</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+                    <div class="text-2xl mb-2">🥇</div>
+                    <div class="font-semibold text-white">Best Overall</div>
+                    <div class="text-green-400 font-bold">Claude Opus 4.6</div>
+                    <div class="text-sm text-gray-400">79.2% SWE-bench, 95.6% AIME</div>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+                    <div class="text-2xl mb-2">💰</div>
+                    <div class="font-semibold text-white">Best Value</div>
+                    <div class="text-green-400 font-bold">GLM-5 / Kimi K2.5</div>
+                    <div class="text-sm text-gray-400">90-95% capability at 1/5 the cost</div>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+                    <div class="text-2xl mb-2">🇨🇳</div>
+                    <div class="font-semibold text-white">Chinese Leader</div>
+                    <div class="text-green-400 font-bold">Kimi K2.5</div>
+                    <div class="text-sm text-gray-400">Ties Opus on math, #1 CorpFin</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coding Benchmarks -->
+        <section class="mb-10">
+            <h2 class="text-xl font-bold mb-4 text-blue-400">💻 Coding Benchmarks</h2>
+            <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                <table class="w-full text-sm">
+                    <thead class="bg-gray-800">
+                        <tr>
+                            <th class="text-left px-4 py-3 font-semibold">Benchmark</th>
+                            <th class="text-center px-4 py-3 font-semibold">Claude Opus 4.6</th>
+                            <th class="text-center px-4 py-3 font-semibold">GPT-5.4</th>
+                            <th class="text-center px-4 py-3 font-semibold">GLM-5</th>
+                            <th class="text-center px-4 py-3 font-semibold">Kimi K2.5</th>
+                            <th class="text-center px-4 py-3 font-semibold">Qwen 3.5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">SWE-bench</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">79.2%</span></td>
+                            <td class="px-4 py-3 text-center">~77%</td>
+                            <td class="px-4 py-3 text-center">67.8%</td>
+                            <td class="px-4 py-3 text-center">68.6%</td>
+                            <td class="px-4 py-3 text-center">70.4%</td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">LiveCodeBench</td>
+                            <td class="px-4 py-3 text-center">84.7%</td>
+                            <td class="px-4 py-3 text-center">~85%</td>
+                            <td class="px-4 py-3 text-center">81.9%</td>
+                            <td class="px-4 py-3 text-center">83.9%</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">85.3%</span></td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">Terminal-Bench</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">58.4%</span></td>
+                            <td class="px-4 py-3 text-center">75.1%</td>
+                            <td class="px-4 py-3 text-center">49.4%</td>
+                            <td class="px-4 py-3 text-center">40.5%</td>
+                            <td class="px-4 py-3 text-center">41.6%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">SWE-bench = real GitHub issues. LiveCodeBench = competitive programming. Terminal-Bench = CLI tasks.</p>
+        </section>
+
+        <!-- Math & Reasoning -->
+        <section class="mb-10">
+            <h2 class="text-xl font-bold mb-4 text-blue-400">🧮 Math & Reasoning</h2>
+            <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                <table class="w-full text-sm">
+                    <thead class="bg-gray-800">
+                        <tr>
+                            <th class="text-left px-4 py-3 font-semibold">Benchmark</th>
+                            <th class="text-center px-4 py-3 font-semibold">Claude Opus 4.6</th>
+                            <th class="text-center px-4 py-3 font-semibold">GPT-5.4</th>
+                            <th class="text-center px-4 py-3 font-semibold">GLM-5</th>
+                            <th class="text-center px-4 py-3 font-semibold">Kimi K2.5</th>
+                            <th class="text-center px-4 py-3 font-semibold">Qwen 3.5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">AIME (Competition Math)</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">95.6%</span></td>
+                            <td class="px-4 py-3 text-center">~94%</td>
+                            <td class="px-4 py-3 text-center">91.7%</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">95.6%</span></td>
+                            <td class="px-4 py-3 text-center">86.0%</td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">GPQA Diamond</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">91.3%</span></td>
+                            <td class="px-4 py-3 text-center">92.8%</td>
+                            <td class="px-4 py-3 text-center">83.3%</td>
+                            <td class="px-4 py-3 text-center">84.1%</td>
+                            <td class="px-4 py-3 text-center">87.4%</td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">MMLU-Pro</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">89.1%</span></td>
+                            <td class="px-4 py-3 text-center">~88%</td>
+                            <td class="px-4 py-3 text-center">86.0%</td>
+                            <td class="px-4 py-3 text-center">87.6%</td>
+                            <td class="px-4 py-3 text-center">87.2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">AIME = olympiad-level math. GPQA = PhD-level science. MMLU-Pro = graduate knowledge across 14 fields.</p>
+        </section>
+
+        <!-- Overall Scores -->
+        <section class="mb-10">
+            <h2 class="text-xl font-bold mb-4 text-blue-400">📊 Composite Scores</h2>
+            <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                <table class="w-full text-sm">
+                    <thead class="bg-gray-800">
+                        <tr>
+                            <th class="text-left px-4 py-3 font-semibold">Metric</th>
+                            <th class="text-center px-4 py-3 font-semibold">Claude Opus 4.6</th>
+                            <th class="text-center px-4 py-3 font-semibold">GPT-5.4</th>
+                            <th class="text-center px-4 py-3 font-semibold">GLM-5</th>
+                            <th class="text-center px-4 py-3 font-semibold">Kimi K2.5</th>
+                            <th class="text-center px-4 py-3 font-semibold">Qwen 3.5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">Chatbot Arena ELO</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">1503</span></td>
+                            <td class="px-4 py-3 text-center">1463</td>
+                            <td class="px-4 py-3 text-center">1454</td>
+                            <td class="px-4 py-3 text-center">1438</td>
+                            <td class="px-4 py-3 text-center">1450</td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">Vals Index (Overall)</td>
+                            <td class="px-4 py-3 text-center"><span class="text-green-400 font-bold">66.0%</span></td>
+                            <td class="px-4 py-3 text-center">~64%</td>
+                            <td class="px-4 py-3 text-center">60.7%</td>
+                            <td class="px-4 py-3 text-center">59.7%</td>
+                            <td class="px-4 py-3 text-center">57.1%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">Chatbot Arena = human preference votes. Vals Index = enterprise benchmark composite.</p>
+        </section>
+
+        <!-- Pricing -->
+        <section class="mb-10">
+            <h2 class="text-xl font-bold mb-4 text-blue-400">💰 Pricing (per 1M tokens)</h2>
+            <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                <table class="w-full text-sm">
+                    <thead class="bg-gray-800">
+                        <tr>
+                            <th class="text-left px-4 py-3 font-semibold">Model</th>
+                            <th class="text-center px-4 py-3 font-semibold">Input</th>
+                            <th class="text-center px-4 py-3 font-semibold">Output</th>
+                            <th class="text-center px-4 py-3 font-semibold">vs Claude</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">Claude Opus 4.6</td>
+                            <td class="px-4 py-3 text-center">$15.00</td>
+                            <td class="px-4 py-3 text-center">$75.00</td>
+                            <td class="px-4 py-3 text-center text-gray-500">1x</td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">GPT-5.4</td>
+                            <td class="px-4 py-3 text-center">$2.50</td>
+                            <td class="px-4 py-3 text-center">$15.00</td>
+                            <td class="px-4 py-3 text-center text-yellow-400">6x cheaper</td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">GLM-5</td>
+                            <td class="px-4 py-3 text-center">$1.00</td>
+                            <td class="px-4 py-3 text-center">$3.20</td>
+                            <td class="px-4 py-3 text-center text-green-400">15x cheaper</td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">Kimi K2.5</td>
+                            <td class="px-4 py-3 text-center">$0.60</td>
+                            <td class="px-4 py-3 text-center">$2.00</td>
+                            <td class="px-4 py-3 text-center text-green-400">25x cheaper</td>
+                        </tr>
+                        <tr class="border-t border-gray-800 highlight-row">
+                            <td class="px-4 py-3 font-medium">Qwen 3.5</td>
+                            <td class="px-4 py-3 text-center">$0.60</td>
+                            <td class="px-4 py-3 text-center">$3.60</td>
+                            <td class="px-4 py-3 text-center text-green-400">23x cheaper</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- What Each Model Excels At -->
+        <section class="mb-10">
+            <h2 class="text-xl font-bold mb-4 text-blue-400">🎯 When to Use Which Model</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gradient-to-br from-purple-900/50 to-gray-900 rounded-xl p-4 border border-purple-800">
+                    <h3 class="font-bold text-purple-300 mb-2">Claude Opus 4.6</h3>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>✓ Best at SWE-bench (real coding)</li>
+                        <li>✓ Strongest overall composite</li>
+                        <li>✓ Best enterprise benchmarks</li>
+                        <li>✓ 200K context window</li>
+                        <li class="text-red-400">✗ Most expensive</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-green-900/50 to-gray-900 rounded-xl p-4 border border-green-800">
+                    <h3 class="font-bold text-green-300 mb-2">GLM-5</h3>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>✓ MIT licensed, fully open</li>
+                        <li>✓ Trained on Huawei chips (NVIDIA-free)</li>
+                        <li>✓ Strong SWE-bench for Chinese model</li>
+                        <li>✓ Great at Chinese + English</li>
+                        <li class="text-yellow-400">~ 90% of Opus capability</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-blue-900/50 to-gray-900 rounded-xl p-4 border border-blue-800">
+                    <h3 class="font-bold text-blue-300 mb-2">Kimi K2.5</h3>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>✓ Ties Opus on AIME math</li>
+                        <li>✓ #1 on corporate finance</li>
+                        <li>✓ Native multimodal</li>
+                        <li>✓ Agent Swarm (100 parallel agents)</li>
+                        <li class="text-green-400">~ 95% of Opus at 1/25 cost</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-cyan-900/50 to-gray-900 rounded-xl p-4 border border-cyan-800">
+                    <h3 class="font-bold text-cyan-300 mb-2">Qwen 3.5</h3>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>✓ 991K context (5x Opus)</li>
+                        <li>✓ #1 LiveCodeBench</li>
+                        <li>✓ Strongest Chinese on GPQA</li>
+                        <li>✓ Apache 2.0 licensed</li>
+                        <li class="text-green-400">Best for long documents</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-emerald-900/50 to-gray-900 rounded-xl p-4 border border-emerald-800">
+                    <h3 class="font-bold text-emerald-300 mb-2">GPT-5.4</h3>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>✓ Best tool integration</li>
+                        <li>✓ 1M context window</li>
+                        <li>✓ Strongest ecosystem</li>
+                        <li>✓ Native image generation</li>
+                        <li class="text-yellow-400">~ 6x cheaper than Opus</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Line -->
+        <section class="mb-10 bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-xl p-6 border border-blue-800">
+            <h2 class="text-xl font-bold mb-3">Bottom Line</h2>
+            <div class="text-lg text-gray-200">
+                <p class="mb-3"><strong class="text-white">GLM-5 is 90-95% as capable as Claude Opus 4.6 and GPT-5.4</strong> — but costs 15-25x less.</p>
+                <p class="mb-3">For most practical work (coding, analysis, research), the gap is barely noticeable. Kimi K2.5 even ties Opus on competition math.</p>
+                <p class="text-blue-300 font-semibold">Use Claude/GPT when you need maximum capability and cost doesn't matter. Use GLM-5/Kimi when you want nearly the same performance at a fraction of the price.</p>
+            </div>
+        </section>
+
+        <!-- Sources -->
+        <section class="text-sm text-gray-500 border-t border-gray-800 pt-6">
+            <h3 class="font-semibold mb-2 text-gray-400">Sources</h3>
+            <ul class="space-y-1">
+                <li>• <a href="https://lmarena.ai" class="text-blue-400 hover:underline">LMArena (Chatbot Arena)</a> — Human preference rankings</li>
+                <li>• <a href="https://www.vals.ai" class="text-blue-400 hover:underline">Vals AI</a> — Standardized benchmark harness</li>
+                <li>• <a href="https://onyx.app/llm-leaderboard" class="text-blue-400 hover:underline">Onyx LLM Leaderboard</a> — Aggregated benchmarks</li>
+                <li>• <a href="https://build.nvidia.com" class="text-blue-400 hover:underline">NVIDIA NIM</a> — GLM-5, Kimi, Qwen official benchmarks</li>
+            </ul>
+            <p class="mt-3 text-gray-600">Data collected March 2026. Benchmark scores from standardized evaluation harnesses where available.</p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800 mt-10 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+            Generated by Kingdom Claw • <a href="https://openclaw.ai" class="text-blue-400 hover:underline">OpenClaw</a>
+        </div>
+    </footer>
+</body>
+</html>

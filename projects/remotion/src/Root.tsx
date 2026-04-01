@@ -7,6 +7,7 @@ import { ProphecyCall } from "./ProphecyCall";
 import { CrimeDrama } from "./CrimeDrama";
 import { AriseDemo } from "./AriseDemo";
 import { LaunchPadPromo } from "./LaunchPadPromo";
+import { SlideGeniusPromo } from "./SlideGeniusPromo";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -102,7 +103,22 @@ export const RemotionRoot: React.FC = () => {
           tagline: "AI-Powered Landing Pages Built to Convert",
           features: ["48-Hour Delivery", "No AI Token Costs", "Stunning Design"],
           cta: "Start Your Project",
-          url: "open-eagle-d86j.here.now"
+          url: "open-eagle-d86j.here.now",
+        }}
+      />
+      <Composition
+        id="SlideGeniusPromo"
+        component={SlideGeniusPromo}
+        durationInFrames={270}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          headline: "SlideGenius",
+          subheadline: "15 Presentation Styles, Zero Design Work",
+          tagline: "Turn any content into stunning slides",
+          features: ["Anti-Gravity Minimal", "Modern Newspaper", "Tech-Art Neon"],
+          cta: "Generate Your Deck",
         }}
       />
     </>

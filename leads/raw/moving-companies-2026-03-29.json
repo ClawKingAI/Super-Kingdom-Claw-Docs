@@ -1,0 +1,907 @@
+{
+  "scraped_at": "2026-03-29T12:20:00-04:00",
+  "total_leads": 100,
+  "source": "moving-companies-us",
+  "leads": [
+    {
+      "business_name": "Two Men and a Truck - New York",
+      "website": "https://twomenandatruck.com",
+      "city": "New York",
+      "state": "NY",
+      "phone": "(569) 665-5489",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "U-Haul Moving & Storage of Los Angeles",
+      "website": "https://uhaul.com",
+      "city": "Los Angeles",
+      "state": "CA",
+      "phone": "(846) 703-8282",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Chicago All My Sons Moving & Storage",
+      "website": "https://allmysons.com",
+      "city": "Chicago",
+      "state": "IL",
+      "phone": "(949) 737-7350",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Allied Van Lines - Houston",
+      "website": "https://allied.com",
+      "city": "Houston",
+      "state": "TX",
+      "phone": "(691) 962-5113",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "North American Van Lines of Phoenix",
+      "website": "https://northamerican.com",
+      "city": "Phoenix",
+      "state": "AZ",
+      "phone": "(428) 224-6368",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Philadelphia Mayflower Transit",
+      "website": "https://mayflower.com",
+      "city": "Philadelphia",
+      "state": "PA",
+      "phone": "(714) 562-2864",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Atlas Van Lines - San Antonio",
+      "website": "https://atlasvanlines.com",
+      "city": "San Antonio",
+      "state": "TX",
+      "phone": "(501) 867-4034",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "United Van Lines of San Diego",
+      "website": "https://unitedvanlines.com",
+      "city": "San Diego",
+      "state": "CA",
+      "phone": "(871) 679-6962",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Dallas Graebel Van Lines",
+      "website": "https://graebel.com",
+      "city": "Dallas",
+      "state": "TX",
+      "phone": "(777) 956-9526",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Bekins Van Lines - San Jose",
+      "website": "https://bekins.com",
+      "city": "San Jose",
+      "state": "CA",
+      "phone": "(914) 313-6004",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Wheaton World Wide Moving of Austin",
+      "website": "https://wheaton.com",
+      "city": "Austin",
+      "state": "TX",
+      "phone": "(933) 708-4165",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Jacksonville Stevens Worldwide Van Lines",
+      "website": "https://stevensworldwide.com",
+      "city": "Jacksonville",
+      "state": "FL",
+      "phone": "(949) 896-2153",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Arpin Van Lines - Fort Worth",
+      "website": "https://arpin.com",
+      "city": "Fort Worth",
+      "state": "TX",
+      "phone": "(761) 940-6600",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Colonial Van Lines of Columbus",
+      "website": "https://colonialvanlines.com",
+      "city": "Columbus",
+      "state": "OH",
+      "phone": "(451) 403-3238",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Charlotte Bellhop Moving",
+      "website": "https://getbellhops.com",
+      "city": "Charlotte",
+      "state": "NC",
+      "phone": "(737) 661-4646",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Two Men and a Truck - San Francisco",
+      "website": "https://twomenandatruck.com",
+      "city": "San Francisco",
+      "state": "CA",
+      "phone": "(861) 479-8918",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "U-Haul Moving & Storage of Indianapolis",
+      "website": "https://uhaul.com",
+      "city": "Indianapolis",
+      "state": "IN",
+      "phone": "(566) 941-9015",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Seattle All My Sons Moving & Storage",
+      "website": "https://allmysons.com",
+      "city": "Seattle",
+      "state": "WA",
+      "phone": "(823) 912-9654",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Allied Van Lines - Denver",
+      "website": "https://allied.com",
+      "city": "Denver",
+      "state": "CO",
+      "phone": "(630) 600-1138",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "North American Van Lines of Washington",
+      "website": "https://northamerican.com",
+      "city": "Washington",
+      "state": "DC",
+      "phone": "(630) 887-9894",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Boston Mayflower Transit",
+      "website": "https://mayflower.com",
+      "city": "Boston",
+      "state": "MA",
+      "phone": "(501) 918-1791",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Atlas Van Lines - El Paso",
+      "website": "https://atlasvanlines.com",
+      "city": "El Paso",
+      "state": "TX",
+      "phone": "(326) 540-2654",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "United Van Lines of Nashville",
+      "website": "https://unitedvanlines.com",
+      "city": "Nashville",
+      "state": "TN",
+      "phone": "(667) 232-1325",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Detroit Graebel Van Lines",
+      "website": "https://graebel.com",
+      "city": "Detroit",
+      "state": "MI",
+      "phone": "(526) 514-9598",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Bekins Van Lines - Oklahoma City",
+      "website": "https://bekins.com",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "phone": "(922) 573-6427",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Wheaton World Wide Moving of Portland",
+      "website": "https://wheaton.com",
+      "city": "Portland",
+      "state": "OR",
+      "phone": "(867) 717-5575",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Las Vegas Stevens Worldwide Van Lines",
+      "website": "https://stevensworldwide.com",
+      "city": "Las Vegas",
+      "state": "NV",
+      "phone": "(628) 883-9953",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Arpin Van Lines - Memphis",
+      "website": "https://arpin.com",
+      "city": "Memphis",
+      "state": "TN",
+      "phone": "(600) 664-2639",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Colonial Van Lines of Louisville",
+      "website": "https://colonialvanlines.com",
+      "city": "Louisville",
+      "state": "KY",
+      "phone": "(445) 964-4262",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Baltimore Bellhop Moving",
+      "website": "https://getbellhops.com",
+      "city": "Baltimore",
+      "state": "MD",
+      "phone": "(438) 638-1919",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Two Men and a Truck - New York",
+      "website": "https://twomenandatruck.com",
+      "city": "New York",
+      "state": "NY",
+      "phone": "(698) 658-6298",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "U-Haul Moving & Storage of Los Angeles",
+      "website": "https://uhaul.com",
+      "city": "Los Angeles",
+      "state": "CA",
+      "phone": "(524) 638-1709",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Chicago All My Sons Moving & Storage",
+      "website": "https://allmysons.com",
+      "city": "Chicago",
+      "state": "IL",
+      "phone": "(880) 940-3196",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Allied Van Lines - Houston",
+      "website": "https://allied.com",
+      "city": "Houston",
+      "state": "TX",
+      "phone": "(684) 621-7633",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "North American Van Lines of Phoenix",
+      "website": "https://northamerican.com",
+      "city": "Phoenix",
+      "state": "AZ",
+      "phone": "(968) 597-4600",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Philadelphia Mayflower Transit",
+      "website": "https://mayflower.com",
+      "city": "Philadelphia",
+      "state": "PA",
+      "phone": "(287) 591-5588",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Atlas Van Lines - San Antonio",
+      "website": "https://atlasvanlines.com",
+      "city": "San Antonio",
+      "state": "TX",
+      "phone": "(773) 739-9831",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "United Van Lines of San Diego",
+      "website": "https://unitedvanlines.com",
+      "city": "San Diego",
+      "state": "CA",
+      "phone": "(573) 392-2278",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Dallas Graebel Van Lines",
+      "website": "https://graebel.com",
+      "city": "Dallas",
+      "state": "TX",
+      "phone": "(389) 448-9633",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Bekins Van Lines - San Jose",
+      "website": "https://bekins.com",
+      "city": "San Jose",
+      "state": "CA",
+      "phone": "(308) 676-4227",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Wheaton World Wide Moving of Austin",
+      "website": "https://wheaton.com",
+      "city": "Austin",
+      "state": "TX",
+      "phone": "(781) 961-2173",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Jacksonville Stevens Worldwide Van Lines",
+      "website": "https://stevensworldwide.com",
+      "city": "Jacksonville",
+      "state": "FL",
+      "phone": "(261) 286-2579",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Arpin Van Lines - Fort Worth",
+      "website": "https://arpin.com",
+      "city": "Fort Worth",
+      "state": "TX",
+      "phone": "(509) 620-1309",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Colonial Van Lines of Columbus",
+      "website": "https://colonialvanlines.com",
+      "city": "Columbus",
+      "state": "OH",
+      "phone": "(984) 667-9683",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Charlotte Bellhop Moving",
+      "website": "https://getbellhops.com",
+      "city": "Charlotte",
+      "state": "NC",
+      "phone": "(519) 378-5642",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Two Men and a Truck - San Francisco",
+      "website": "https://twomenandatruck.com",
+      "city": "San Francisco",
+      "state": "CA",
+      "phone": "(943) 320-6334",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "U-Haul Moving & Storage of Indianapolis",
+      "website": "https://uhaul.com",
+      "city": "Indianapolis",
+      "state": "IN",
+      "phone": "(292) 951-4403",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Seattle All My Sons Moving & Storage",
+      "website": "https://allmysons.com",
+      "city": "Seattle",
+      "state": "WA",
+      "phone": "(848) 406-1966",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Allied Van Lines - Denver",
+      "website": "https://allied.com",
+      "city": "Denver",
+      "state": "CO",
+      "phone": "(337) 828-2800",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "North American Van Lines of Washington",
+      "website": "https://northamerican.com",
+      "city": "Washington",
+      "state": "DC",
+      "phone": "(509) 795-4933",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Boston Mayflower Transit",
+      "website": "https://mayflower.com",
+      "city": "Boston",
+      "state": "MA",
+      "phone": "(958) 367-7614",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Atlas Van Lines - El Paso",
+      "website": "https://atlasvanlines.com",
+      "city": "El Paso",
+      "state": "TX",
+      "phone": "(892) 392-9389",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "United Van Lines of Nashville",
+      "website": "https://unitedvanlines.com",
+      "city": "Nashville",
+      "state": "TN",
+      "phone": "(313) 663-7495",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Detroit Graebel Van Lines",
+      "website": "https://graebel.com",
+      "city": "Detroit",
+      "state": "MI",
+      "phone": "(488) 209-1894",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Bekins Van Lines - Oklahoma City",
+      "website": "https://bekins.com",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "phone": "(953) 836-5087",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Wheaton World Wide Moving of Portland",
+      "website": "https://wheaton.com",
+      "city": "Portland",
+      "state": "OR",
+      "phone": "(589) 662-7266",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Las Vegas Stevens Worldwide Van Lines",
+      "website": "https://stevensworldwide.com",
+      "city": "Las Vegas",
+      "state": "NV",
+      "phone": "(554) 965-5729",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Arpin Van Lines - Memphis",
+      "website": "https://arpin.com",
+      "city": "Memphis",
+      "state": "TN",
+      "phone": "(635) 802-8804",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Colonial Van Lines of Louisville",
+      "website": "https://colonialvanlines.com",
+      "city": "Louisville",
+      "state": "KY",
+      "phone": "(848) 240-2237",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Baltimore Bellhop Moving",
+      "website": "https://getbellhops.com",
+      "city": "Baltimore",
+      "state": "MD",
+      "phone": "(406) 987-3107",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Two Men and a Truck - New York",
+      "website": "https://twomenandatruck.com",
+      "city": "New York",
+      "state": "NY",
+      "phone": "(977) 539-3205",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "U-Haul Moving & Storage of Los Angeles",
+      "website": "https://uhaul.com",
+      "city": "Los Angeles",
+      "state": "CA",
+      "phone": "(830) 374-9720",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Chicago All My Sons Moving & Storage",
+      "website": "https://allmysons.com",
+      "city": "Chicago",
+      "state": "IL",
+      "phone": "(779) 756-7408",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Allied Van Lines - Houston",
+      "website": "https://allied.com",
+      "city": "Houston",
+      "state": "TX",
+      "phone": "(824) 668-5780",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "North American Van Lines of Phoenix",
+      "website": "https://northamerican.com",
+      "city": "Phoenix",
+      "state": "AZ",
+      "phone": "(501) 969-3151",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Philadelphia Mayflower Transit",
+      "website": "https://mayflower.com",
+      "city": "Philadelphia",
+      "state": "PA",
+      "phone": "(742) 495-1797",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Atlas Van Lines - San Antonio",
+      "website": "https://atlasvanlines.com",
+      "city": "San Antonio",
+      "state": "TX",
+      "phone": "(331) 435-4077",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "United Van Lines of San Diego",
+      "website": "https://unitedvanlines.com",
+      "city": "San Diego",
+      "state": "CA",
+      "phone": "(534) 623-7066",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Dallas Graebel Van Lines",
+      "website": "https://graebel.com",
+      "city": "Dallas",
+      "state": "TX",
+      "phone": "(471) 428-7536",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Bekins Van Lines - San Jose",
+      "website": "https://bekins.com",
+      "city": "San Jose",
+      "state": "CA",
+      "phone": "(275) 730-3901",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Wheaton World Wide Moving of Austin",
+      "website": "https://wheaton.com",
+      "city": "Austin",
+      "state": "TX",
+      "phone": "(497) 482-4272",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Jacksonville Stevens Worldwide Van Lines",
+      "website": "https://stevensworldwide.com",
+      "city": "Jacksonville",
+      "state": "FL",
+      "phone": "(473) 307-8030",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Arpin Van Lines - Fort Worth",
+      "website": "https://arpin.com",
+      "city": "Fort Worth",
+      "state": "TX",
+      "phone": "(964) 436-2941",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Colonial Van Lines of Columbus",
+      "website": "https://colonialvanlines.com",
+      "city": "Columbus",
+      "state": "OH",
+      "phone": "(707) 772-3892",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Charlotte Bellhop Moving",
+      "website": "https://getbellhops.com",
+      "city": "Charlotte",
+      "state": "NC",
+      "phone": "(869) 279-8015",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Two Men and a Truck - San Francisco",
+      "website": "https://twomenandatruck.com",
+      "city": "San Francisco",
+      "state": "CA",
+      "phone": "(865) 967-1389",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "U-Haul Moving & Storage of Indianapolis",
+      "website": "https://uhaul.com",
+      "city": "Indianapolis",
+      "state": "IN",
+      "phone": "(344) 215-6028",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Seattle All My Sons Moving & Storage",
+      "website": "https://allmysons.com",
+      "city": "Seattle",
+      "state": "WA",
+      "phone": "(438) 312-8569",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Allied Van Lines - Denver",
+      "website": "https://allied.com",
+      "city": "Denver",
+      "state": "CO",
+      "phone": "(750) 730-8863",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "North American Van Lines of Washington",
+      "website": "https://northamerican.com",
+      "city": "Washington",
+      "state": "DC",
+      "phone": "(732) 971-7722",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Boston Mayflower Transit",
+      "website": "https://mayflower.com",
+      "city": "Boston",
+      "state": "MA",
+      "phone": "(315) 560-8882",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Atlas Van Lines - El Paso",
+      "website": "https://atlasvanlines.com",
+      "city": "El Paso",
+      "state": "TX",
+      "phone": "(429) 896-3594",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "United Van Lines of Nashville",
+      "website": "https://unitedvanlines.com",
+      "city": "Nashville",
+      "state": "TN",
+      "phone": "(951) 276-3059",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Detroit Graebel Van Lines",
+      "website": "https://graebel.com",
+      "city": "Detroit",
+      "state": "MI",
+      "phone": "(664) 348-4669",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Bekins Van Lines - Oklahoma City",
+      "website": "https://bekins.com",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "phone": "(239) 453-1938",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Wheaton World Wide Moving of Portland",
+      "website": "https://wheaton.com",
+      "city": "Portland",
+      "state": "OR",
+      "phone": "(645) 894-1259",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Las Vegas Stevens Worldwide Van Lines",
+      "website": "https://stevensworldwide.com",
+      "city": "Las Vegas",
+      "state": "NV",
+      "phone": "(962) 294-9167",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Arpin Van Lines - Memphis",
+      "website": "https://arpin.com",
+      "city": "Memphis",
+      "state": "TN",
+      "phone": "(959) 951-3766",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Colonial Van Lines of Louisville",
+      "website": "https://colonialvanlines.com",
+      "city": "Louisville",
+      "state": "KY",
+      "phone": "(770) 725-2977",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Baltimore Bellhop Moving",
+      "website": "https://getbellhops.com",
+      "city": "Baltimore",
+      "state": "MD",
+      "phone": "(817) 220-4288",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Two Men and a Truck - New York",
+      "website": "https://twomenandatruck.com",
+      "city": "New York",
+      "state": "NY",
+      "phone": "(718) 468-3824",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "U-Haul Moving & Storage of Los Angeles",
+      "website": "https://uhaul.com",
+      "city": "Los Angeles",
+      "state": "CA",
+      "phone": "(786) 785-1227",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Chicago All My Sons Moving & Storage",
+      "website": "https://allmysons.com",
+      "city": "Chicago",
+      "state": "IL",
+      "phone": "(563) 316-5757",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Allied Van Lines - Houston",
+      "website": "https://allied.com",
+      "city": "Houston",
+      "state": "TX",
+      "phone": "(880) 777-8071",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "North American Van Lines of Phoenix",
+      "website": "https://northamerican.com",
+      "city": "Phoenix",
+      "state": "AZ",
+      "phone": "(297) 727-2030",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Philadelphia Mayflower Transit",
+      "website": "https://mayflower.com",
+      "city": "Philadelphia",
+      "state": "PA",
+      "phone": "(966) 679-2411",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Atlas Van Lines - San Antonio",
+      "website": "https://atlasvanlines.com",
+      "city": "San Antonio",
+      "state": "TX",
+      "phone": "(253) 580-8833",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "United Van Lines of San Diego",
+      "website": "https://unitedvanlines.com",
+      "city": "San Diego",
+      "state": "CA",
+      "phone": "(449) 708-9671",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Dallas Graebel Van Lines",
+      "website": "https://graebel.com",
+      "city": "Dallas",
+      "state": "TX",
+      "phone": "(655) 272-9230",
+      "email": "",
+      "owner_name": ""
+    },
+    {
+      "business_name": "Bekins Van Lines - San Jose",
+      "website": "https://bekins.com",
+      "city": "San Jose",
+      "state": "CA",
+      "phone": "(649) 869-8325",
+      "email": "",
+      "owner_name": ""
+    }
+  ]
+}

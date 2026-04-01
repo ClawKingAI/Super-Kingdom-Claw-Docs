@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArgentOS - Personal AI Operating System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-tertiary: #1a1a25;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-tertiary: #a855f7;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: #2d2d3a;
+            --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --gradient-2: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--gradient-1);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
+                        radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--accent-primary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 50px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-primary);
+        }
+
+        /* Launch Banner */
+        .launch-banner {
+            background: var(--gradient-2);
+            padding: 1rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .launch-banner p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .launch-banner strong {
+            color: var(--accent-tertiary);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-primary);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            background: var(--bg-secondary);
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tech-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tech-container h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .tech-badge {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .tech-badge:hover {
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
+        }
+
+        /* Connectors Section */
+        .connectors {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .connectors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .connector-tag {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-secondary);
+            padding: 6rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-content strong {
+            color: var(--text-primary);
+        }
+
+        .creator-creds {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .cred-badge {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+        }
+
+        /* Links Section */
+        .links-section {
+            padding: 6rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .link-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-primary);
+        }
+
+        .link-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .link-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="launch-banner">
+        <p>🚀 Launching <strong>March 28, 2026</strong> — The first Personal AI Operating System</p>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">ArgentOS</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#connectors">Connectors</a>
+                <a href="#about">About</a>
+                <a href="https://docs.argent.ai" target="_blank">Docs</a>
+                <a href="https://discord.gg/argentos" target="_blank" class="nav-cta">Join Discord</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">⚠️ Not a Chatbot Wrapper</div>
+            <h1>Your AI Should <span>Think</span>, Not Just Chat</h1>
+            <p class="hero-subtitle">
+                ArgentOS is a Personal AI Operating System with always-on contemplation, 
+                hybrid memory, and a contract-based accountability system. It's the AI 
+                infrastructure you've been waiting for.
+            </p>
+            <div class="hero-cta">
+                <a href="https://argentos.ai" class="btn-primary" target="_blank">
+                    → Visit argentos.ai
+                </a>
+                <a href="https://docs.argent.ai" class="btn-secondary" target="_blank">
+                    Read the Docs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Built Different</h2>
+            <p>Core systems designed for autonomous operation, not just response generation</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Hybrid Memory</h3>
+                <p>SQLite + pgvector hybrid search with entity tracking. Your AI remembers conversations, relationships, and context across sessions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💓</div>
+                <h3>Heartbeat System</h3>
+                <p>Contract and promise system with periodic accountability. Your AI commits to tasks and reports back — no more forgotten promises.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Contemplation Loop</h3>
+                <p>Always-on thinking powered by local Qwen via Ollama. Your AI processes, reflects, and prepares even when you're not prompting.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Visual Workflows</h3>
+                <p>Multi-agent pipeline builder with 62 connectors. Design complex automations visually without writing code.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Intent System</h3>
+                <p>3-tier hierarchical policy engine ensures your AI acts within boundaries you define. Global, agent, and task-level policies.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔀</div>
+                <h3>Model Router</h3>
+                <p>Complexity-based routing between local/fast/balanced/powerful models. Use the right intelligence for each task.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Self-Improving System</h3>
+                <p>SIS extracts lessons from every interaction, continuously improving behavior and decision-making over time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>React Dashboard</h3>
+                <p>WebGL avatar, chat interface, and task board in a beautiful dashboard. Monitor and interact with your AI visually.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Knowledge Library</h3>
+                <p>RAG-powered knowledge base with agent-level ACL. Share information selectively across your AI agents.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3>Encrypted Secrets</h3>
+                <p>AES-256-GCM encryption with OS keychain integration. Your API keys and credentials stay secure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <div class="tech-container">
+            <h2>Built With Modern Infrastructure</h2>
+            <div class="tech-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">SQLite</span>
+                <span class="tech-badge">pgvector</span>
+                <span class="tech-badge">WebGL</span>
+                <span class="tech-badge">Ollama</span>
+                <span class="tech-badge">Qwen</span>
+                <span class="tech-badge">AES-256-GCM</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Python</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="connectors" id="connectors">
+        <div class="section-header">
+            <h2>30+ Integrations</h2>
+            <p>Connect your AI to the tools you already use</p>
+        </div>
+        <div class="connectors-grid">
+            <span class="connector-tag">Slack</span>
+            <span class="connector-tag">GitHub</span>
+            <span class="connector-tag">Notion</span>
+            <span class="connector-tag">HubSpot</span>
+            <span class="connector-tag">Stripe</span>
+            <span class="connector-tag">Salesforce</span>
+            <span class="connector-tag">Linear</span>
+            <span class="connector-tag">Jira</span>
+            <span class="connector-tag">Discord</span>
+            <span class="connector-tag">Telegram</span>
+            <span class="connector-tag">Gmail</span>
+            <span class="connector-tag">Google Calendar</span>
+            <span class="connector-tag">Google Drive</span>
+            <span class="connector-tag">Dropbox</span>
+            <span class="connector-tag">AWS</span>
+            <span class="connector-tag">Azure</span>
+            <span class="connector-tag">PostgreSQL</span>
+            <span class="connector-tag">Redis</span>
+            <span class="connector-tag">OpenAI</span>
+            <span class="connector-tag">Anthropic</span>
+            <span class="connector-tag">Ollama</span>
+            <span class="connector-tag">Webhook</span>
+            <span class="connector-tag">REST API</span>
+            <span class="connector-tag">GraphQL</span>
+            <span class="connector-tag">+38 more</span>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2>Created by Jason Brashear</h2>
+            <div class="about-content">
+                <p>
+                    With over <strong>30 years in IT</strong>, Jason has built ArgentOS from the ground up 
+                    to solve real problems he encountered running a Managed Service Provider. This isn't 
+                    a weekend project — it's production-grade infrastructure designed for people who 
+                    need AI that actually works.
+                </p>
+                <div class="creator-creds">
+                    <span class="cred-badge">CCIE Certified</span>
+                    <span class="cred-badge">Red Hat Certified</span>
+                    <span class="cred-badge">MSP Owner</span>
+                    <span class="cred-badge">30+ Years IT Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="links-section">
+        <div class="section-header">
+            <h2>Get Started</h2>
+            <p>Explore ArgentOS resources</p>
+        </div>
+        <div class="links-grid">
+            <a href="https://argentos.ai" class="link-card" target="_blank">
+                <h3>🌐 argentos.ai</h3>
+                <p>Main website and product info</p>
+            </a>
+            <a href="https://docs.argent.ai" class="link-card" target="_blank">
+                <h3>📖 Documentation</h3>
+                <p>Setup guides and API reference</p>
+            </a>
+            <a href="https://marketplace.argentos.ai" class="link-card" target="_blank">
+                <h3>🛒 Marketplace</h3>
+                <p>Agents, workflows, and connectors</p>
+            </a>
+            <a href="https://discord.gg/argentos" class="link-card" target="_blank">
+                <h3>💬 Discord</h3>
+                <p>Join the community</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ArgentOS</div>
+            <div class="footer-links">
+                <a href="https://argentos.ai" target="_blank">Website</a>
+                <a href="https://docs.argent.ai" target="_blank">Documentation</a>
+                <a href="https://github.com/ARGENTAIOS" target="_blank">GitHub</a>
+                <a href="https://discord.gg/argentos" target="_blank">Discord</a>
+            </div>
+            <p class="footer-copy">
+                © 2026 ArgentOS. Launching March 28, 2026.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
