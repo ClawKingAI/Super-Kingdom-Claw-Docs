@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "parent": null,
+  "timestamp": "2026-04-02T21:00:00Z",
+  "session_id": "bootstrap",
+  "changes": [
+    "CONSTITUTION.md",
+    "SELF-EVOLUTION.md",
+    "memory/golden-suite.jsonl"
+  ],
+  "metrics_snapshot": {
+    "session_count": 0,
+    "success_rate_7d": 1.0,
+    "correction_rate_7d": 0.0
+  }
+}

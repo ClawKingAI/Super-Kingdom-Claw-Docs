@@ -1,0 +1,23 @@
+[
+  {
+    "id": "golden-001",
+    "description": "David prefers email delivery over workspace files",
+    "lesson": "When creating content for David, send via email and delete workspace files. He explicitly requested: 'I've told you don't save stuff into workspaces. Send me in an email and delete that workspace afterwards.'",
+    "session_id": "session-2026-04-02-6948",
+    "created_at": "2026-04-02T16:13:00Z"
+  },
+  {
+    "id": "golden-002",
+    "description": "Stop inbox checks when explicitly told",
+    "lesson": "When David says 'Stop checking the inbox now', immediately remove the cron job and confirm action taken.",
+    "session_id": "session-2026-04-02-6938",
+    "created_at": "2026-04-02T07:36:00Z"
+  },
+  {
+    "id": "golden-003",
+    "description": "Verify before stating facts",
+    "lesson": "Never state something as fact unless directly verified. From MEMORY.md: 'CERTAINTY RULE: Never state something as fact unless I have directly verified it.'",
+    "session_id": "bootstrap",
+    "created_at": "2026-03-15T00:00:00Z"
+  }
+]

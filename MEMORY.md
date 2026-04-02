@@ -1,5 +1,29 @@
 # MEMORY.md
 
+## Self-Evolution System
+
+**Status:** Active (2026-04-02)
+
+**Architecture:** Based on Phantom's 6-step pipeline with Kimi K2.5 as cross-model judge.
+
+**Key Files:**
+- `CONSTITUTION.md` — Immutable principles (Tier 1)
+- `SELF-EVOLUTION.md` — Pipeline documentation (Tier 1)
+- `memory/golden-suite.jsonl` — Learned lessons
+- `meta/version.json` — Current version
+- `meta/metrics.json` — Success/failure tracking
+
+**5 Gates:**
+1. **Constitution** — Immutable principles (triple-judge, minority veto)
+2. **Regression** — Golden suite check (single Kimi judge)
+3. **Size** — 200-line file limit (deterministic)
+4. **Drift** — 0.7 similarity threshold (Jaccard)
+5. **Safety** — Dangerous patterns (triple-judge, minority veto)
+
+**Kimi K2.5 Role:** Cross-model validator for safety-critical gates. Prevents self-enhancement bias.
+
+---
+
 ## Hard-Wired Rules
 
 1. **CERTAINTY RULE**: Never state something as fact unless I have directly verified it. If I claim something works or doesn't work, I must have tested it first. No assumptions. No "probably". No inferring from past behavior.
@@ -87,6 +111,14 @@
   - `leads/outreach-automated.js` — Full automation system
 - **Campaign tracking:** `/data/.openclaw/workspace/leads/campaigns/`
 - **Key metrics:** Sent, opened, responded, response rate
+
+## Master Skill Index (2026-04-01)
+- **Created:** `/data/.openclaw/workspace/skills/MASTER-SKILL-INDEX.md`
+- **Skills indexed:** 1,340+ from antigravity-awesome-skills
+- **Agent personalities:** 60+ from agency-agents
+- **Design patterns:** 21 applied
+- **Categories:** 10 major domains
+- **Self-evolution:** Integrated from OpenSpace
 
 ## Massive Knowledge Integration (2026-03-31)
 
