@@ -1,9 +1,47 @@
-.DS_Store
-*.swp
-*.swo
-node_modules/
-.openclaw/
+# Email scripts and batches
+send_batch*.py
+outreach_batch*.py
+send_*.py
+*_batch*.py
+*.pyc
+__pycache__/
+
+# Contact data
+contacts*.csv
+*_contacts.csv
+recipients*.txt
+
+# Screenshots and images
+fb-*.png
+*.png
+!assets/*.png
+
+# Logs and temp files
+*.log
+daily_report_*.txt
+daily-report-*.txt
+report_*.txt
+*.tmp
+
+# Archives
+*.tar.gz
+*.zip
+
+# Credentials and secrets
 *.env
-*.key
-*credentials*
-*token*
+.env.*
+*_credentials*
+secrets.json
+
+# Email progress
+email_progress*
+outreach_progress*
+
+# PDFs
+*.pdf
+
+# Browser stream
+browser-stream/
+
+# Test outputs
+agent-memory/outputs/
