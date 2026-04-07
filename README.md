@@ -1,7 +1,7 @@
+<!-- Social Preview Image -->
+<img src="assets/banner.png" alt="Kingdom Claw Banner" width="100%"/>
+
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Crown&size=40&duration=3000&pause=1000&color=FFD700&background=00000000&center=true&vCenter=true&width=500&height=60&lines=%F0%9F%91%91+KINGDOM+CLAW" alt="Kingdom Claw Title Animation"/>
-
 <br/>
 
 <img src="https://img.shields.io/badge/Version-2.0.0-FFD700?style=for-the-badge&labelColor=1a1a2e&logoColor=FFD700" alt="Version"/>
@@ -11,14 +11,6 @@
 <img src="https://img.shields.io/badge/Patterns-21-00D4FF?style=for-the-badge&labelColor=1a1a2e" alt="Patterns"/>
 
 <br/><br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=4000&pause=500&color=00D4FF&background=00000000&center=true&width=600&lines=The+Complete+Blueprint+for+a;Production+AI+Agent+System;Self-Evolving+%E2%80%A2+Multi-Agent+%E2%80%A2+24%2F7+Autonomous" alt="Subtitle Animation"/>
-
-</div>
-
----
-
-<div align="center">
 
 ### 🧠 "One agent learns, all agents benefit. Every failure becomes improvement."
 
@@ -33,26 +25,26 @@ This is the **complete blueprint** for Kingdom Claw — an AI agent system that 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                                                                 │
-│   YOU: "Send an email to my leads"                              │
+│  YOU: "Send an email to my leads"                               │
 │                                                                 │
-│   ┌─────┐    ┌─────────────┐    ┌──────────────┐    ┌───────┐  │
-│   │ 🧠  │───►│ 🎯 ORCHESTRA│───►│ ✉️ OUTREACH  │───►│ SENT! │  │
-│   │ LLM │    │   ROUTER    │    │   AGENT      │    │  ✓    │  │
-│   └─────┘    └─────────────┘    └──────────────┘    └───────┘  │
+│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐      │
+│  │ 🧠 │───►│ 🎯 ORCHESTRA│───►│ ✉️ OUTREACH │───►│ SENT! │      │
+│  │ LLM │   │   ROUTER   │   │    AGENT     │   │  ✓    │      │
+│  └─────┘   └─────────────┘   └──────────────┘   └───────┘      │
 │                                                                 │
-│   YOU: "Check inbox and reply"                                  │
+│  YOU: "Check inbox and reply"                                   │
 │                                                                 │
-│   ┌─────┐    ┌─────────────┐    ┌──────────────┐    ┌───────┐  │
-│   │ 🧠  │───►│ 📨 INBOX    │───►│ 💬 COMPOSER  │───►│REPLIED│  │
-│   │ LLM │    │   WATCHER   │    │   AGENT      │    │  ✓    │  │
-│   └─────┘    └─────────────┘    └──────────────┘    └───────┘  │
+│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐      │
+│  │ 🧠 │───►│ 📨 INBOX    │───►│ 💬 COMPOSER │───►│REPLIED│      │
+│  │ LLM │   │  WATCHER    │   │    AGENT     │   │  ✓    │      │
+│  └─────┘   └─────────────┘   └──────────────┘   └───────┘      │
 │                                                                 │
-│   YOU: "Build me a landing page"                                │
+│  YOU: "Build me a landing page"                                 │
 │                                                                 │
-│   ┌─────┐    ┌─────────────┐    ┌──────────────┐    ┌───────┐  │
-│   │ 🧠  │───►│ 🎨 DESIGNER  │───►│ ⚡ DEVELOPER │───►│LIVE!  │  │
-│   │ LLM │    │   AGENT     │    │   AGENT      │    │  🌐   │  │
-│   └─────┘    └─────────────┘    └──────────────┘    └───────┘  │
+│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐      │
+│  │ 🧠 │───►│ 🎨 DESIGNER │───►│ ⚡ DEVELOPER │───►│ LIVE! │      │
+│  │ LLM │   │   AGENT     │   │    AGENT     │   │  🌐   │      │
+│  └─────┘   └─────────────┘   └──────────────┘   └───────┘      │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -124,16 +116,16 @@ This is the **complete blueprint** for Kingdom Claw — an AI agent system that 
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     KINGDOM CLAW AGENTS                         │
+│                    KINGDOM CLAW AGENTS                          │
 ├─────────────────┬─────────────────┬─────────────────┬───────────┤
 │   ENGINEERING   │    MARKETING    │     DESIGN      │   SALES   │
-│     (23)        │      (27)       │       (8)       │    (8)    │
+│      (23)       │      (27)       │       (8)       │    (8)    │
 ├─────────────────┼─────────────────┼─────────────────┼───────────┤
 │ ▸ Frontend Dev  │ ▸ Growth Hacker │ ▸ UI Designer   │ ▸ Outbound│
 │ ▸ Backend Arch  │ ▸ SEO Specialst │ ▸ UX Researcher │ ▸ Discovery│
-│ ▸ DevOps Auto   │ ▸ Content Crtor │ ▸ UX Architect  │ ▸ Deals    │
+│ ▸ DevOps Auto   │ ▸ Content Crtor │ ▸ UX Architect  │ ▸ Deals   │
 │ ▸ Security Eng  │ ▸ TikTok Strtgt │ ▸ Brand Guardn  │ ▸ Proposals│
-│ ▸ Data Engineer │ ▸ Reddit Builder│ ▸ Visual Story │ ▸ Pipeline │
+│ ▸ Data Engineer │ ▸ Reddit Builder│ ▸ Visual Story  │ ▸ Pipeline│
 │ ▸ Mobile Dev    │ ▸ LinkedIn Crtor│                 │           │
 │ ▸ AI Engineer   │ ▸ WeChat Master │                 │           │
 │ ▸ Code Reviewer │ ▸ Douyin Strtgt │                 │           │
@@ -149,16 +141,16 @@ This is the **complete blueprint** for Kingdom Claw — an AI agent system that 
 The system **improves itself**:
 
 ```
-┌──────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
-│ EXECUTE  │────►│ ANALYZE  │────►│ DETECT   │────►│  FIX /   │
-│  TASK    │     │ RESULTS  │     │ PATTERN  │     │ DERIVE   │
-└──────────┘     └──────────┘     └──────────┘     └──────────┘
-                                                          │
-                                                          ▼
-┌──────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
-│ BETTER   │◄────│ UPDATE   │◄────│ CREATE   │◄────│ CAPTURE  │
-│ SKILLS   │     │ SKILLS   │     │ ENHANCED │     │ NOVEL    │
-└──────────┘     └──────────┘     └──────────┘     └──────────┘
+┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐
+│ EXECUTE  │───►│ ANALYZE  │───►│ DETECT   │───►│ FIX /    │
+│  TASK    │   │ RESULTS  │   │ PATTERN  │   │ DERIVE   │
+└──────────┘   └──────────┘   └──────────┘   └──────────┘
+      │              │              │              │
+      ▼              ▼              ▼              ▼
+┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐
+│ BETTER   │◄───│ UPDATE   │◄───│ CREATE   │◄───│ CAPTURE  │
+│ SKILLS   │   │ SKILLS   │   │ ENHANCED │   │ NOVEL    │
+└──────────┘   └──────────┘   └──────────┘   └──────────┘
 ```
 
 **Results from OpenSpace research:**
@@ -193,36 +185,27 @@ openclaw gateway start
 ```
 Super-Kingdom-Claw-Docs/
 │
-├── 📖 README.md                    ← You are here
-├── 📋 LICENSE.md                   ← Usage terms
+├── 📖 README.md              ← You are here
+├── 📋 LICENSE.md             ← Usage terms
 │
-├── 🏗️ architecture/                ← How it works
-│   ├── SYSTEM-OVERVIEW.md          ← The big picture
-│   ├── CORE-RUNTIME.md             ← Agent harness
-│   ├── PERMISSION-SYSTEM.md        ← Security
-│   └── EVENT-STREAMING.md          ← Observability
+├── 🏗️ architecture/          ← How it works
+│   ├── SYSTEM-OVERVIEW.md    ← The big picture
+│   ├── CORE-RUNTIME.md       ← Agent harness
+│   ├── PERMISSION-SYSTEM.md  ← Security
+│   └── EVENT-STREAMING.md    ← Observability
 │
-├── 🧠 skills/                      ← Capabilities
-│   ├── kingdom-mastery/            ← Master skill
-│   ├── self-evolution-engine/      ← Auto-improvement
-│   └── agentic-design-patterns/    ← 21 patterns
+├── 🧠 integration/           ← Claude Code patterns
+│   ├── CLAUDE-CODE-PATTERNS.md
+│   ├── HOOKS.md
+│   ├── SKILL-FRONTMATTER.md
+│   └── ORCHESTRATION-WORKFLOW.md
 │
-├── 🎭 kingdom-claw-core/           ← Agent system
-│   ├── runtime.py                  ← Production harness
-│   ├── personas/library/           ← 60+ agents
-│   └── plugins/                    ← Extensions
+├── 🎭 kingdom-claw-core/     ← Agent system
+│   ├── runtime.py            ← Production harness
+│   ├── personas/library/     ← 60+ agents
+│   └── plugins/              ← Extensions
 │
-├── 📚 repos/                       ← Knowledge base
-│   ├── antigravity-awesome-skills/ ← 1,340+ skills
-│   ├── agency-agents/              ← 60+ agents
-│   └── [9 more repositories]
-│
-├── 🔗 integration/                 ← Connect everything
-│   ├── OPENCLAW-SETUP.md
-│   ├── MODEL-PROVIDERS.md
-│   └── TELEGRAM-INTEGRATION.md
-│
-└── 🚀 deployment/                  ← Go live
+└── 🚀 deployment/            ← Go live
     ├── VPS-SETUP.md
     └── PRODUCTION-CHECKLIST.md
 ```
@@ -282,12 +265,10 @@ This documentation is available with a Kingdom Claw license.
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3000&pause=1000&color=FFD700&background=00000000&center=true&width=400&lines=Build+Once.;Run+Forever.;Evolve+Always." alt="Footer Animation"/>
-
-<br/><br/>
-
 **👑 Kingdom Claw**
 
 *The AI Agent System That Builds AI Systems*
+
+*Build Once. Run Forever. Evolve Always.*
 
 </div>
