@@ -22,13 +22,13 @@
 
 <div align="center">
 
-https://user-images.githubusercontent.com/assets/kingdom-claw-demo.mp4
+<img src="assets/videos/kingdom-claw-demo.gif" alt="Kingdom Claw Demo" width="100%" />
 
 **⚡ Kingdom Claw Demo — Watch the agent network visualize in real-time**
 
 <br/><br/>
 
-https://user-images.githubusercontent.com/assets/agent-builder-demo.mp4
+<img src="assets/videos/agent-builder-demo.gif" alt="Agent Builder Demo" width="100%" />
 
 **🔧 Agent Builder Demo — See the system write its own code and spawn specialized agents**
 
