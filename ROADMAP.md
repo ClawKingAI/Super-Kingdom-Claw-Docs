@@ -15,218 +15,91 @@
 
 **Files:**
 - `integration/CLAUDE-CODE-PATTERNS.md` — Full integration documentation
-- `integration/HOOKS-ENHANCEMENT.md` — Hooks system design
-- `integration/ORCHESTRATION-PATTERNS.md` — Workflow patterns
+- `integration/HOOKS.md` — Hooks system design
+- `integration/SKILL-FRONTMATTER.md` — Frontmatter standard
+- `integration/ORCHESTRATION-WORKFLOW.md` — Workflow patterns
 
 ---
 
-# Pocket Prayers - Build Roadmap
+### 2026-04-01: Master Skill Index
 
-## Phase 1: App Scaffold + Design System
-**Objective**: Establish the project foundation with proper tooling and styling.
+**Status:** ✅ Complete
 
-### Tasks
-- [ ] Initialize Next.js 14 with App Router
-- [ ] Configure TypeScript (strict mode)
-- [ ] Install and configure Tailwind CSS
-- [ ] Install shadcn/ui components
-- [ ] Set up Supabase client configuration
-- [ ] Create base layout components (Header, Footer, AppNav)
-- [ ] Define color palette and typography scale
-- [ ] Create reusable UI components (Button, Card, Input, etc.)
-
-### Dependencies
-- Node.js 18+
-- Supabase project created
-
-### Done Criteria
-- `npm run dev` starts the app
-- Tailwind classes work
-- shadcn/ui components render
-- Basic layout shell exists
+- 1,340+ skills indexed from antigravity-awesome-skills
+- 60+ agent personalities mapped
+- 21 design patterns documented
+- Self-evolution engine integrated
 
 ---
 
-## Phase 2: Auth + Profile
-**Objective**: Enable user registration, login, and profile management.
+### 2026-03-31: Massive Knowledge Integration
 
-### Tasks
-- [ ] Configure Supabase Auth helpers
-- [ ] Create `/login`, `/register`, `/forgot-password` pages
-- [ ] Implement auth forms with validation
-- [ ] Create auth middleware for route protection
-- [ ] Build `/app/profile` page
-- [ ] Implement profile edit functionality
-- [ ] Add avatar upload (Supabase Storage)
-- [ ] Handle auth state persistence
+**Status:** ✅ Complete
 
-### Dependencies
-- Phase 1 complete
-- Supabase Auth enabled
-
-### Done Criteria
-- User can register with email/password
-- User can log in and out
-- Protected routes redirect to login
-- User can edit their profile
+11 repositories integrated:
+1. antigravity-awesome-skills — 1,340+ agentic skills
+2. agency-agents — 60+ agent personalities
+3. Agentic-Design-Patterns — 21 core patterns
+4. NemoClaw — NVIDIA sandbox orchestration
+5. OpenClaw — Core framework
+6. OpenClaw-bot-review — Bot analysis tools
+7. OpenSpace — Self-evolution engine
+8. claude-code — Anthropic's coding tool
+9. claw-code — Python harness port
+10. GLM-5 — 744B model
+11. Kimi-K2.5 — 1T multimodal model
 
 ---
 
-## Phase 3: Prayer Wall + Post Prayer
-**Objective**: Enable community prayer sharing and browsing.
+## Upcoming
 
-### Tasks
-- [ ] Create `/app/prayers` page with infinite scroll
-- [ ] Build PrayerCard component
-- [ ] Implement prayer list query with pagination
-- [ ] Create `/app/prayers/new` page
-- [ ] Build PostPrayerForm component
-- [ ] Add anonymous posting option
-- [ ] Implement prayer creation server action
-- [ ] Add success/error toasts
+### Phase: Hooks Implementation
 
-### Dependencies
-- Phase 2 complete
-- `prayers` table created
+**Status:** Design complete, implementation pending
 
-### Done Criteria
-- User can browse prayer wall
-- Prayer wall loads more on scroll
-- User can post a prayer
-- Anonymous prayers display correctly
+- PreToolUse/PostToolUse hooks
+- Matcher-based conditional execution
+- Per-skill hooks in frontmatter
+- Action types: deny, log, exec, notify, webhook
 
----
+### Phase: Skill Preload
 
-## Phase 4: Teachings + Premium Gating
-**Objective**: Publish teachings with premium content protection.
+**Status:** Planned
 
-### Tasks
-- [ ] Create `/app/teachings` page
-- [ ] Build TeachingCard and TeachingGrid components
-- [ ] Implement teachings list query
-- [ ] Create `/app/teachings/[slug]` page
-- [ ] Build LockedTeachingCard for non-subscribers
-- [ ] Implement premium content check (client + server)
-- [ ] Add "Subscribe to Unlock" CTA
-- [ ] Feature teachings on homepage
+Add `skillPreload` parameter to `sessions_spawn`:
 
-### Dependencies
-- Phase 3 complete
-- `teachings` table created
-- Sample teachings seeded
+```javascript
+sessions_spawn({
+  task: "...",
+  skillPreload: ["agent-reach", "weather"]
+})
+```
 
-### Done Criteria
-- User can browse teachings
-- Free teachings are accessible
-- Premium teachings show locked state
-- CTA redirects to subscription flow
+### Phase: Workflow Definitions
+
+**Status:** Planned
+
+Define reusable workflows in YAML:
+
+```yaml
+name: multi-platform-search
+steps:
+  - skill: agent-reach
+    action: search
+  - skill: scrapling
+    action: scrape
+  - skill: memory
+    action: store
+```
 
 ---
 
-## Phase 5: Stripe Subscriptions
-**Objective**: Enable paid subscriptions for premium access.
+## Long-Term
 
-### Tasks
-- [ ] Create Stripe product and price
-- [ ] Configure Stripe SDK
-- [ ] Build PricingCard component
-- [ ] Implement checkout session creation
-- [ ] Create webhook endpoint `/api/webhooks/stripe`
-- [ ] Handle all webhook events
-- [ ] Update subscription table on events
-- [ ] Update profile role on subscription
-- [ ] Test with Stripe CLI
-- [ ] Build subscription status component
-
-### Dependencies
-- Phase 4 complete
-- Stripe account created
-- `subscriptions` table created
-
-### Done Criteria
-- User can click "Subscribe" and pay
-- Payment succeeds and updates database
-- Premium content unlocks immediately
-- Subscription status displays correctly
-
----
-
-## Phase 6: Admin Dashboard + Moderation
-**Objective**: Enable admins to manage content and users.
-
-### Tasks
-- [ ] Create `/admin` layout with navigation
-- [ ] Build admin dashboard with stats
-- [ ] Create `/admin/teachings` list page
-- [ ] Build teachings CRUD forms
-- [ ] Implement teaching create/edit/delete actions
-- [ ] Create `/admin/prayers` moderation page
-- [ ] Build prayer moderation controls (hide/delete)
-- [ ] Create `/admin/members` page
-- [ ] Implement member search and filter
-- [ ] Add admin role check middleware
-
-### Dependencies
-- Phase 5 complete
-- Admin user seeded
-
-### Done Criteria
-- Admin can log in and see dashboard
-- Admin can create/edit/delete teachings
-- Admin can moderate prayers
-- Admin can view members
-
----
-
-## Phase 7: QA + Deployment
-**Objective**: Test thoroughly and launch to production.
-
-### Tasks
-- [ ] Write E2E tests for critical paths
-- [ ] Test all auth flows
-- [ ] Test subscription flow (use Stripe test mode)
-- [ ] Test premium content gating
-- [ ] Test admin functions
-- [ ] Run Lighthouse audit
-- [ ] Fix responsive design issues
-- [ ] Configure Vercel project
-- [ ] Set environment variables
-- [ ] Deploy to Vercel
-- [ ] Configure custom domain
-- [ ] Test production webhook endpoint
-- [ ] Create legal pages (Terms, Privacy)
-- [ ] Pre-seed teachings content
-- [ ] Launch announcement
-
-### Dependencies
-- All phases complete
-
-### Done Criteria
-- All tests pass
-- Production deployment successful
-- Webhook receives events
-- First real user can register
-
----
-
-## Timeline Estimate
-
-| Phase | Duration |
-|-------|----------|
-| Phase 1 | 2 days |
-| Phase 2 | 3 days |
-| Phase 3 | 3 days |
-| Phase 4 | 3 days |
-| Phase 5 | 4 days |
-| Phase 6 | 4 days |
-| Phase 7 | 3 days |
-| **Total** | **~22 days** |
-
-## Risk Mitigation
-
-| Risk | Mitigation |
-|------|------------|
-| Stripe integration delay | Use Supabase Stripe extension |
-| RLS policy issues | Test thoroughly with different roles |
-| Webhook not receiving | Use Stripe CLI for local testing |
-| Slow page loads | Implement pagination, use React Query |
+| Priority | Feature | Status |
+|----------|---------|--------|
+| High | Hooks implementation | Design |
+| High | Skill preload | Planned |
+| Medium | Workflow definitions | Planned |
+| Medium | Parallel spawning | Planned |
+| Low | Model routing | Future |
