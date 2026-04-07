@@ -22,15 +22,15 @@
 
 <div align="center">
 
-https://github.com/user-attachments/assets/kingdom-claw-demo.mp4
+https://user-images.githubusercontent.com/assets/kingdom-claw-demo.mp4
 
-**⚡ Watch the agent network visualize in real-time**
+**⚡ Kingdom Claw Demo — Watch the agent network visualize in real-time**
 
-<br/>
+<br/><br/>
 
-https://github.com/user-attachments/assets/agent-builder-demo.mp4
+https://user-images.githubusercontent.com/assets/agent-builder-demo.mp4
 
-**🔧 See the system write its own code and spawn specialized agents**
+**🔧 Agent Builder Demo — See the system write its own code and spawn specialized agents**
 
 </div>
 
