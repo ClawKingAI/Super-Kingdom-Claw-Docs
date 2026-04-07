@@ -1,3 +1,25 @@
+# Kingdom Claw Roadmap
+
+## Recent Additions
+
+### 2026-04-06: Claude Code Best Practices Integration
+
+**Status:** ✅ Complete
+
+**What was added:**
+- 36 skills enhanced with standardized frontmatter
+- Orchestration workflow patterns documented
+- Hooks system design (enhancement layer)
+- Memory scopes formalized
+- Batch enhancement script
+
+**Files:**
+- `integration/CLAUDE-CODE-PATTERNS.md` — Full integration documentation
+- `integration/HOOKS-ENHANCEMENT.md` — Hooks system design
+- `integration/ORCHESTRATION-PATTERNS.md` — Workflow patterns
+
+---
+
 # Pocket Prayers - Build Roadmap
 
 ## Phase 1: App Scaffold + Design System
