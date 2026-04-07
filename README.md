@@ -18,6 +18,24 @@
 
 ---
 
+## 🎬 See It In Action
+
+<div align="center">
+
+https://github.com/user-attachments/assets/kingdom-claw-demo.mp4
+
+**⚡ Watch the agent network visualize in real-time**
+
+<br/>
+
+https://github.com/user-attachments/assets/agent-builder-demo.mp4
+
+**🔧 See the system write its own code and spawn specialized agents**
+
+</div>
+
+---
+
 ## 🎯 What Is This?
 
 This is the **complete blueprint** for Kingdom Claw — an AI agent system that doesn't just chat, it **acts**.
@@ -27,24 +45,24 @@ This is the **complete blueprint** for Kingdom Claw — an AI agent system that 
 │                                                                 │
 │  YOU: "Send an email to my leads"                               │
 │                                                                 │
-│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐      │
-│  │ 🧠 │───►│ 🎯 ORCHESTRA│───►│ ✉️ OUTREACH │───►│ SENT! │      │
-│  │ LLM │   │   ROUTER   │   │    AGENT     │   │  ✓    │      │
-│  └─────┘   └─────────────┘   └──────────────┘   └───────┘      │
+│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐     │
+│  │ 🧠  │───►│ 🎯 ORCHESTRA│───►│ ✉️ OUTREACH │───►│ SENT! │     │
+│  │ LLM │   │   ROUTER    │   │    AGENT     │   │  ✓    │     │
+│  └─────┘   └─────────────┘   └──────────────┘   └───────┘     │
 │                                                                 │
 │  YOU: "Check inbox and reply"                                   │
 │                                                                 │
-│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐      │
-│  │ 🧠 │───►│ 📨 INBOX    │───►│ 💬 COMPOSER │───►│REPLIED│      │
-│  │ LLM │   │  WATCHER    │   │    AGENT     │   │  ✓    │      │
-│  └─────┘   └─────────────┘   └──────────────┘   └───────┘      │
+│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐     │
+│  │ 🧠  │───►│ 📨 INBOX    │───►│ 💬 COMPOSER  │───►│REPLIED│     │
+│  │ LLM │   │  WATCHER    │   │    AGENT     │   │  ✓    │     │
+│  └─────┘   └─────────────┘   └──────────────┘   └───────┘     │
 │                                                                 │
 │  YOU: "Build me a landing page"                                 │
 │                                                                 │
-│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐      │
-│  │ 🧠 │───►│ 🎨 DESIGNER │───►│ ⚡ DEVELOPER │───►│ LIVE! │      │
-│  │ LLM │   │   AGENT     │   │    AGENT     │   │  🌐   │      │
-│  └─────┘   └─────────────┘   └──────────────┘   └───────┘      │
+│  ┌─────┐   ┌─────────────┐   ┌──────────────┐   ┌───────┐     │
+│  │ 🧠  │───►│ 🎨 DESIGNER │───►│ ⚡ DEVELOPER │───►│ LIVE! │     │
+│  │ LLM │   │   AGENT     │   │    AGENT     │   │  🌐   │     │
+│  └─────┘   └─────────────┘   └──────────────┘   └───────┘     │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -125,7 +143,7 @@ This is the **complete blueprint** for Kingdom Claw — an AI agent system that 
 │ ▸ Backend Arch  │ ▸ SEO Specialst │ ▸ UX Researcher │ ▸ Discovery│
 │ ▸ DevOps Auto   │ ▸ Content Crtor │ ▸ UX Architect  │ ▸ Deals   │
 │ ▸ Security Eng  │ ▸ TikTok Strtgt │ ▸ Brand Guardn  │ ▸ Proposals│
-│ ▸ Data Engineer │ ▸ Reddit Builder│ ▸ Visual Story  │ ▸ Pipeline│
+│ ▸ Data Engineer │ ▸ Reddit Builder│ ▸ Visual Story │ ▸ Pipeline│
 │ ▸ Mobile Dev    │ ▸ LinkedIn Crtor│                 │           │
 │ ▸ AI Engineer   │ ▸ WeChat Master │                 │           │
 │ ▸ Code Reviewer │ ▸ Douyin Strtgt │                 │           │
@@ -185,27 +203,31 @@ openclaw gateway start
 ```
 Super-Kingdom-Claw-Docs/
 │
-├── 📖 README.md              ← You are here
-├── 📋 LICENSE.md             ← Usage terms
+├── 📖 README.md           ← You are here
+├── 📋 LICENSE.md          ← Usage terms
 │
-├── 🏗️ architecture/          ← How it works
-│   ├── SYSTEM-OVERVIEW.md    ← The big picture
-│   ├── CORE-RUNTIME.md       ← Agent harness
-│   ├── PERMISSION-SYSTEM.md  ← Security
-│   └── EVENT-STREAMING.md    ← Observability
+├── 🏗️ architecture/       ← How it works
+│   ├── SYSTEM-OVERVIEW.md ← The big picture
+│   ├── CORE-RUNTIME.md    ← Agent harness
+│   ├── PERMISSION-SYSTEM.md ← Security
+│   └── EVENT-STREAMING.md ← Observability
 │
-├── 🧠 integration/           ← Claude Code patterns
+├── 🧠 integration/        ← Claude Code patterns
 │   ├── CLAUDE-CODE-PATTERNS.md
 │   ├── HOOKS.md
 │   ├── SKILL-FRONTMATTER.md
 │   └── ORCHESTRATION-WORKFLOW.md
 │
-├── 🎭 kingdom-claw-core/     ← Agent system
-│   ├── runtime.py            ← Production harness
-│   ├── personas/library/     ← 60+ agents
-│   └── plugins/              ← Extensions
+├── 🎭 kingdom-claw-core/  ← Agent system
+│   ├── runtime.py         ← Production harness
+│   ├── personas/library/  ← 60+ agents
+│   └── plugins/           ← Extensions
 │
-└── 🚀 deployment/            ← Go live
+├── 🎬 assets/videos/      ← Demo videos
+│   ├── kingdom-claw-demo.mp4
+│   └── agent-builder-demo.mp4
+│
+└── 🚀 deployment/         ← Go live
     ├── VPS-SETUP.md
     └── PRODUCTION-CHECKLIST.md
 ```
